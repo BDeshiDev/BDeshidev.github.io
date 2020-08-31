@@ -5,7 +5,7 @@ let slides = [
                 "Game Programmer"
                 ];
 
-let textFlashTime = 5000;
+let textFlashTime = 2000;
 let curSlideIndex = -1;
 
 function textFlash() {
