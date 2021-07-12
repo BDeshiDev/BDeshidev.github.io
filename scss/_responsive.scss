@@ -1,16 +1,24 @@
 @use 'config' as *;
 @include media-md {
     .menu-btn{  
-        visibility: hidden;
+       display: none !important;
     }
 
     .nav{
-        visibility:hidden;
+       display: none !important;
+    }
+
+    .disable-non-mobile{
+       display: none !important;
     }
 }
 
 @include mobile {
     .navBar {
-        visibility: hidden;
+       display: none !important;
+    }
+
+    .disable-mobile{
+       display: none !important;
     }
 }

@@ -120,22 +120,26 @@
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 5px solid $secondary;
-
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100vw;
+    height: 2rem;
 
     .menu-nav {
-        display: flex;
-        flex-flow: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 100vw;
-        height: 2rem;
+ 
         // height: 100vh;
         background: $background-color;
         list-style-type: none;
-        padding-right: 10rem;
-        padding-left: 10rem;
-    
+        border-bottom: 5px solid $secondary;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+        justify-content: space-between;
 
         &__item {
             @include transition-ease;
@@ -145,14 +149,28 @@
             }
         }
 
-        &__link {
-            font-size: 2rem;
-            text-transform: uppercase;
-            padding: 2rem 0;
-            font-weight: 300;
-            @include transition-ease;
-        }
+
     }
+
+    &__link {
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        font-weight: 300;
+        // font-variant: ;   
+        @include transition-ease;
+    }
+    
+}
+
+.test{
+    border-bottom: 5px solid $secondary;
+    margin: 0;
+}
+
+
+#nav-logo{
+    text-align: center;
 }
 @for $i from 1 through 5 {
     .menu-nav__item:nth-child(#{$i}) {
