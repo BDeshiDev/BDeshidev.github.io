@@ -2,6 +2,7 @@
 @use 'fonts' as *;
 @use 'home' as *;
 @use 'menu' as *;
+@use 'responsive' as *;
 section{
     padding: 5em, 1em;
 }
@@ -30,6 +31,7 @@ strong {
     text-decoration: underline;
     color: $primary;
 }
+
 
 h2 { 
     @include headerFontSettings(4rem, 3.5rem);
