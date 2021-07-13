@@ -1,8 +1,8 @@
 const menuButton = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.burger-nav');
-const navMenu = document.querySelector('.menu-nav');
-const navItems = document.querySelectorAll('.menu-nav__item');
+const navMenu = document.querySelector('.burger-menu-nav');
+const navItems = document.querySelectorAll('.burger-menu-nav__item');
 
 let showMenu = false;
 
@@ -16,6 +16,8 @@ function toggleMenu(){
         navItems.forEach(element => {
             element.classList.add('open');
         }); 
+
+        
         showMenu = true;
     }else{
         hamburger.classList.remove('open');    

@@ -1,24 +1,27 @@
 @use 'config' as *;
 @include media-md {
-    .menu-btn{  
-       display: none !important;
-    }
 
     .nav{
-       display: none !important;
+       display: none ;
     }
 
     .disable-non-mobile{
-       display: none !important;
+       display: none ;
     }
+    
+   // .navBar{
+   //    grid-template-columns: 1fr 2fr 2fr  2fr 2fr 2fr 1fr;
+   //  }
 }
 
 @include mobile {
-    .navBar {
-       display: none !important;
-    }
+
 
     .disable-mobile{
-       display: none !important;
+       display: none ;
     }
+   //  .navBar{
+   //    grid-template-columns: 1fr 4fr 2fr 4fr 1fr;
+   //  }
+
 }
