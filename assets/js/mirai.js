@@ -1,11 +1,17 @@
 
-
-
 class Vec2{
     constructor(x,y){
         this.x = x;
         this.y = y;
     }
+}
+
+class Transform{
+    constructor(origin, scale){
+        this.origin = origin;
+        this.scale = scale;
+    }
+
 }
 // jquery get border height was not working for some reason
 // $('#nav-logo').outerHeight(true);

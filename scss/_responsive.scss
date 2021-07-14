@@ -1,32 +1,60 @@
 @use 'config' as *;
-@include media-md {
 
-    .nav{
-       display: none ;
-    }
+$md-width: 800px;
+$lg-width: 1100px;
+$sm-width: 607px;
+$xsm-width: 300px;
 
-    .disable-non-mobile{
-       display: none ;
-    }
-}
-
-@include mobile {
-
-
-    .disable-mobile{
-       display: none ;
-    }
-
-}
-@mixin media-sm {
-   @media screen and (max-width:560px) {
+@mixin media-lg {
+   @media screen and (min-width:$lg-width) {
        @content;
    }
 }
+
+
+@mixin media-md {
+    @media screen and (max-width:$md-width) {
+        @content;
+    }
+}
+
+
+@mixin media-sm {
+   @media screen and (max-width:$sm-width) {
+       @content;
+   }
+   
+}
+@mixin media-xsm {
+   @media screen and (max-width:$xsm-width) {
+       @content;
+   }
+   
+}
+
+@include media-md {
+
+   .nav{
+      display: none ;
+   }
+
+   .disable-md {
+      display: none;
+   }
+}
+
 
 @include media-sm {
    .disable-sm{
       display: none ;
    }
 }
+
+
+@include media-xsm {
+   .navBar {
+      grid-template-columns: 50px 1fr 50px;
+   }
+}
+
 

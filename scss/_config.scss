@@ -26,40 +26,8 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 }
 
 $background-color:  rgb(4, 3, 5);
-$mobile-width: 800px;
 
-@mixin mobile{
-    @media(max-width: $mobile-width) {
-        @content;
-    }
-}
-@mixin media-md {
-    @media screen and (min-width:768px) {
-        @content;
-    }
-}
 
-@mixin media-lg {
-    @media screen and (min-width:1024px) {
-        @content;
-    }
-}
-
-@mixin media-xl {
-    @media screen and (min-width:1600pz) {
-        @content;
-    }
-}
-
-.main {
-    @include flexCenter(row);
-    p{
-        color: red;
-    }
-    @include mobile{
-        flex-direction: column;
-    }
-}
 
 
 @mixin transition-ease {
