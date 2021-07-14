@@ -8,10 +8,6 @@
     .disable-non-mobile{
        display: none ;
     }
-    
-   // .navBar{
-   //    grid-template-columns: 1fr 2fr 2fr  2fr 2fr 2fr 1fr;
-   //  }
 }
 
 @include mobile {
@@ -20,8 +16,17 @@
     .disable-mobile{
        display: none ;
     }
-   //  .navBar{
-   //    grid-template-columns: 1fr 4fr 2fr 4fr 1fr;
-   //  }
 
 }
+@mixin media-sm {
+   @media screen and (max-width:560px) {
+       @content;
+   }
+}
+
+@include media-sm {
+   .disable-sm{
+      display: none ;
+   }
+}
+

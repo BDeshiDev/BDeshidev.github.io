@@ -4,6 +4,7 @@
     position: absolute;
     z-index: 1;
     right: 1rem;
+
     
     height: 20px;
     width: 28px;
@@ -13,7 +14,7 @@
     
     &__burger {
         position: absolute;
-        right: 0;
+        right:0;
         top: .5rem;
         width: 28px;
         height: 3px;
@@ -124,32 +125,35 @@
 
     background: $background-color;
     // border-bottom: 5px solid $secondary;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+    // align-items: center;
+    // margin-left: auto;
+    // margin-right: auto;
     
-    // display: grid;
 
-    display: flex;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: space-evenly;
-    padding-left: 100px;
-    padding-right: 100px;
+    // display: flex;
+    // flex-direction: row;
+    // align-content: center;
+    // justify-content: center;
 
+    display: grid;  
+    grid-template-columns: 4fr 200px 4fr;
     width: 100%;
 
 
     &__item {
         @include transition-ease;
-        padding-right: .5em;
-        padding-left: .5em;
+        // padding-right: 10px;
+        // padding-left: 20px;
+
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        box-shadow: inset 0 -5px $secondary;
+
         &.active > a {
             color: $primary;
         }
-
-    border-bottom: 5px solid $secondary;
-
     }
 
     // .menu-nav {
@@ -182,7 +186,8 @@
     &__link {
         font-size: 2rem;
         text-transform: uppercase;
-        padding: 2rem 0;
+        flex-grow: 1;
+        flex-shrink: 1;
         font-weight: 300;
         // font-variant: ;   
         @include transition-ease;
@@ -191,11 +196,21 @@
 }
 
 #nav-logo{
-    display: inline-block;
-    flex-grow: 1;
-    background: red;;
+    color: $background-color;
+    // background: red;
     // box-shadow: white 0px 0px 0px 5px;
+    // min-height: ;
+    // max-width: 200px;
+    // flex-grow: 1;
+    // height: auto;
+    // overflow: hidden;
+    // box-shadow: 0px 0px 0px 30px $background-color;
+    // border-bottom: 50px solid red;
+    box-sizing: content-box;
+    
+
 }
+
 
 .test{
     border-bottom: 5px solid $secondary;
