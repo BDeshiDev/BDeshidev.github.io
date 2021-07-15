@@ -13,12 +13,6 @@ body {
     height: 100vh;
     font-family: $normal-font-family;
     line-height: 1.6;
-
-
-    img {
-        display: block;
-        max-width: 100%;
-    }
 }
 h1{
     @include headerFontSettings(5rem, 4.5rem);
@@ -27,7 +21,7 @@ strong {
     @include headerFontSettings(5rem, 4.5rem);
     display: block;
 }
-#job-line {
+.job-line {
     text-decoration: underline;
     color: $primary;
 }

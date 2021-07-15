@@ -10876,9 +10876,9 @@ textarea.form-control-lg {
   left: 0;
   background: #040305;
   display: grid;
-  grid-template-columns: 4fr 200px 4fr;
+  grid-template-columns: 4fr 180px 4fr;
   width: 100%;
-  height: 50px;
+  height: 55px;
   box-shadow: inset 0 -5px #d122e3ff;
 }
 .navBar__item {
@@ -10971,10 +10971,6 @@ body {
   font-family: Montserrat, sans-serif;
   line-height: 1.6;
 }
-body img {
-  display: block;
-  max-width: 100%;
-}
 
 h1 {
   font-family: "Jura", sans-serif;
@@ -10991,7 +10987,7 @@ strong {
   display: block;
 }
 
-#job-line {
+.job-line {
   text-decoration: underline;
   color: #9926f0;
 }
