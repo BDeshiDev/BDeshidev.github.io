@@ -3,7 +3,7 @@ const teethCount = 7;
 const maxTeethScale = 8;
 const teethTweenTime = 100;
 const minSpeechAnimRestartTime = 150;
-
+const miraiAspect = 3;//~180/55 = ratio in header
 //because javascript is an insane language that deserves it's own place in hell for not even handling callback contexts properly
 function bindMethods(o, ...excludeMembers) {
     let p = o.constructor.prototype,
@@ -21,14 +21,28 @@ class Vec2{
     }
 }
 
+class CustomMiraiContainer{
+    constructor(el, width, height){
+        this.el = el;
+        this.width = width;
+        this.height =  height;
+    }
+
+    bottomLeft(){
+        return new Vec2(0, height);
+    }
+
+    bottomRight(){
+        return new Vec2(width, height);
+    }
+}
+
 class Mirai{
     constructor(container, width, height, containerBottomLeft, containerBottomRight){
         this.width = width;
         this.height = height;
         this.container = container;
-        this.teethGap = this.width * .05;
-        this.cheekSize = new Vec2( this.width * .1, this.height * .075);//half of remaining per cheek
-        this.teethSize = new Vec2( (((this.width - 20- this.teethGap * (teethCount -1)) ) /10.0), this.height * .05);
+
         this.containerBottomLeft = containerBottomLeft;
         this.containerBottomRight = containerBottomRight;
 
@@ -41,10 +55,17 @@ class Mirai{
 
     createTeeth(){
         let t = document.createElement('div');
+        //in %
+        let teethGap = 5;
+        let cheekSize = new Vec2(10, 7.5);//half of remaining per cheek
+        let teethSize = new Vec2( (((100 - 5.56 * 5- teethGap * (teethCount -1)) ) /10.0), 5);
+
+        console.log(teethSize);        
+        
         t.classList.add('mirai__Cheek');
-        t.style.width = this.cheekSize.x+"px";
-        t.style.height = this.cheekSize.y+"px";
-        t.style.left = 10  +"px";
+        t.style.width = cheekSize.x + "%";
+        t.style.height = cheekSize.y +"%";
+        t.style.left = "5.56%";
         t.style.bottom = 0;
         t.style.position = "absolute";
 
@@ -53,29 +74,29 @@ class Mirai{
         
         t = document.createElement('div');
         t.classList.add('mirai__Cheek');
-        t.style.width = this.cheekSize.x+"px";
-        t.style.height = this.cheekSize.y+"px";
-        t.style.right = 10  +"px";
+        t.style.width = cheekSize.x + "%";
+        t.style.height = cheekSize.y +"%";
+        t.style.right = "5.56%";
         t.style.bottom = 0;
         t.style.position = "absolute";
 
         this.container.appendChild(t);
 
-        let teethOriginX = this.containerBottomLeft.x + 10 +this.cheekSize.x + this.teethGap;
-        let teethOriginY = this.height - this.cheekSize.y*.5;
+        let teethOriginX = this.containerBottomLeft.x + 5.56 +cheekSize.x + teethGap;
+        let teethOriginY = this.height - cheekSize.y*.5;
         
         this.teeth = [];
         for (let i = 0; i < teethCount; i++) {
             let t = document.createElement('div');
             t.classList.add('mirai__Teeth');
-            t.style.width = this.teethSize.x+"px";
-            t.style.height = this.teethSize.y+"px";
-            t.style.left = teethOriginX  +"px";
-            t.style.bottom = this.cheekSize.y * .25 + "px";
+            t.style.width = teethSize.x+"%";
+            t.style.height = "5%";
+            t.style.left = teethOriginX +"%";
+            t.style.bottom =  cheekSize.y * .25 + "%";
             t.style.position = "absolute";
             this.teeth[i] = t;
             this.container.appendChild(t);
-            teethOriginX += this.teethGap + this.teethSize.x;
+            teethOriginX += teethGap + teethSize.x;
         }
         this.speechAnim = anime.timeline({
             targets: this.teeth,
@@ -126,26 +147,30 @@ class Mirai{
         if(eyes.length >= 2){
 
             let e =new Eye(eyes[0]).eye;
-            // let e = eyes[0]
-            e.style.position = "absolute";
-            e.setAttribute("width", (this.width * .15)+"px");
-            e.setAttribute("height", (this.height* .4)+"px");
-            e.style.width = (this.width * .15)+"px";
-            e.style.height = (this.height* .4)+"px";
-            e.style.top = (this.height* .1) + "px";
-            e.style.left = (this.width * .15)+"px";
+
+            e.setAttribute("width", "15%");
+            e.setAttribute("height", "4%");
+            e.style.width = "15%";
+            e.style.height= "40%";
+            e.style.top =  "10%";
+            e.style.left = "15%";
 
             e =new Eye(eyes[1]).eye;
+            console.log(e);
 
             
             e = eyes[1];
-            e.style.position = "absolute";
-            e.style.width = (this.width * .15)+"px";
-            e.style.height = (this.height* .4)+"px";
-            e.style.top = (this.height* .1) + "px";
+         
+            e.setAttribute("width", "15%");
+            e.setAttribute("height", "4%");
+            e.style.width = "15%";
+            e.style.height= "40%";
+            e.style.top =  "10%";
+            e.style.right = "15%";
+            
             e.style.fill = "green"; 
-            e.style.right = (this.width * .15)+"px";
 
+            console.log(e);
              
         }else{
             console.log("wrong number of eyes");
@@ -219,24 +244,38 @@ function getAbsoluteHeight(el) {
   return Math.ceil(el.offsetHeight + margin);
 }
 
-const navMiraiContainer = document.querySelector('#nav-logo');
-
-width = navMiraiContainer.clientWidth;
-oldHeight = navMiraiContainer.height;
-height = getAbsoluteHeight(navMiraiContainer.parentElement) + 7;
-
-canvasPadding = new Vec2( width * .05, 0 );
-width -= canvasPadding.x *2;
-height -= canvasPadding.y *2;
-containerBottomLeft = new Vec2(0, height);
-containerBottomRight = new Vec2(width, height);
 
 
-
-var mirai = new Mirai(navMiraiContainer, width, height, containerBottomLeft, containerBottomRight);
+var mirais = [];
 
 function handleCharTyped(c){
-    mirai.handleCharTyped(c);
+    for (let i = 0; i < mirais.length; i++) {
+        mirais[i].handleCharTyped(c);
+    }
 }
 
-// let eye = container.querySelector('svg-test');
+function createMiraiInsideContainer(container){
+    width = container.clientWidth;
+    oldHeight = container.height;
+    // height = getAbsoluteHeight(container.parentElement) + 7;
+    height = getAbsoluteHeight(container.parentElement) +7 ;
+
+    canvasPadding = new Vec2( width * .05, 0 );
+    width -= canvasPadding.x *2;
+    height -= canvasPadding.y *2;
+    containerBottomLeft = new Vec2(0, height);
+    containerBottomRight = new Vec2(width, height);
+
+    return new Mirai(container, width, height, containerBottomLeft, containerBottomRight);
+}
+
+function fetchAndCreateMirais(){
+    let targetContainers = document.querySelectorAll('.mirai');
+    console.log(targetContainers.length);
+    for (let i = 0; i < targetContainers.length; i++) {
+        mirais[i] = createMiraiInsideContainer(targetContainers[i])
+        
+    }
+}
+
+window.onload = fetchAndCreateMirais();
