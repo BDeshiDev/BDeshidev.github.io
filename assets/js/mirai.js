@@ -2,6 +2,17 @@ const noSoundList = ['.', ',','?',' '];
 const teethCount = 7;
 const maxTeethScale = 10;
 const teethTweenTime = 100;
+const minSpeechAnimRestartTime = 150;
+
+//because javascript is an insane language that deserves it's own place in hell for not even handling callback contexts properly
+function bindMethods(o, ...excludeMembers) {
+    let p = o.constructor.prototype,
+        exclude = new Set(excludeMembers);
+    Object.getOwnPropertyNames(p)
+        .concat(Object.getOwnPropertySymbols(p))
+        .filter(n => p[n] instanceof Function && p[n] !== p.constructor && !exclude.has(n))
+        .forEach(n => o[n] = o[n].bind(o));
+}
 
 class Vec2{
     constructor(x,y){
@@ -23,6 +34,9 @@ class Mirai{
 
         this.createTeeth();
         this.createEyes();
+
+        this.queuedChar = null;
+        bindMethods(this);
     }
 
     createTeeth(){
@@ -83,21 +97,24 @@ class Mirai{
                 ],
             }, 0);
         }
-        let that = this;
-        let a = 9;
-        var fufu = ()=> {
-            setTimeout(() => {
-                if(a > 0){
-                    a--;
-                    fufu();
-                    that.speechAnim.restart();
-                }
-            }, 150);
-        };
-        fufu();
-        console.log(this.speechAnim);
 
     }
+
+    doSpeechAnim(){
+        this.speechAnim.restart();
+        this.isSpeaking = true;
+   
+        setTimeout(() => { 
+            if(this.queuedChar){
+                this.queuedChar = null;
+                this.doSpeechAnim();
+            }else{
+                this.isSpeaking = false;
+            }
+        }, minSpeechAnimRestartTime);
+    }
+
+    
 
     createEyes(){
         let eyes = this.container.querySelectorAll('.mirai__Eye');
@@ -129,7 +146,17 @@ class Mirai{
             console.log("wrong number of eyes");
         }
     }
+    handleCharTyped(c){
+        if(noSoundList.includes(c)){
+            return;
+        }
+        if(this.isSpeaking){
+            this.queuedChar = c;
+        }else{
+            this.doSpeechAnim();
+        }
 
+    }
     
 }
 
@@ -194,5 +221,9 @@ containerBottomRight = new Vec2(width, height);
 
 
 var mirai = new Mirai(navMiraiContainer, width, height, containerBottomLeft, containerBottomRight);
+
+function handleCharTyped(c){
+    mirai.handleCharTyped(c);
+}
 
 // let eye = container.querySelector('svg-test');

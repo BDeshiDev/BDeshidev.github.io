@@ -1,0 +1,1 @@
+fetchAndCreateTypeWriters(mirai.handleCharTyped);

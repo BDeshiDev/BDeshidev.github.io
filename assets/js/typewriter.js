@@ -1,6 +1,6 @@
+
 var defaultPerCharPrintDelay = 64;//ms
 var defaultperCharDeleteDelay = 24;//ms
-
 
 
 async function sleepAsync (t) {
@@ -28,6 +28,9 @@ class TypeWriter{
         if(this.showCount < (this.fullText.length)){
             this.showCount++;
             this.el.textContent = this.fullText.substring(0, this.showCount);
+
+            this.handleCharTyped(this.fullText[this.showCount - 1]);
+
             await sleepAsync(this.perCharPrintDelay);
             await this.typeText();
 
@@ -38,6 +41,11 @@ class TypeWriter{
                 
             }
         }   
+    }
+
+    handleCharTyped(c){
+        if(this.charTypedCallBack)
+            this.charTypedCallBack(c);
     }
 
     isTypeComplete(){return this.showCount >= this.fullText.length};
@@ -98,18 +106,22 @@ class TypeWriterGroup{
     }
 }
 
+const typeWriterGroups = [];
 
 async function test(writerGroup){
     await writerGroup.typeText();
     await writerGroup.deleteText();
-    console.log('donefgfgfg');
+    console.log('done');
 }
 
-window.onload = function() {
+//call this with an optional callback
+// not bothering with with a proper event system for now
+function fetchAndCreateTypeWriters(charTypedCallBack){
     var elements = document.querySelectorAll('.typeWriterGroup');
     for (let i=0; i<elements.length; i++) {
         let children = elements[i].querySelectorAll('.typeWriter');
         var writerGroup = new TypeWriterGroup();
+        typeWriterGroups[i] = writerGroup;
         for (let i = 0; i < children.length; i++) {
 
             let c = children[i];
@@ -124,13 +136,10 @@ window.onload = function() {
                 charTypeTime = JSON.parse(charTypeTime);
             }
             writerGroup.writers[i] = new TypeWriter(c, charTypeTime, waitTime);
+            writerGroup.writers[i].charTypedCallBack = charTypedCallBack;
         }
-        console.log(i);
-        test(writerGroup);
-        // writerGroup.writers[3].typeText().then(()=> {console.log('donefgfgfg')});
-
+        // console.log(i);
+        // test(writerGroup);
+        writerGroup.typeText();
     }
-    console.log("done" + elements.length);
-    // INJECT CSS
-    // document.body.appendChild(css);
 };
