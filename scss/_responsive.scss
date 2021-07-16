@@ -6,7 +6,7 @@ $sm-width: 607px;
 $xsm-width: 300px;
 
 @mixin media-lg {
-   @media screen and (min-width:$lg-width) {
+   @media screen and (max-width:$lg-width) {
        @content;
    }
 }
@@ -41,6 +41,8 @@ $xsm-width: 300px;
    .disable-md {
       display: none;
    }
+
+
 }
 
 
@@ -50,11 +52,5 @@ $xsm-width: 300px;
    }
 }
 
-
-@include media-xsm {
-   .navBar {
-      grid-template-columns: 50px 1fr 50px;
-   }
-}
 
 
