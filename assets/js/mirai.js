@@ -1,4 +1,7 @@
-noSoundList = ['.', ',','?',' '];
+const noSoundList = ['.', ',','?',' '];
+const teethCount = 7;
+const maxTeethScale = 10;
+const teethTweenTime = 100;
 
 class Vec2{
     constructor(x,y){
@@ -12,10 +15,9 @@ class Mirai{
         this.width = width;
         this.height = height;
         this.container = container;
-        this.teeth = 7;
         this.teethGap = this.width * .05;
         this.cheekSize = new Vec2( this.width * .1, this.height * .075);//half of remaining per cheek
-        this.teethSize = new Vec2( (((this.width - 20- this.teethGap * (this.teeth -1)) ) /10.0), this.height * .05);
+        this.teethSize = new Vec2( (((this.width - 20- this.teethGap * (teethCount -1)) ) /10.0), this.height * .05);
         this.containerBottomLeft = containerBottomLeft;
         this.containerBottomRight = containerBottomRight;
 
@@ -49,7 +51,7 @@ class Mirai{
         let teethOriginY = this.height - this.cheekSize.y*.5;
         
         this.teeth = [];
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < teethCount; i++) {
             let t = document.createElement('div');
             t.classList.add('mirai__Teeth');
             t.style.width = this.teethSize.x+"px";
@@ -61,13 +63,40 @@ class Mirai{
             this.container.appendChild(t);
             teethOriginX += this.teethGap + this.teethSize.x;
         }
-        this.maxTeethScale = 2.5;
-        // speechAnim = anime({
-        //     targets: this.teeth,
-        //     scaleY: {
-        //         duration: .05f,
-        //     }
-        // })
+        this.speechAnim = anime.timeline({
+            duration: teethTweenTime,
+            easing: 'easeOutQuad',
+            // loop: true,
+            // endDelay: 0
+            autoplay: false,
+        });
+        let middle = this.teeth.length / 2.0;
+        // console.log(middle + " " + (this.teeth.length / 2.0));
+        for (let i = 0; i < this.teeth.length; i++) {
+            let t =  (1.2 + (maxTeethScale -1.2) * (((i+1)  <= middle? (i+1) : (this.teeth.length -i)))/middle);
+            // console.log(t);
+            this.speechAnim.add({
+                targets: this.teeth[i],
+                scaleY: [
+                    {value: t, duration: teethTweenTime *.75},
+                    {value: 1, duration: teethTweenTime *.25}
+                ],
+            }, 0);
+        }
+        let that = this;
+        let a = 9;
+        var fufu = ()=> {
+            setTimeout(() => {
+                if(a > 0){
+                    a--;
+                    fufu();
+                    that.speechAnim.restart();
+                }
+            }, 150);
+        };
+        fufu();
+        console.log(this.speechAnim);
+
     }
 
     createEyes(){
