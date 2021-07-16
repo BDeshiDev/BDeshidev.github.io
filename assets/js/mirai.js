@@ -1,6 +1,6 @@
 const noSoundList = ['.', ',','?',' '];
 const teethCount = 7;
-const maxTeethScale = 10;
+const maxTeethScale = 8;
 const teethTweenTime = 100;
 const minSpeechAnimRestartTime = 150;
 
@@ -78,25 +78,29 @@ class Mirai{
             teethOriginX += this.teethGap + this.teethSize.x;
         }
         this.speechAnim = anime.timeline({
-            duration: teethTweenTime,
-            easing: 'easeOutQuad',
-            // loop: true,
-            // endDelay: 0
-            autoplay: false,
+            targets: this.teeth,
+            easing: 'easeOutQuad'
         });
-        let middle = this.teeth.length / 2.0;
-        // console.log(middle + " " + (this.teeth.length / 2.0));
-        for (let i = 0; i < this.teeth.length; i++) {
-            let t =  (1.2 + (maxTeethScale -1.2) * (((i+1)  <= middle? (i+1) : (this.teeth.length -i)))/middle);
-            // console.log(t);
-            this.speechAnim.add({
-                targets: this.teeth[i],
-                scaleY: [
-                    {value: t, duration: teethTweenTime *.75},
-                    {value: 1, duration: teethTweenTime *.25}
-                ],
-            }, 0);
-        }
+
+        this.speechAnim.add({
+
+            scaleY: function(el, i, l) {
+                let middle = l / 2.0;
+                let t = ((1.2 + (maxTeethScale -1.2) * 
+                        (((i+1)  <= middle? (i+1) : (l -i)))/middle)) *
+                        anime.random(9, 10)/10.0;
+                    return t; 
+                },
+            duration: teethTweenTime *.75,
+            loop: true,
+        });
+
+        this.speechAnim.add({
+
+            scaleY: 1,
+            duration: teethTweenTime *.75,
+            loop: true,
+        });
 
     }
 
@@ -113,6 +117,7 @@ class Mirai{
             }
         }, minSpeechAnimRestartTime);
     }
+
 
     
 
@@ -184,7 +189,7 @@ class Eye{
                 // autoplay: false,
                 autoplay: true,
                 loop: true,
-                endDelay: 500   
+                endDelay: 5000   
             }
         )
     }
@@ -192,6 +197,14 @@ class Eye{
 
     blink(){
         this.eyeBlinkAnim.restart();
+    }
+
+    enableBlink(){
+        this.eyeBlinkAnim.loop = true;
+    }
+
+    disableBlink(){
+        this.eyeBlinkAnim.loop = false;
     }
 
 }
