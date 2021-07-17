@@ -18,7 +18,6 @@ $xsm-width: 300px;
     }
 }
 
-
 @mixin media-sm {
    @media screen and (max-width:$sm-width) {
        @content;

@@ -34,4 +34,4 @@ $background-color:  rgb(4, 3, 5);
     transition: all .33s ease-in-out;
 }
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";//some osrt of weird padding issue if i don't include bootstrap defaults
