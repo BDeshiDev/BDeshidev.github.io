@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/main.css">
-    <title></title>
+    <title>{{ page.title }}</title>
 </head>
 <body>
     <header>
@@ -20,11 +20,16 @@
                     Devlogs
                 </a>
             </span>
-            
+            {% if page.showNavMirai %}
+                <span class="mirai" id="nav-logo">
+                    <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
+                    <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
+                </span>
+            {% else %}
                 <span >
 
                 </span>     
-            
+            {% endif %}
       
 
             <span class="navBar__item " id= "right-navBar">
@@ -75,29 +80,7 @@
     </header>
     <main>
         <section class="content">
-            <section class="home typeWriterGroup">
-    <div class="mirai-container">
-            <div class="mirai">
-                <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
-                <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
-            </div>
-    </div>
-    <h3 class="intro__greeting">
-        <span hidden hold-time="800" char-type-time='30' class ='typeWriter'> Hi,</span>
-        <span hidden hold-time="200"  class ='typeWriter'>I'm</span>
-    </h3>
-    <h3 class="intro__rest">    
-        <strong hidden hold-time="550" char-type-time='80'  class ='typeWriter'>B-DeshiDev</strong>
-        <span hidden  class ='typeWriter'>an </span>
-        <span hidden class = "job-line typeWriter"> Indie Game Developer. </span>
-        <a href="games.html"  role="button">
-            <button class= "cta-button">My Games</button>
-        </a>
-    </h3>
-</section> 
-
-
-
+            {{ content }}
         </section>
         <footer>
             <div class="social-icons">
