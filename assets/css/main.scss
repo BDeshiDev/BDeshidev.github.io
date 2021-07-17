@@ -88,7 +88,12 @@ main {
         padding-top: 33%;
     }
     
-}   
+}  
+.content {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
 .home {
     display: grid;  
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -96,8 +101,6 @@ main {
     
     width: 100%;
     height: 100%;
-    padding-top: 55px;
-    padding-bottom: 55px;
 
     .intro{
         z-index: 1;
@@ -213,5 +216,95 @@ footer {
     &:hover {
         background: $secondary;
         font-weight: bolder;
+    }
+}
+
+//#TODO move to separate scss and templatify scss includes
+.gamesList{
+    display: flex;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    
+    h2 {
+        @include headerFontSettings(3rem, 3rem);
+        padding-bottom: 1em;
+    }
+    .gameWidget{
+        background: lighten($color: $background-color, $amount: 2);
+        margin-bottom: 2em;
+        display: grid;
+        grid-template-columns: 1fr 4fr; 
+        grid-template-Rows: 1fr 3fr 1fr; 
+        grid-template-areas:"gameIcon gameTitle"
+                            "gameIcon gameDesc"
+                            "gameIcon gamePlatformsList"; 
+        
+        border-bottom: 2px solid $primary;
+
+        &__Icon{
+            grid-area: gameIcon;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            align-self: center;
+            border-right: 2px solid $primary;
+            height: 100%;
+            img {
+                margin-top: auto;
+                margin-bottom: auto;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        &__Title{
+            grid-area: gameTitle;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            
+            font-size: 2.4rem;
+            border-bottom: 2px solid $primary;
+        }
+        &__Desc{
+            grid-area: gameDesc;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            
+            font-size: 1.2rem;
+        }
+        &__PlatformsList{
+            grid-area: gamePlatformsList;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: stretch;
+
+            padding-left: .5rem;
+            padding-right: .5rem;
+
+            // border-top: 2px solid $primary;
+            padding-top: 5px;
+            
+            .PlatformLink{
+                // flex-grow: 1;
+                // flex-shrink: 1;
+                // font-variant: ;
+                // height: 100%;
+            vertical-align: middle;
+                    
+                padding: 0;   
+                @include transition-ease;
+                font-size: 2rem;
+                padding-left: .5rem;
+                
+                i {
+                    display: block;
+                    height: 100%;
+                }
+            }
+
+        }
     }
 }
