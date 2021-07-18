@@ -150,22 +150,10 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-_site/index.html
-_site/package-lock.json
-_site/package.json
-_site/theming-kit.html
-_site/assets/css/main.css
-_site/assets/css/main.css.map
-_site/assets/img/eyes-closed.svg
-_site/assets/img/eyes-open.svg
-_site/assets/img/gray-shiDev.png
-_site/assets/img/Screenshot (92.2.0).png
-_site/assets/img/zero-face.png
-_site/assets/js/landingPage.js
-_site/assets/js/mirai.js
-_site/assets/js/navBurger.js
-_site/assets/js/textflash.js
-_site/assets/js/typewriter.js
-_site/scss/main.scss
-_site/games.html
-_site/index.html
+_site/*
+_site/
+.liquidrc
+Gemfile
+Gemfile.lock
+.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910/*
+.jekyll-cache/Jekyll/Cache/Jekyll--Cache/b7/9606fb3afea5bd1609ed40b622142f1c98125abcfe89a76a661b0e8e343910/
