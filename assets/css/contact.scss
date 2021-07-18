@@ -6,6 +6,9 @@
 @use 'fonts' as *;
 @use 'responsive' as *;
 
+.test{
+    font-family: $header-font-family;
+}
 .contacts{
     padding-left: 2rem;
     padding-right: 2rem;
