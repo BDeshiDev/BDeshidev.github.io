@@ -5,14 +5,15 @@
 @use 'config' as *;
 @use 'fonts' as *;
 @use 'responsive' as *;
+@use 'responsive' as *;
 
 .gamesList{
     display: flex;
-    padding-left: 2em;
-    padding-right: 2em;
+    // padding-left: 2em;
+    // padding-right: 2em;
 
-    width: 100%;
-    height: auto;
+    width: auto;
+    // height: ;
     flex-direction: column;
     
     h2 {
@@ -22,7 +23,8 @@
     .gameWidget{
         background: lighten($color: $background-color, $amount: 2);
         margin-bottom: 2rem;
-        padding: .5rem;;
+        // margin-right: 2em;
+        padding: .5rem;
 
 
         display: flex;
@@ -32,7 +34,7 @@
             flex: 1;
             display: inline-flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: space-between;
         }
 
         &__Icon{
@@ -51,8 +53,14 @@
             }
         }
         &__Title{
+            font-family: $header-font-family;
             padding-left: .5rem;
             padding-right: .5rem;
+            
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
             
             font-size: 2.4rem;
             border-bottom: 2px solid $primary;
@@ -63,6 +71,7 @@
             padding-right: .5rem;
             
             font-size: 1.2rem;
+            margin-bottom: auto;
         }
         &__PlatformsList{
             display: flex;
