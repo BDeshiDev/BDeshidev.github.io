@@ -1,0 +1,20 @@
+---
+layout: skeleton
+showNavMirai: true
+Title: B-DeshiDev 
+customcss:
+  - 'assets/css/games.css'
+---
+
+<ul class='gamesList'>
+    <h2>Commercial:</h2>
+    {% for game in site.data.games.commercial %}
+        {% include gameWidget.html %}
+    {% endfor %}
+</ul>
+<ul class='gamesList'>
+    <h2>Personal:</h2>
+    {% for game in site.data.games.personal %}
+        {% include gameWidget.html %}
+    {% endfor %}
+</ul>

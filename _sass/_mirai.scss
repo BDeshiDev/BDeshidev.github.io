@@ -1,0 +1,21 @@
+@use 'config' as *;
+
+.mirai {
+    position: relative;
+
+    &__Teeth, &__Cheek{
+        background: $secondary;
+        position: absolute;
+        display: inline-block;
+    }
+    &__Eye{
+        fill: $secondary;
+        stroke: $secondary;
+        position: absolute;
+        display: inline-block;
+        pointer-events: none;
+    }
+
+    
+}
+

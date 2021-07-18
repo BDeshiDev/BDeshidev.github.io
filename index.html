@@ -1,110 +1,29 @@
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="B-DeshiDev is a Bangladeshi Indie Game Developer/Programmer. Currently making Control : Override. Currently a part of B-Deshi Interactive">
-    <title> B-DeshiDev : Bangladeshi indie game developer. </title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-</head>
-<body class = "background">
-    <header class = 'top-bar-body'>
-        <ul id="horizontal-list">
-            </li>
-            <li>
-                <a class="clean-hyperlink" href="https://BDeshiDev.github.io">
-                    <span id = 'header-logo' >
-                        B-DeshiDev | <span id = 'side-text'>  </span>
-                    </span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#games-section">
-                    <button class = "top-bar-button"> My Games </button>
-                </a>
-            </li>
-            <li>
-                <a href= "https://bdeshidev.github.io/#contact">
-                    <button class = "top-bar-button"> Contact </button>
-                </a>
-            </li>
-        </ul>
-    </header>
-    <div id = "main-section">
-        <div id = 'about-section'>
-            <h3> Hi. I'm B-DeshiDev.  </h3>
-            <p> I am a Bangladeshi indie game developer. </p>
-            <p> I program games in Unity. </p>
-            <p style="white-space: pre-wrap"> I am also a part of : </p>
-                <a class="clean-hyperlink" href="https://bdeshi-interactive.github.io/">
-                    <img class="inline-logo" src = "https://bdeshi-interactive.github.io/media/bdeshiinteractive%20LOGO.svg">
-                </a>
-        </div>
-        <br>
-
-        <br>
-        <ul id = "games-section">
-            <div class ="section-header">
-                <div>
-                    My Games
-                </div>
+---
+layout: skeleton
+showNavMirai: false
+Title: B-DeshiDev Portfolio
+customScripts: 
+  - 'assets/js/landingPage.js'
+customcss:
+  - 'assets/css/home.css'
+---
+<section class="home typeWriterGroup">
+    <div class="mirai-container">
+            <div class="mirai">
+                <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
+                <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
             </div>
-            <li>
-                <a class="clean-hyperlink"  href="https://bdeshi-interactive.github.io/control-override/" >
-                    <div class="modular-widget">
-                        <img class = 'thumbnail' src="media/Screenshot%20(92.2.0).png" >
-                        <div class = "widget-text">
-                            <h2> Control : Overide </h2>
-                            <p> A Puzzle game where control itself is a power-up. </p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a class="clean-hyperlink"  href="https://b-deshidev.itch.io/" >
-                    <div class="modular-widget">
-                        <div class = "widget-text">
-                            <h2> Want More? </h2>
-                            <p> Visit my itch.io page for game jam entries.  </p>
-                        </div>
-                    </div>
-                </a>
-            </li>
-        </ul>
-        <div id ="contact">
-            <div class = "section-header">
-                <div> Contact </div>
-            </div>
-        </div>
-        <ul id = "contact-list">
-            <li>
-                <a href="https://twitter.com/B_DeshiDev?ref_src=twsrc%5Etfw"  data-show-count="false">
-                    <img src="media/Twitter_Social_Icon_Circle_Color.svg" style= "height: 100%; width: auto" >
-                </a>
-<!--                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>-->
-            </li>
-            <li>
-                <a href="https://github.com/BDeshiDev">
-                    <img src="media/git-icon.svg" style= "height: 100%; width: auto" >
-                </a>
-            </li>
-            <li>
-                <a href="https://b-deshidev.itch.io/">
-                    <img src="media/itch-icon.svg" style= "height: 100%; width: auto">
-                </a>
-            </li>
-        </ul>
     </div>
-
-    <br class = 'end-gap' >
-    <br class = 'end-gap' >
-    <br class = 'end-gap' >
-<!--    <div class = 'home-footer'> B-Deshi Interactive </div>-->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src = "js/textflash.js"> </script>
-</body >
-</html>
+    <h3 class="intro__greeting">
+        <span hidden hold-time="800" char-type-time='30' class ='typeWriter'> Hi,</span>
+        <span hidden hold-time="200"  class ='typeWriter'>I'm</span>
+    </h3>
+    <h3 class="intro__rest">    
+        <strong hidden hold-time="550" char-type-time='80'  class ='typeWriter'>B-DeshiDev</strong>
+        <span hidden  class ='typeWriter'>an </span>
+        <span hidden class = "job-line typeWriter"> Indie Game Developer. </span>
+        <a href="games.html"  role="button">
+            <button hidden class= "cta-button" id='games-button'>My Games</button>
+        </a>
+    </h3>
+</section> 
