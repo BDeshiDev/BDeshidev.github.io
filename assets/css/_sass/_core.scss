@@ -1,7 +1,8 @@
-@use 'config' as *;
-@use 'fonts' as *;
-@use 'fonts' as *;
-@use 'menu' as *;
+@import 'config';
+@import 'fonts';
+@import 'responsive';
+@import 'mirai';
+@import 'menu';
 section{
     padding: 5em, 1em;
 }

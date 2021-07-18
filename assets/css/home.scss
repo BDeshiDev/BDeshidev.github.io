@@ -1,10 +1,7 @@
 ---
 ---
 
-@use 'config' as *;
-@use 'fonts' as *;
-@use 'responsive' as *; 
-@use 'core' as *;
+@import '_sass/core';
 
 .mirai-container{
     grid-column: 2 / 5;

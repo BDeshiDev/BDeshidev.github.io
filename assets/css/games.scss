@@ -1,11 +1,7 @@
 ---
 ---
 
-@use 'core' as *;
-@use 'config' as *;
-@use 'fonts' as *;
-@use 'responsive' as *;
-@use 'responsive' as *;
+@import '_sass/core';
 
 .gamesList{
     display: flex;
