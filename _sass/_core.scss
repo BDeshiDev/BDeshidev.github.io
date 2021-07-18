@@ -16,10 +16,7 @@ body {
 h1{
     @include headerFontSettings(5rem, 4.5rem);
 }
-strong {
-    @include headerFontSettings(5rem, 4.5rem);
-    display: block;
-}
+
 .job-line {
     text-decoration: underline;
     color: $primary;
