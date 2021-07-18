@@ -1,0 +1,8 @@
+
+<div class="socialMedia">
+    {% for social in site.data.contacts.socialMedia %}
+        <a href="{{social.link}}" alt="{{social.name}}" class='socialMedia__Link'>
+            <i class="fab fa-{{social.icon}} fa-2x"></i>.com {{social.previewSideText}}
+        </a>
+    {% endfor %}
+</div>

@@ -78,7 +78,7 @@ main {
 
 
     .mirai {
-        justify-self: auto;
+        justify-self: center;
         // vertical-align: auto;
         position: relative;
         width: auto;
@@ -129,7 +129,7 @@ main {
 
     @include media-lg{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows:  1fr 1fr 4fr;
+        grid-template-rows:  2fr 1fr 8fr;
         .mirai-container{
             // background: blue;
     
@@ -208,9 +208,9 @@ footer {
     font-family: $header-font-family;
     @include transition-ease;
 
-    transform: translateX(-200%);
-    &.revealed {
-        transform: translateX(0);
+    transform: translateX(0);
+    &.hide {
+        transform: translateX(-200%);
     }
 
     &:hover {
@@ -239,9 +239,11 @@ footer {
         padding: .5rem;;
 
 
-        display: inline-flex;
+        display: flex;
         flex-direction: row;
+        // min-width: 600px;
         &__Text{
+            flex: 1;
             display: inline-flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -268,6 +270,7 @@ footer {
             
             font-size: 2.4rem;
             border-bottom: 2px solid $primary;
+            width: auto;
         }
         &__Desc{
             padding-left: .5rem;
@@ -292,7 +295,7 @@ footer {
                 // flex-shrink: 1;
                 // font-variant: ;
                 // height: 100%;
-            vertical-align: middle;
+                vertical-align: middle;
                     
                 padding: 0;   
                 @include transition-ease;
@@ -321,3 +324,50 @@ footer {
         }
     }
 }
+
+.contacts{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .socialMedia {
+        display: flex;
+        flex-direction: column;
+        &__Link {
+            font-size: 2rem;
+            i {
+                font-size: 2rem;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .emContainer {
+        display: flex;
+        flex-direction: row;
+
+        a {
+            padding: 0;
+        }
+        a, .cta-button {
+            margin-left: .5rem;
+        }
+        @include media-sm {
+            flex-direction: column;
+
+            a , .cta-button 
+            {
+                display: block;
+                justify-self: stretch;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        @include media-md {
+            a , .cta-button 
+            {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+

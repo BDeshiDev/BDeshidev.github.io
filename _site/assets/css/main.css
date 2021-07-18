@@ -10760,6 +10760,7 @@ textarea.form-control-lg {
   stroke: #d122e3ff;
   position: absolute;
   display: inline-block;
+  pointer-events: none;
 }
 
 .menu-btn {
@@ -11026,7 +11027,7 @@ main a:hover {
   flex-direction: column;
 }
 .mirai-container .mirai {
-  justify-self: auto;
+  justify-self: center;
   position: relative;
   width: auto;
   height: auto;
@@ -11068,7 +11069,7 @@ main a:hover {
 @media screen and (max-width: 1100px) {
   .home {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-rows: 2fr 1fr 8fr;
   }
   .home .mirai-container {
     grid-column: 1/5;
@@ -11130,10 +11131,10 @@ footer {
   font-size: 3rem;
   font-family: "Jura", sans-serif;
   transition: all 0.33s ease-in-out;
-  transform: translateX(-200%);
-}
-.cta-button.revealed {
   transform: translateX(0);
+}
+.cta-button.hide {
+  transform: translateX(-200%);
 }
 .cta-button:hover {
   background: #d122e3ff;
@@ -11159,10 +11160,11 @@ footer {
   background: #09070b;
   margin-bottom: 2rem;
   padding: 0.5rem;
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
 }
 .gamesList .gameWidget__Text {
+  flex: 1;
   display: inline-flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -11186,6 +11188,7 @@ footer {
   padding-right: 0.5rem;
   font-size: 2.4rem;
   border-bottom: 2px solid #9926f0;
+  width: auto;
 }
 .gamesList .gameWidget__Desc {
   padding-left: 0.5rem;
@@ -11223,6 +11226,50 @@ footer {
     font-size: 2rem;
   }
   .gamesList .gameWidget__Desc {
+    font-size: 1.5rem;
+  }
+}
+
+.contacts {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.contacts .socialMedia {
+  display: flex;
+  flex-direction: column;
+}
+.contacts .socialMedia__Link {
+  font-size: 2rem;
+}
+.contacts .socialMedia__Link i {
+  font-size: 2rem;
+}
+.contacts .socialMedia__Link:hover {
+  text-decoration: underline;
+}
+.contacts .emContainer {
+  display: flex;
+  flex-direction: row;
+}
+.contacts .emContainer a {
+  padding: 0;
+}
+.contacts .emContainer a, .contacts .emContainer .cta-button {
+  margin-left: 0.5rem;
+}
+@media screen and (max-width: 607px) {
+  .contacts .emContainer {
+    flex-direction: column;
+  }
+  .contacts .emContainer a, .contacts .emContainer .cta-button {
+    display: block;
+    justify-self: stretch;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contacts .emContainer a, .contacts .emContainer .cta-button {
     font-size: 1.5rem;
   }
 }
