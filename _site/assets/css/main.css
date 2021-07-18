@@ -11044,7 +11044,7 @@ main a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 2fr;
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 .home .intro {
@@ -11069,7 +11069,7 @@ main a:hover {
 @media screen and (max-width: 1100px) {
   .home {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 8fr;
+    grid-template-rows: 2fr 1fr 4fr;
   }
   .home .mirai-container {
     grid-column: 1/5;

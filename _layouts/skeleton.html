@@ -6,7 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/main.css">
+    {% if page.customcss%}
+        <link rel="stylesheet" href="{{page.customcss}}">    
+    {% else %}
+        <link rel="stylesheet" href="assets/css/main.css">    
+    {% endif %}
     <title>{{ page.title }}</title>
 </head>
 <body>
@@ -16,9 +20,9 @@
                 <a href="games.html" class = "navBar__link disable-sm" role="button">
                     Games
                 </a>
-                <a href="devlogs.html" class = "navBar__link disable-md " role="button">
+                <!-- <a href="devlogs.html" class = "navBar__link disable-md " role="button">
                     Devlogs
-                </a>
+                </a> -->
             </span>
             {% if page.showNavMirai %}
                     <a href="index.html" class="mirai" id="nav-logo">
@@ -33,9 +37,9 @@
       
 
             <span class="navBar__item " id= "right-navBar">
-                <a href="portfolio.html" class = "navBar__link disable-md" role="button">
+                <!-- <a href="portfolio.html" class = "navBar__link disable-md" role="button">
                     Portfolio
-                </a>
+                </a> -->
                 <a href="contact.html" class = "navBar__link disable-sm"" role="button">
                     Contact
                 </a>
@@ -83,14 +87,14 @@
             {{ content }}
         </section>
         <footer>
-            <div class="social-icons">
+            <!-- <div class="social-icons">
                 <a href="#!">
                     <i class="fab fa-twitter fa-2x"></i>
                 </a>
                 <a href="#!">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
-            </div>
+            </div> -->
             &copy; Copyright 2021
         </footer> 
     </main>

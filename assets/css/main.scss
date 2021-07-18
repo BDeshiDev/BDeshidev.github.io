@@ -99,7 +99,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 2fr;
     
-    width: 100%;
+    width: auto;
     height: 100%;
 
     .intro{
@@ -129,7 +129,7 @@ main {
 
     @include media-lg{
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows:  2fr 1fr 8fr;
+        grid-template-rows:  2fr 1fr 4fr;
         .mirai-container{
             // background: blue;
     
