@@ -1,0 +1,94 @@
+@use 'config' as *;
+@use 'fonts' as *;
+@use 'fonts' as *;
+@use 'menu' as *;
+section{
+    padding: 5em, 1em;
+}
+
+body {
+    background-color: $background-color;
+    color: $normal-font-color;
+    height: 100vh;
+    font-family: $normal-font-family;
+    line-height: 1.6;
+}
+h1{
+    @include headerFontSettings(5rem, 4.5rem);
+}
+strong {
+    @include headerFontSettings(5rem, 4.5rem);
+    display: block;
+}
+.job-line {
+    text-decoration: underline;
+    color: $primary;
+}
+
+
+h2 { 
+    @include headerFontSettings(4rem, 3.5rem);
+    font-style: normal; font-size: 4rem;
+}
+h3 { font-style: normal; font-size: 3rem;}
+a {
+    color: $normal-font-color;
+    text-decoration: none;
+}
+
+
+header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    
+    .social-icons {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        
+    }
+
+    a {
+        padding: 0.4rem;
+        @include transition-ease;
+        &:hover{
+            color: $primary;
+        }
+    }     
+}
+
+
+.content {
+    padding-top: 55px;
+    // padding-bottom: 55px;
+}
+
+.cta-button {
+    display: block;
+    background: $primary;
+    border: none;
+    margin-top:  .5rem;
+    padding: .5rem;
+    font-weight: 300;
+    font-size: 3rem;
+    font-family: $header-font-family;
+    @include transition-ease;
+
+    transform: translateX(0);
+    &.hide {
+        transform: translateX(-200%);
+    }
+
+    &:hover {
+        background: $secondary;
+        font-weight: bolder;
+    }
+}
+

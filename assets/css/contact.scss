@@ -1,0 +1,54 @@
+---
+---
+
+@use 'core' as *;
+@use 'config' as *;
+@use 'fonts' as *;
+@use 'responsive' as *;
+
+.contacts{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    .socialMedia {
+        display: flex;
+        flex-direction: column;
+        &__Link {
+            font-size: 2rem;
+            i {
+                font-size: 2rem;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .emContainer {
+        display: flex;
+        flex-direction: row;
+
+        a {
+            padding: 0;
+        }
+        a, .cta-button {
+            margin-left: .5rem;
+        }
+        @include media-sm {
+            flex-direction: column;
+
+            a , .cta-button 
+            {
+                display: block;
+                justify-self: stretch;
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+        @include media-md {
+            a , .cta-button 
+            {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
