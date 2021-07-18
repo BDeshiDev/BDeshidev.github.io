@@ -4,3 +4,5 @@ url: https://bdeshidev.github.io/
 
 include:
   - node_modules/
+  - /node_modules/.bin/autoprefixer
+  - node_modules/.bin/autoprefixer
