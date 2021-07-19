@@ -244,8 +244,6 @@ function getAbsoluteHeight(el) {
   return Math.ceil(el.offsetHeight + margin);
 }
 
-
-
 var mirais = [];
 
 function handleCharTyped(c){

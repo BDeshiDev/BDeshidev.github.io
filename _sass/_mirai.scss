@@ -3,13 +3,13 @@
     position: relative;
 
     &__Teeth, &__Cheek{
-        background: $secondary;
+        background: $primary;
         position: absolute;
         display: inline-block;
     }
     &__Eye{
-        fill: $secondary;
-        stroke: $secondary;
+        fill: $primary;
+        stroke: $primary;
         position: absolute;
         display: inline-block;
         pointer-events: none;

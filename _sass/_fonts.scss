@@ -13,8 +13,6 @@ $header-font-family: 'Raleway', sans-serif;
 // $header-font-family: 'Righteous', cursive;
 $normal-font-family: 'Montserrat',  sans-serif;
 
-
-
 @mixin headerFontSettings($normalSize, $mobileSize) {
     font-family: $header-font-family;
     // font-weight: bold;
@@ -25,4 +23,8 @@ $normal-font-family: 'Montserrat',  sans-serif;
 @mixin textFontSettings {
     font-family: $normal-font-family;
     font-size: 1rem;
+}
+
+.text-bg {
+    color: $text-bg;
 }
