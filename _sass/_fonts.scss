@@ -5,26 +5,27 @@
 // $header-font-family:'Jura',  sans-serif;
 // $normal-font-family: Montserrat,  sans-serif;
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Montserrat&display=swap');
-
-$header-font-family: 'Raleway', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Raleway:wght@200;400&display=swap');
+$normal-font-family: 'Raleway', sans-serif;
 
 // @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Montserrat&display=swap');
 // $header-font-family: 'Righteous', cursive;
-$normal-font-family: 'Montserrat',  sans-serif;
+$header-font-family:'Montserrat',  sans-serif;
 
 @mixin headerFontSettings($normalSize, $mobileSize) {
     font-family: $header-font-family;
-    // font-weight: bold;
+    font-weight: bolder;
     font-size: $normalSize;
     line-height: 1.1;
     margin: 0;
 }
 @mixin textFontSettings {
     font-family: $normal-font-family;
+    font-weight: 500;
     font-size: 1rem;
 }
 
 .text-bg {
-    color: $text-bg;
+    font-family: $normal-font-family;
+    font-weight: 400;
 }
