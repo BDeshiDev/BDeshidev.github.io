@@ -1,0 +1,180 @@
+---
+---
+
+@import 'core';
+
+.gamesList{
+    display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    width: auto;
+    // height: ;
+    flex-direction: column;
+    
+    h2 {
+        @include headerFontSettings(3rem, 3rem);
+        padding-bottom: 1em;
+        @include bg-color-text;
+
+        margin-right: auto;
+        margin-bottom: 2rem;
+        padding-bottom: 0;
+        padding-left: .5rem;
+        padding-right: .5rem;
+
+    }
+    .gameWidget{
+        margin-bottom: 2rem;
+        // margin-right: 2em;
+        // padding-left: .5rem;
+        // padding-right: .5rem;
+        // border: solid  $bg-light-2 1px;
+
+
+        display: flex;
+        flex-direction: row;
+        // min-width: 600px;
+        &__Text{
+            flex: 1;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__Icon{
+            // padding-left: .5rem;
+            // padding-right: .5rem;
+            // border-right: 2px solid $primary;
+            height: 100%;
+            display: flex;
+            align-content: flex-start;
+            // padding: 1em;
+            
+            img {
+                max-width: 100%;
+                height: auto;
+                flex-grow: 1;
+            }
+            background: $bg-light;
+
+        }
+        &__Title{
+            font-family: $header-font-family;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+
+            @include bg-color-text;
+            margin-right: auto;
+            
+            font-size: 2.5rem;
+            width: auto;
+        }
+        &__Desc{
+            padding-left: .5rem;
+            padding-right: .5rem;
+
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            
+            font-size: 1.2rem;
+            border-top: 2px solid $primary;
+            height: auto;
+            flex-grow: 1;
+            background: $bg-light;
+        }
+        &__PlatformsList{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: stretch;
+
+
+            // border-top: 2px solid $primary;
+            // padding-top: 5px;
+            background: $bg-light;
+
+            span{
+               font-size: 2rem;
+                background: $secondary;
+                color: $background-color;
+                font-weight: 400;
+                font-family: $header-font-family;
+                
+                padding-left: .5rem;
+                padding-right: .5rem;
+                text-transform: capitalize;
+            }
+            
+            .IconsList{
+                display: flex;
+                .PlatformLink{
+                    // flex-grow: 1;
+                    // flex-shrink: 1;
+                    // font-variant: ;
+                    // height: 100%;
+                    // margin-top: auto;
+                    // margin-bottom: auto;
+    
+    
+                        
+                    @include transition-ease;
+                    font-size: 3rem;
+                    padding-left: .5rem;
+    
+                    color: white;
+                    &:hover {
+                        // background: $primary;
+                        color: $secondary;
+                    }
+                        
+                    i {
+                        // margin-left: auto;
+                        // margin-right: auto;
+                        display: block;
+                        
+                        height: 100%;
+                    }
+                }
+            }
+            
+            
+
+        }
+        @include media-md{
+            background: $bg-light;
+            flex-direction: column;
+            &__Icon {
+                // max-width: 315px ;
+                border: none;
+            }
+            &__Title {
+                font-size: 1.8rem;
+                margin-right: unset;
+                width: unset;
+                
+            }   
+            &__Desc {
+                font-size: 1.5rem;
+            }
+            &__PlatformsList{
+                display: flex;
+                flex-direction: column;
+                span{
+                   display: block;
+                }
+
+                .IconsList{
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+}

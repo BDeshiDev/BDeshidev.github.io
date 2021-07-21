@@ -1,0 +1,93 @@
+---
+---
+
+@import 'core';
+
+.blog{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas: "pd tt tp"
+                         "sn bd tp"
+                         ".  rt . ";
+    // background: blue;
+    &__Title{
+        grid-area: tt;
+        position: relative;
+        // background: $bg-light;
+        &__Image{
+            // position: absolute;
+            top: 0;
+            bottom: 0;
+            // right: 0;
+            // left: 0;
+
+            background: coral;
+
+            // aspect-ratio: 4/1;
+            min-height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        &__Text{
+            position: absolute;
+            bottom: 0;
+            
+            @include headerFontSettings(2, 1.2);
+            font-size: 3rem;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,.5));
+            padding-left: .5rem;
+            padding-right: .5rem;
+        }
+        // background: red;
+    }
+    &__PublishData{
+        grid-area: pd;
+        // background: red;
+        display: flex;
+        margin-left: auto;
+
+        flex-direction: column-reverse;
+        &__Writer{
+
+            @include headerFontSettings(2, 1.2);
+            @include bg-color-text;
+
+            margin-left: auto;
+            justify-self: auto;
+            margin-bottom: .5rem;
+
+            font-size: 2rem;
+            padding-left: .5rem;
+            padding-right: .25rem;
+
+        }
+
+        &__Date{
+            @include bg-color-text($secondary);
+            margin-bottom: .5rem;
+            margin-left: auto;
+            justify-self: auto;
+
+            padding-left: .5rem;
+            padding-right: .25rem;
+        }
+    }
+    &__Body{
+        grid-area: bd;
+        background: $bg-light;
+        padding: 1rem;
+        // background: red;
+    }
+    &__Related{
+        grid-area: rt;
+    }
+    &__SideNav{
+        grid-area: sn;
+    }
+    &__Topic{
+        grid-area: tp;
+    }
+}

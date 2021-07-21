@@ -176,7 +176,7 @@
             background: $primary;
         }
 
-        &:hover, &;:active {
+        &:hover, &:active {
             @include bg-color-text;
             font-weight: bolder;
          }
