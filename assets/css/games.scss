@@ -74,7 +74,7 @@
             @include bg-color-text;
             margin-right: auto;
             
-            font-size: 2.5rem;
+            font-size: 3rem;
             width: auto;
         }
         &__Desc{
@@ -104,14 +104,16 @@
             background: $bg-light;
 
             span{
-               font-size: 2rem;
+               font-size: 2.5rem;
                 background: $secondary;
                 color: $background-color;
                 font-weight: 400;
                 font-family: $header-font-family;
-                
+                // font-size: 3rem;
                 padding-left: .5rem;
                 padding-right: .5rem;
+                // vertical-align: middle;
+                
                 text-transform: capitalize;
             }
             
@@ -128,7 +130,7 @@
     
                         
                     @include transition-ease;
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                     padding-left: .5rem;
     
                     color: white;
@@ -171,6 +173,8 @@
                 flex-direction: column;
                 span{
                    display: block;
+                font-size: 1.7rem;
+
                 }
 
                 .IconsList{

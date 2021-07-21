@@ -55,7 +55,7 @@ main {
         padding: 0.4rem;
         @include transition-ease;
         &:hover{
-            color: $primary;
+            color: $secondary-dark;
         }
     }     
 }

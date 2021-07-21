@@ -108,9 +108,13 @@
     <script src="{% link /assets/js/typewriter.js %}"></script>
     <script src="{% link /assets/js/navBurger.js %}"></script>
     <script src="{% link /assets/js/mirai.js %}"></script>
+    
 
+    {% for customScript in layout.customScripts %}
+        <script src="/{{customScript}}"></script>
+    {% endfor %}
     {% for customScript in page.customScripts %}
-        <script src="{{customScript}}"></script>
+        <script src="/{{customScript}}"></script>
     {% endfor %}
 </body>
     

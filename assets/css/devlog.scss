@@ -86,6 +86,28 @@
     }
     &__SideNav{
         grid-area: sn;
+
+        &__List {
+            list-style: none;
+            &__Item {
+                
+                &__Anchor{
+                    font-size: 1.6rem;
+                    &::before {
+                        content: '--';
+                    }
+                    &:hover{
+                        @include bg-color-text($secondary);
+                        color: $background-color;
+                    }
+                }
+
+                &__Submenu{
+                    list-style: none;
+                }
+               
+            }
+        }
     }
     &__Topic{
         grid-area: tp;

@@ -20,8 +20,11 @@ customcss:
     </div>
     <div class="blog__Related"></div>
     <nav  class="blog__SideNav">
-    
-          
+        {% include toc.html html=content 
+            class='blog__SideNav__List' 
+            item_class='blog__SideNav__List__Item'
+            anchor_class='blog__SideNav__List__Item__Anchor' 
+            submenu_class='blog__SideNav__List__Item__Submenu'%}
     </nav>
     <div class="blog__Topic">
         {% if page.game %}
