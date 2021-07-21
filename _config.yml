@@ -1,7 +1,7 @@
 sass:
   sass_dir: _sass
   style: compressed
-  implementation: sass-embedded
+  # implementation: sass-embedded
 url: https://bdeshidev.github.io/ 
 
 include:

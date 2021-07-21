@@ -77,10 +77,13 @@ class TypeWriterGroup{
             this.writers[i].reset();
         }
     }
-    async typeText(){
+    async typeText(typeCompletedCallback){
         for(this.curWriterNo = 0;  this.curWriterNo < this.writers.length; this.curWriterNo++){
             await this.writers[this.curWriterNo].typeText();
-        }        
+        }
+        
+        if(typeCompletedCallback)
+            typeCompletedCallback();
     }
     
 
@@ -116,30 +119,30 @@ async function test(writerGroup){
 
 //call this with an optional callback
 // not bothering with with a proper event system for now
-function fetchAndCreateTypeWriters(charTypedCallBack){
-    var elements = document.querySelectorAll('.typeWriterGroup');
-    for (let i=0; i<elements.length; i++) {
-        let children = elements[i].querySelectorAll('.typeWriter');
-        var writerGroup = new TypeWriterGroup();
-        typeWriterGroups[i] = writerGroup;
-        for (let i = 0; i < children.length; i++) {
+function createTypeWriterGroupFromElement(el, charTypedCallBack){
 
-            let c = children[i];
-            let waitTime =  c.getAttribute('hold-time');
-            let charTypeTime =  c.getAttribute('char-type-time');
-            writerGroup.writers[i] = {target: c};
+    var writerGroup = new TypeWriterGroup();
+    typeWriterGroups[typeWriterGroups.length] = writerGroup;
 
-            if(waitTime){
-                waitTime = JSON.parse(waitTime);   
-            }
-            if(charTypeTime){
-                charTypeTime = JSON.parse(charTypeTime);
-            }
-            writerGroup.writers[i] = new TypeWriter(c, charTypeTime, waitTime);
-            writerGroup.writers[i].charTypedCallBack = charTypedCallBack;
+    let children = el.querySelectorAll('.typeWriter');
+    for (let i = 0; i < children.length; i++) {
+
+        let c = children[i];
+        let waitTime =  c.getAttribute('hold-time');
+        let charTypeTime =  c.getAttribute('char-type-time');
+        writerGroup.writers[i] = {target: c};
+
+        if(waitTime){
+            waitTime = JSON.parse(waitTime);   
         }
-        // console.log(i);
-        // test(writerGroup);
-        writerGroup.typeText();
+        if(charTypeTime){
+            charTypeTime = JSON.parse(charTypeTime);
+        }
+        writerGroup.writers[i] = new TypeWriter(c, charTypeTime, waitTime);
+        writerGroup.writers[i].charTypedCallBack = charTypedCallBack;
     }
+    // test(writerGroup);
+    // writerGroup.typeText();
+
+    return writerGroup;
 };

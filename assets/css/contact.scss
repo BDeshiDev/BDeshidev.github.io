@@ -1,10 +1,7 @@
 ---
 ---
 
-@use 'core' as *;
-@use 'config' as *;
-@use 'fonts' as *;
-@use 'responsive' as *;
+@import 'core';
 
 .test{
     font-family: $header-font-family;
