@@ -10,3 +10,7 @@ customcss:
   - 'assets/css/devlog.css'
 ---
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
+# header 1
+## header 1.2
+# header 2
+# header 3

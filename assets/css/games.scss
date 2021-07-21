@@ -11,6 +11,8 @@
     width: auto;
     // height: ;
     flex-direction: column;
+    scroll-margin-top: 2em;
+
     
     h2 {
         @include headerFontSettings(3rem, 3rem);
