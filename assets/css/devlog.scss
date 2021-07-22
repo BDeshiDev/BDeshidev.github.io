@@ -86,16 +86,18 @@
     }
     &__SideNav{
         grid-area: sn;
-
         &__List {
             list-style: none;
             &__Item {
-                
+                border-left: 2px $secondary solid;
+                line-height: 2.4rem;
+    
                 &__Anchor{
+                    border-bottom: 2px $secondary solid;
+                    padding-left: 1rem;
+
                     font-size: 1.6rem;
-                    &::before {
-                        content: '--';
-                    }
+
                     &:hover{
                         @include bg-color-text($secondary);
                         color: $background-color;
