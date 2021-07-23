@@ -87,3 +87,15 @@ main {
     }
 }
 
+
+@mixin adjusted-anchor-settings{
+    // display: block;
+    // position: relative;
+    // top: -55px;
+
+    padding-top: 40px; margin-top: -40px;
+}
+
+.anchor {
+    @include adjusted-anchor-settings();
+}

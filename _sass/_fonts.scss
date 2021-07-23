@@ -38,7 +38,15 @@ $header-font-family:'Montserrat',  sans-serif;
     padding-left: $amount;
     padding-right: $amount;
 }
+@mixin margin-lr($amount:.25rem) {
+    margin-left: $amount;
+    margin-right: $amount;
+}
 
+@mixin margin-tb($amount:.25rem) {
+    margin-top: $amount;
+    margin-bottom: $amount;
+}
 @mixin undo-header-padding {
     margin-block-start: 0;
     margin-block-end: 0;

@@ -3,10 +3,11 @@ let prevAnchor = null;
 $('.blog__SideNav__List').each(
     (index, el)=> {
         var sticky = new Waypoint.Sticky({
-            element:  el
+            element:  el,
+            // wrapper: false,
           }); 
     }
-)
+);
 
 let navHeaders = $('.blog__SideNav__List__Item');
 let cur =0;
@@ -21,10 +22,10 @@ if(headers.length > 0){
         let i =cur;
         let navHeader = navHeaders[i];
         cur++;   
-        if(firstHeader != null){
-            
-        }
-        console.log(el);
+        
+        //this line was changed last session
+        $(el).addClass('anchor');
+
         var sticky = new Waypoint.Inview({
             element: el,
             enter: function(direction) {
