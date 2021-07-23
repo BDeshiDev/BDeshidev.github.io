@@ -104,36 +104,51 @@
                     }
                 }
 
+                &.AnchorStuck{
+
+                    .blog__SideNav__List__Item__Anchor{
+                        @include bg-color-text($secondary);
+                        color: $background-color;
+                    }
+                    // top:0;   
+                    // margin-top: 55px;
+                }
+
                 &__Submenu{
                     list-style: none;
                 }
-               
             }
+            &.stuck {
+                position:fixed;
+                z-index: 1;
+                top:0;
+                margin-top: 55px;
+
+                &__Item {
+
+                    &.AnchorStuck{
+                        position:fixed;
+                    }
+                }
+            }
+            
         }
     }
     &__Topic{
         grid-area: tp;
     }
 }
-.stuck {
-    position:fixed;
-    background: red;
-    z-index: 1;
-    top:0;
-    margin-top: 55px;
-}
+// .stuck {
+//     position:fixed;
+//     background: red;
+//     z-index: 1;
+//     top:0;
+//     margin-top: 55px;
+// }
 
 .sticky-wrapper{
     padding: 0;
     // border-left:  2px $secondary solid;
     
 
-}
-
-.AnchorStuck{
-    position:fixed;
-    @include bg-color-text($secondary);
-    color: $background-color;
-    // top:0;   
-    // margin-top: 55px;
 }
