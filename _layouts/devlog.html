@@ -32,9 +32,12 @@ customScripts:
             submenu_class='blog__SideNav__List__Item__Submenu'%}
     </nav>
     <div class="blog__Topic">
-        {% if page.game %}
-            {{ page.game }}
-        {% endif %}
+        <h4>Game:</h4>
+        {% capture gameName %}{{page.game}}{% endcapture %}
+        {% include gamePreviewByName.html  %}
+
+        
+            
         <div class="blog__Topic__Tags">
             {% for tag in page.tags %}
                 <span class="blog__Topic__Tag">

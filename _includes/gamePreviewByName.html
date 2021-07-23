@@ -1,0 +1,15 @@
+{% assign foundGame = false %}
+{% for game in site.data.games.personal %}
+    {% if game.name == gameName%}
+        {% include gamePreviewWidget.html %}
+        {% assign foundGame = true %}
+    {% endif %}
+{% endfor %}
+{% if foundGame == false %}
+    {% for game in site.data.games.commercial %}
+        {% if game.name == gameName %}
+            {% include gamePreviewWidget.html %}
+            {% assign foundGame = true %}
+        {% endif %}
+    {% endfor %}
+{% endif %}

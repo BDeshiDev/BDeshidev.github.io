@@ -29,3 +29,19 @@ $header-font-family:'Montserrat',  sans-serif;
     font-family: $normal-font-family;
     font-weight: 400;
 }
+@mixin nowrap-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+}
+@mixin pad-lr($amount:.25rem) {
+    padding-left: $amount;
+    padding-right: $amount;
+}
+
+@mixin undo-header-padding {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
