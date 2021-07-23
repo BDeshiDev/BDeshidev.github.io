@@ -91,11 +91,11 @@
             &__Item {
                 border-left: 2px $secondary solid;
                 line-height: 2.4rem;
-    
+
                 &__Anchor{
                     border-bottom: 2px $secondary solid;
                     padding-left: 1rem;
-
+                    
                     font-size: 1.6rem;
 
                     &:hover{
@@ -114,4 +114,26 @@
     &__Topic{
         grid-area: tp;
     }
+}
+.stuck {
+    position:fixed;
+    background: red;
+    z-index: 1;
+    top:0;
+    margin-top: 55px;
+}
+
+.sticky-wrapper{
+    padding: 0;
+    // border-left:  2px $secondary solid;
+    
+
+}
+
+.AnchorStuck{
+    position:fixed;
+    @include bg-color-text($secondary);
+    color: $background-color;
+    // top:0;   
+    // margin-top: 55px;
 }
