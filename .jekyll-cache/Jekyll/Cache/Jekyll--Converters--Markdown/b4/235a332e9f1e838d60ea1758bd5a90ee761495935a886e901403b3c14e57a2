@@ -1,14 +1,4 @@
----
-title: Devlogs are up
-by: B-DeshiDev
-published: true
-layout: devlog
-tags: Jekyll, Sass, WebDev
-headerImage: '/assets/img/Screenshot (92.2.0).png'
-game: 'Control:Override'
-customcss:
-  - 'assets/css/devlog.css'
----
+I"<<p>I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
@@ -33,16 +23,16 @@ I finally decided to update my github page. I needed some place to host all of m
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
-I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
-I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
+I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site.</p>
 
-# header 1
-# header 2
-# header 3
-# header 4
-# header 5
-# header 6
-# header 7
+<h1 id="header-1">header 1</h1>
+<h1 id="header-2">header 2</h1>
+<h1 id="header-3">header 3</h1>
+<h1 id="header-4">header 4</h1>
+<h1 id="header-5">header 5</h1>
+<h1 id="header-6">header 6</h1>
+<h1 id="header-7">header 7</h1>
+<p>I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
@@ -64,5 +54,5 @@ I finally decided to update my github page. I needed some place to host all of m
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
-I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
-I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
+I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site.</p>
+:ET

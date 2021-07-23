@@ -11,8 +11,8 @@ $('.blog__SideNav__List').each(
 let navHeaders = $('.blog__SideNav__List__Item');
 let cur =0;
 
-var firstHeader = null;
 const headers = $(".blog__Body").find(":header");
+let activeNavHeaders = [];
 
 if(headers.length > 0){
     var firstHeader = headers[0];
@@ -27,41 +27,31 @@ if(headers.length > 0){
         console.log(el);
         var sticky = new Waypoint.Inview({
             element: el,
-            entered: function(direction) {
+            enter: function(direction) {
                 // console.log('Entered triggered with direction ' + direction);
-                $(navHeader).addClass('AnchorStuck');
-                if(prevAnchor){
-                    $(prevAnchor).removeClass('AnchorStuck');
+
+                if(direction =='down'){
+                    $(navHeader).addClass('AnchorStuck');
+                    if(prevAnchor){
+                        $(prevAnchor).removeClass('AnchorStuck');
+                    }
+                    prevAnchor = navHeader;
+    
+                    activeNavHeaders[activeNavHeaders.length] = navHeader;
                 }
-                prevAnchor = navHeader;
             },
-            exit: function(direction) {
-                // console.log('Exit triggered with direction ' + direction);
+            exited: function(direction) {
+                // console.log( $(el).text() + 'Exit triggered with direction ' + direction);
 
-                if(el == lastHeader && direction == 'down'){
-                    console.log(direction );
-                    return;
-                }
-
-
-                if(el == firstHeader && direction == 'up'){
-                    console.log(direction );
-                    return;
-                }
-
-                // console.log('unstick')
-                if(el){
-                    $(el).removeClass('AnchorStuck');
-                }
-                if(prevAnchor == el){
-                    prevAnchor = null;
+                if(direction == 'up'){
+                    if(activeNavHeaders.length > 1){
+                        $(activeNavHeaders.pop()).removeClass('AnchorStuck');
+                        prevAnchor = activeNavHeaders[activeNavHeaders.length -1];
+                        $(prevAnchor).addClass('AnchorStuck');
+                    }
                 }
             }
         }); 
     }
     );
-}
-
-function handleWaypointReached(dir){
-    
 }
