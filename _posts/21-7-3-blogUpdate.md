@@ -9,6 +9,7 @@ tags:
   - WebDev
 headerImage: '/assets/img/Screenshot (92.2.0).png'
 game: 'Control:Override'
+comments: true
 customcss:
   - 'assets/css/devlog.css'
 ---

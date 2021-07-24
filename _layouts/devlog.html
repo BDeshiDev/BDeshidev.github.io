@@ -6,11 +6,11 @@ Title: B-DeshiDev
 customcss:
   - 'assets/css/devlog.css'
 customScripts:
+  - 'https://code.jquery.com/jquery-3.6.0.min.js'
   - '/assets/js/externalModules/imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js'
   - '/assets/js/externalModules/imakewebthings-waypoints-34d9f6d/src/shortcuts/sticky.js'
   - '/assets/js/externalModules/imakewebthings-waypoints-34d9f6d/src/shortcuts/inview.js'
   - '/assets/js/devlogTocGenerator.js'
-  - 'https://code.jquery.com/jquery-3.6.0.min.js'
 ---
 <div class='blog'>
     <div class="blog__Title">
@@ -25,7 +25,9 @@ customScripts:
     <div class="blog__Body">
         {{content }}
     </div>
-    <div class="blog__Related"></div>
+    <div class="blog__Related">
+        {% include disqus.html %}
+    </div>
     <nav  class="blog__SideNav">
         {% include toc.html html=content 
             class='blog__SideNav__List' 
@@ -47,6 +49,5 @@ customScripts:
         <h4>Game:</h4>
         {% capture gameName %}{{page.game}}{% endcapture %}
         {% include gamePreviewByName.html  %}  
-
     </div>
 </div>
