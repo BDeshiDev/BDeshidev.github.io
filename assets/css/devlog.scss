@@ -8,7 +8,7 @@
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 1fr auto 1fr;
     grid-template-areas: "pd tt ."
-                         "sn bd tp"
+                         "tp bd sn"
                          ".  rt . ";
     // background: blue;
     &__Title{
@@ -34,6 +34,8 @@
         &__Text{
             position: absolute;
             bottom: 0;
+            width: 100%;
+            text-transform: capitalize; 
             
             @include headerFontSettings(2, 1.2);
             font-size: 3rem;
@@ -48,6 +50,8 @@
         // background: red;
         display: flex;
         margin-left: auto;
+        margin-right: .5rem;
+
 
         flex-direction: column-reverse;
         &__Writer{
@@ -88,45 +92,37 @@
     &__SideNav{
         grid-area: sn;
         // margin-left: auto;
-        width: 100%;
         // margin-right: auto;
 
         &__List {
-            // margin-left: auto;
             list-style: none;
-            // align-items: flex-end;
-            width: auto;
             @include undo-header-padding;
-            padding-inline-start: .5rem;
+            border-left: 4px $secondary solid;
+            padding-inline-start: 8px;
 
-
-            display: flex;
-            flex-direction: column;
             &::before{
                 content: 'Jump()';
                 @include headerFontSettings(1.8rem, 1.8rem);
                 @include bg-color-text($secondary);
+                @include pad-lr;
                 line-height: 2.4rem;
-                border-left: 2px $secondary solid;
-                border-bottom: 2px $secondary solid;
-                display: block;
-                width: auto;
+                border-bottom: 2px $secondary solid;  
+                font-weight: bold;                              
             }
             &__Item {
-                border-left: 2px $secondary solid;
                 line-height: 2.6rem;
                 text-overflow: ellipsis;
-
+                
                 &__Anchor{
-                    border-bottom: 2px $secondary solid;
-                    
                     font-size: 1.8rem;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
+                    text-transform: capitalize;
                     &:hover{
                         @include bg-color-text($secondary);
                         color: $background-color;
+                        font-weight: 900;
                     }
                 }
 
@@ -134,6 +130,7 @@
 
                     .blog__SideNav__List__Item__Anchor{
                         @include bg-color-text($secondary);
+                        font-weight: 900;
                         color: $background-color;
                     }
                     // top:0;   
@@ -164,22 +161,30 @@
         grid-area: tp;
         margin-right: .5rem;
         margin-left: .5rem;
+        justify-self: right;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        justify-content: right;
         h4{
             font-size: 1.5rem;
             @include bg-color-text;
             @include undo-header-padding;
             @include pad-lr;
-            display: inline;
-            
-            margin-right: auto;
+            margin-left: auto;
         }
 
         .gamePreviewWidget {
             // background: $bg-light;
+            display: flex;
             flex-direction: column;
+            // justify-content: right;
             // width: 300px;
             // justify-content: stretch;
+            
             &__Icon {
+                margin-top: .5rem;
+
                 height: 100%;
                 display: flex;
                 align-content: flex-start;
@@ -201,32 +206,35 @@
             }
             &__Title {
                 font-family: $header-font-family;
+                display: inline;
+                font-size: 1.8rem;
+                @include undo-header-padding;
+                // @include nowrap-text;
+                @include bg-color-text;
+                padding: .25rem;
 
+                margin-top: .5rem;                
+                margin-left: auto;
                 
-                margin-block-start: 0;
-                margin-block-end: 0;
-                margin-inline-start: 0px;
-                margin-inline-end: 0px;
-
-
-                @include nowrap-text;
+                justify-self: right;
                 
                 span {
                     padding-left: .5rem;
                     padding-right: .5rem;
                     @include bg-color-text;
-                    margin-right: auto;
-                    justify-self: left;
+                    margin-left: auto;
+                    justify-self: right;
                     
                     font-size: 1.8rem;
                 }
-                width: auto;
                 
             }   
             &__Desc {
                 font-size: 1.5rem;
             }
             &__PlatformsList{
+                margin-top: .5rem;
+                margin-left: auto;
                 display: flex;
                 flex-direction: column;
                 span{
@@ -240,6 +248,7 @@
         
                 .IconsList{
                     display: inline-flex;
+                    flex-direction: row-reverse;
                     a {
                         font-size: 1.6rem;
                     }
@@ -247,15 +256,19 @@
             }
         }
         &__Tags{
-            padding: .25rem;
-            padding-left: 0;
+            padding: .5rem;
+            padding-right: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: right;
+            flex-direction: row-reverse;
         }
 
         &__Tag{
             @include pad-lr(.25rem);
             // @include margin-tb(5rem);
             @include bg-color-text($secondary);
-            margin-right: .25rem;
+            margin-left: .25rem;
         }
     }
 }

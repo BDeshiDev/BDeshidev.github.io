@@ -1,7 +1,7 @@
 <div class="gamePreviewWidget">
     <h3 class="gamePreviewWidget__Title"><span>{{game.name}}</span></h3>
     <div class="gamePreviewWidget__Icon">
-        <a href="{% link games.html %}">
+        <a href="{% link games.html %}#{{ game.name | url_encode}}">
             <img src="{{ game.icon }}" alt="{{ game.name }} icon">
         </a>
     </div>
