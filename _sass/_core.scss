@@ -10,9 +10,14 @@ section{
 body {
     background-color: $background-color;
     color: $normal-font-color;
-    height: 100vh;
+    // height: 100vh;
     font-family: $normal-font-family;
-    line-height: 1.6;
+    // line-height: 1.6;
+    width: auto;
+    height: auto;
+
+    // justify-self: auto;
+    margin: auto;
 }
 h1{
     @include headerFontSettings(5rem, 4.5rem);
@@ -36,9 +41,9 @@ header {
 }
 
 main {
-    height: 100%;
-    width: 100%;
-    
+    // height: 100%;
+    // width: 100%;
+
     .social-icons {
         position: fixed;
         bottom: 1rem;
@@ -50,7 +55,7 @@ main {
         padding: 0.4rem;
         @include transition-ease;
         &:hover{
-            color: $primary;
+            color: $secondary-dark;
         }
     }     
 }
@@ -58,6 +63,7 @@ main {
 
 .content {
     padding-top: 55px;
+
     // padding-bottom: 55px;
 }
 
@@ -82,3 +88,15 @@ main {
     }
 }
 
+
+@mixin adjusted-anchor-settings{
+    // display: block;
+    // position: relative;
+    // top: -55px;
+
+    padding-top: 40px; margin-top: -40px;
+}
+
+.anchor {
+    @include adjusted-anchor-settings();
+}

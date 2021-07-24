@@ -1,4 +1,5 @@
 <div class="gameWidget">
+    <a href= "#{{ game.name  | url_encode}}" class='anchor'></a>
     <div class="gameWidget__Icon">
         <img src="{{ game.icon }}" alt="{{ game.name }} icon">
     </div>
@@ -7,16 +8,20 @@
         <p class="gameWidget__Desc">{{game.desc}}</p>
         
         <span class="gameWidget__PlatformsList">
-            {% if game.steam %}
-                <a href="{{game.steam}}" class="PlatformLink">
-                    <i class="fab fa-steam"></i>
-                </a>
-            {% endif %}
-            {% if game.itch %}
-                <a href="{{game.itch}}" class="PlatformLink">
-                    <i class="fab fa-itch-io"></i>
-                </a>
-            {% endif %}
+            <span>Available on:</span>
+
+            <div class="IconsList">
+                {% if game.steam %}
+                    <a href="{{game.steam}}" class="PlatformLink">
+                        <i class="fab fa-steam"></i>
+                    </a>
+                {% endif %}
+                {% if game.itch %}
+                    <a href="{{game.itch}}" class="PlatformLink">
+                        <i class="fab fa-itch-io"></i>
+                    </a>
+                {% endif %}
+            </div>
         </span>
     </div>
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% if page.customcss%}
-        <link rel="stylesheet" href="{{page.customcss}}">        
+        <link rel="stylesheet" href="/{{page.customcss}}">        
     {% endif %}
     <title>{{ page.title }}</title>
 </head>
@@ -15,15 +15,15 @@
     <header>
         <div class="navBar">
             <span class="navBar__item">
-                <a href="games.html" class = "navBar__link disable-sm" role="button">
+                <a href="/games.html" class = "navBar__link disable-sm" role="button">
                     Games
                 </a>
-                <!-- <a href="devlogs.html" class = "navBar__link disable-md " role="button">
+                <!-- <a href="/devlogs.html" class = "navBar__link disable-md " role="button">
                     Devlogs
                 </a> -->
             </span>
             {% if page.showNavMirai %}
-                    <a href="index.html" class="mirai" id="nav-logo">
+                    <a href="/index.html" class="mirai" id="nav-logo">
                         <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
                         <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
                     </a>
@@ -35,10 +35,10 @@
       
 
             <span class="navBar__item " id= "right-navBar">
-                <!-- <a href="portfolio.html" class = "navBar__link disable-md" role="button">
+                <!-- <a href="/portfolio.html" class = "navBar__link disable-md" role="button">
                     Portfolio
                 </a> -->
-                <a href="contact.html" class = "navBar__link disable-sm"" role="button">
+                <a href="/contact.html" class = "navBar__link disable-sm"" role="button">
                     Contact
                 </a>
                 <div class="menu-btn">
@@ -54,27 +54,27 @@
         <nav class ="burger-nav">
             <ul class="burger-menu-nav">
                 <li class="burger-menu-nav__item">
-                    <a href="index.html" class = "burger-menu-nav__link active" role="button">
+                    <a href="/index.html" class = "burger-menu-nav__link active" role="button">
                         Home
                     </a>
                 </li>
                 <li class="burger-menu-nav__item">
-                    <a href="games.html" class = "burger-menu-nav__link" role="button">
+                    <a href="/games.html" class = "burger-menu-nav__link" role="button">
                         Games
                     </a>
                 </li>
                 <li class="burger-menu-nav__item">
-                    <a href="devlogs.html" class = "burger-menu-nav__link" role="button">
+                    <a href="/devlogs.html" class = "burger-menu-nav__link" role="button">
                         Devlogs
                     </a>
                 </li>
                 <li class="burger-menu-nav__item">
-                    <a href="portfolio.html" class = "burger-menu-nav__link" role="button">
+                    <a href="/portfolio.html" class = "burger-menu-nav__link" role="button">
                         Portfolio
                     </a>
                 </li>
                 <li class="burger-menu-nav__item">
-                    <a href="contact.html" class = "burger-menu-nav__link" role="button">
+                    <a href="/contact.html" class = "burger-menu-nav__link" role="button">
                         Contact
                     </a>
                 </li>
@@ -99,10 +99,15 @@
         <!-- &copy; Copyright 2021 -->
     </footer> 
     <script src="https://kit.fontawesome.com/4821939044.js" ></script>
-    <script src="assets/js/externalModules/anime.min.js"></script>
-    <script src="assets/js/typewriter.js" ></script>
-    <script src="assets/js/navBurger.js" ></script>
-    <script src="assets/js/mirai.js"></script>
+    <script src="{% link /assets/js/externalModules/anime.min.js %}"></script>
+    <script src="{% link /assets/js/typewriter.js %}"></script>
+    <script src="{% link /assets/js/navBurger.js %}"></script>
+    <script src="{% link /assets/js/mirai.js %}"></script>
+    
+
+    {% for customScript in layout.customScripts %}
+        <script src="{{customScript}}"></script>
+    {% endfor %}
     {% for customScript in page.customScripts %}
         <script src="{{customScript}}"></script>
     {% endfor %}

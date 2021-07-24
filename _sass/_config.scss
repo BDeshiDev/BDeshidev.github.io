@@ -1,25 +1,21 @@
-// $purple-dark:  #9926f0;
-// $purple-light:  #BB6EF5;
-// $pink:    #d122e3ff;
 
-// $header-font-color: white;
-// $normal-font-color:   #d8d8d8;
-//$background-color:  rgb(4, 3, 5);
-// 
 $purple-dark:  #D83f87;
 $purple-light:  #BB6EF5;
 $pink:    #d122e3ff;
 
 $header-font-color: white;
-$normal-font-color:   #d8d8d8;
+$normal-font-color:   white;
 
-$primary:       #9c27b0;
-$primary-dark:  #7200ca;
-$secondary:     #ffc107;
-$secondary-dark:     #ff9800;
+$primary-dark: #7200ca;
+$primary:  #aa00ff;
+$secondary-dark:     #ffc107;
+$secondary:     #ff9800;
 
-$background-color:  rgb(4, 3, 5);
-$text-bg:#a4a8af;
+
+$background-color:  #030303;
+$bg-light: #0a0b0c;
+$bg-light-2: #2a2a2b;
+
 
 @mixin transition-ease {
     transition: all .33s ease-in-out;
@@ -29,5 +25,15 @@ a {
     // color: $normal-font-color;
     color: $secondary;
     text-decoration: none;
+}
+
+@mixin bg-color-text ($bg-col: $primary){
+    color: $background-color;
+    background: $bg-col;
+}
+
+@mixin bg-color-text-white ($bg-col: $primary){
+    color: white;
+    background: $bg-col;
 }
 

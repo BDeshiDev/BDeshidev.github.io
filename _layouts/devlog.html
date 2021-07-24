@@ -1,0 +1,52 @@
+---
+layout: skeleton
+showNavMirai: true
+comments: true
+Title: B-DeshiDev 
+customcss:
+  - 'assets/css/devlog.css'
+customScripts:
+  - '/assets/js/externalModules/imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js'
+  - '/assets/js/externalModules/imakewebthings-waypoints-34d9f6d/src/shortcuts/sticky.js'
+  - '/assets/js/externalModules/imakewebthings-waypoints-34d9f6d/src/shortcuts/inview.js'
+  - '/assets/js/devlogTocGenerator.js'
+  - 'https://code.jquery.com/jquery-3.6.0.min.js'
+---
+<div class='blog'>
+    <div class="blog__Title">
+        <img src="{{page.headerImage}}" alt="" srcset="" class="blog__Title__Image">
+        <h1 class="blog__Title__Text">{{page.title}}</h1>
+    </div>
+    <div class="blog__PublishData">
+        <div class="blog__PublishData__Date">{{page.date}}</div>
+        <h3 class="blog__PublishData__Writer">{{page.by}}</h3>
+
+    </div>
+    <div class="blog__Body">
+        {{content }}
+    </div>
+    <div class="blog__Related"></div>
+    <nav  class="blog__SideNav">
+        {% include toc.html html=content 
+            class='blog__SideNav__List' 
+            item_class='blog__SideNav__List__Item'
+            anchor_class='blog__SideNav__List__Item__Anchor' 
+            submenu_class='blog__SideNav__List__Item__Submenu'%}
+    </nav>
+    <div class="blog__Topic">
+        <h4>Tags:</h4>          
+        <div class="blog__Topic__Tags">
+            {% for tag in page.tags %}
+                <span class="blog__Topic__Tag">
+                    {{tag}}
+                </span>
+            {% endfor %}
+        </div>
+        <br>
+
+        <h4>Game:</h4>
+        {% capture gameName %}{{page.game}}{% endcapture %}
+        {% include gamePreviewByName.html  %}  
+
+    </div>
+</div>
