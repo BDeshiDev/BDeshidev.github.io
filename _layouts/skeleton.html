@@ -98,11 +98,6 @@
         </div> -->
         <!-- &copy; Copyright 2021 -->
     </footer> 
-    <!-- <script src="https://kit.fontawesome.com/4821939044.js" ></script>
-    <script src="assets/js/externalModules/anime.min.js"></script>
-    <script src="assets/js/typewriter.js" ></script>
-    <script src="assets/js/navBurger.js" ></script>
-    <script src="assets/js/mirai.js"></script> -->
     <script src="https://kit.fontawesome.com/4821939044.js" ></script>
     <script src="{% link /assets/js/externalModules/anime.min.js %}"></script>
     <script src="{% link /assets/js/typewriter.js %}"></script>
@@ -111,10 +106,10 @@
     
 
     {% for customScript in layout.customScripts %}
-        <script src="/{{customScript}}"></script>
+        <script src="{{customScript}}"></script>
     {% endfor %}
     {% for customScript in page.customScripts %}
-        <script src="/{{customScript}}"></script>
+        <script src="{{customScript}}"></script>
     {% endfor %}
 </body>
     
