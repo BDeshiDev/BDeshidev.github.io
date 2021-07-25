@@ -1,3 +1,5 @@
+
+
 let prevAnchor = null;
 
 $('.blog__SideNav__List').each(
@@ -8,7 +10,7 @@ $('.blog__SideNav__List').each(
           }); 
     }
 );
-
+// 
 let navHeaders = $('.blog__SideNav__List__Item');
 let cur =0;
 
@@ -56,3 +58,31 @@ if(headers.length > 0){
     }
     );
 }
+class SimpleToggleMenu{
+    constructor(container, btn){
+        this.ogText = topicButton.textContent;
+        this.container = container;
+
+    }
+}
+const topicButton = document.querySelector('#topicButton');
+
+
+const openTarget = $('.blog__Topic')
+                    .add('.blog__Topic__Container')
+                    .add('#topicButton');
+console.log(topicButton);
+let ogText = topicButton.innerText ;
+let isTopicBarToggled = false;
+topicButton.addEventListener('click', () => {
+    if(isTopicBarToggled){
+        $(openTarget).removeClass('open');
+        topicButton.innerText = ogText;
+    }else{
+        topicButton.innerText = 'X';
+        $(openTarget).addClass('open');
+        
+    }
+    console.log( topicButton.innerText);
+    isTopicBarToggled = !isTopicBarToggled;
+})

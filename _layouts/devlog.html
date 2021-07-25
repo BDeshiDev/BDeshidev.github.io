@@ -25,7 +25,17 @@ customScripts:
     <div class="blog__Body">
         {{content }}
     </div>
-    <div class="blog__Related">
+    <div class="blog__Bottom">
+        <h4>Tags:</h4>          
+        <div class="blog__Bottom__Tags">
+            {% for tag in page.tags %}
+                <span class="blog__Bottom__Tag">
+                    {{tag}}
+                </span>
+            {% endfor %}
+
+        </div>
+        <br>
         {% include disqus.html %}
     </div>
     <nav  class="blog__SideNav">
@@ -36,18 +46,16 @@ customScripts:
             submenu_class='blog__SideNav__List__Item__Submenu'%}
     </nav>
     <div class="blog__Topic">
-        <h4>Tags:</h4>          
-        <div class="blog__Topic__Tags">
-            {% for tag in page.tags %}
-                <span class="blog__Topic__Tag">
-                    {{tag}}
-                </span>
-            {% endfor %}
-        </div>
-        <br>
+        {% if page.game %}
+            <button class="cta-button blog__Topic__ToggleButton" id = "topicButton">
+            Game:
+            </button>
+            <div class="blog__Topic__Container">
+                <!-- <h4>Game:</h4> -->
+                {% capture gameName %}{{page.game}}{% endcapture %}
+                {% include gamePreviewByName.html  %}
+            </div> 
+        {% endif %}
 
-        <h4>Game:</h4>
-        {% capture gameName %}{{page.game}}{% endcapture %}
-        {% include gamePreviewByName.html  %}  
     </div>
 </div>
