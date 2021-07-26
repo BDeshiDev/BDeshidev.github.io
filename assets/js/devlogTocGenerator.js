@@ -59,30 +59,39 @@ if(headers.length > 0){
     );
 }
 class SimpleToggleMenu{
-    constructor(container, btn){
-        this.ogText = topicButton.textContent;
-        this.container = container;
-
+    constructor(openButton, openTarget){
+        this.openButton = openButton;
+        this.openTarget = openTarget;
+        this.ogText = openButton.textContent.trim();
+        this.isMenuToggled = false;
+        this.openButton.addEventListener('click', () => {
+            if(this.isMenuToggled){
+                $(this.openTarget).removeClass('open');
+                this.openButton.innerText = this.ogText;
+            }else{
+                this.openButton.innerText = 'X';
+                $(this.openTarget).addClass('open');
+                
+            }
+            this.isMenuToggled = !this.isMenuToggled;
+        })
     }
 }
-const topicButton = document.querySelector('#topicButton');
-
-
-const openTarget = $('.blog__Topic')
+let openButton = document.querySelector('#topicToggleButton');
+let openTarget = $('.blog__Topic')
                     .add('.blog__Topic__Container')
-                    .add('#topicButton');
-console.log(topicButton);
-let ogText = topicButton.innerText ;
-let isTopicBarToggled = false;
-topicButton.addEventListener('click', () => {
-    if(isTopicBarToggled){
-        $(openTarget).removeClass('open');
-        topicButton.innerText = ogText;
-    }else{
-        topicButton.innerText = 'X';
-        $(openTarget).addClass('open');
-        
-    }
-    console.log( topicButton.innerText);
-    isTopicBarToggled = !isTopicBarToggled;
-})
+                    .add('#topicToggleButton');
+
+if(openButton && openTarget){
+    var topicToggleMenu = new SimpleToggleMenu(openButton, openTarget);
+}
+
+
+openButton = document.querySelector('#sideNavToggleButton');
+openTarget = $('.blog__SideNav')
+                    .add('.blog__SideNav__Container')
+                    .add('#sideNavToggleButton');
+
+if(openButton && openTarget && headers.length > 0){
+    var topicToggleMenu = new SimpleToggleMenu(openButton, openTarget);
+}

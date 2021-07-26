@@ -14,21 +14,16 @@
     &__Title{
         grid-area: tt;
         position: relative;
-        // background: $bg-light;
-        &__Image{
-            // position: absolute;
+        div{//image container
+            height: 100%;
             width: 100%;
-            top: 0;
-            bottom: 0;
-            // right: 0;
-            // left: 0;
-
-            background: coral;
-
-            // aspect-ratio: 4/1;
+            display: flex;
+            flex-direction: column-reverse;   
+        }
+        &__Image{
+            width: 100%;
             min-height: 100px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-top: auto;
             display: block;
         }
 
@@ -89,6 +84,7 @@
         .anchor {
             word-wrap: break-word;
             white-space: pre-line;
+            @include headerFontSettings(3rem,2rem);
         }
     }
     &__Bottom{
@@ -120,12 +116,16 @@
     }
     &__SideNav{
         grid-area: sn;
-        // margin-left: auto;
-        // margin-right: auto;
 
         .sticky-wrapper{
             display: flex;
         }
+
+
+        &__ToggleButton{
+            display: none;
+        }
+
 
         &__List {
             list-style: none;
@@ -331,41 +331,105 @@
         }
         &__SideNav{
             position: fixed;
+            height: 100%;
+            margin-top: -.5rem;
             right: 0;
-        }
-        &__Topic{
-            margin-left: -.5rem;
+            display: flex;
+            flex-direction: column;   
+            max-width: 100%;
+
 
             &__ToggleButton{
                 display: inline;
                 font-size: 1.5rem;
-                @include pad-lr(1rem);
+                padding: .5rem;
+                margin-top: 0;
+                margin-left: auto;
+                margin-right: 0;
+                justify-self: right;
+
+                &.open{
+                    color: $secondary;
+                    background: none;
+                    margin-right: auto;
+                    margin-left: 0;
+
+                    border-left: $secondary solid 4px;
+
+
+                }
+            }
+            &__List{
+                
+                &.stuck{
+                    position: unset;
+                    z-index: unset;
+                    top: unset;
+                    margin-top: unset;
+                }
+            }
+
+
+
+            &__Container{
+                margin-left: auto;
+                height: 100%;
+                display: none;
+                opacity: 0;
+                &.open{
+                    opacity: 1;
+                    display: unset; 
+                }
+            }
+
+
+            &.open{
+                background: rgba($color: $bg-light, $alpha: .8);                
+            }
+
+        }
+        &__Topic{
+            margin-left: -.5rem;
+            position: fixed;
+            height: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            
+            
+            &__ToggleButton{
+                display: inline;
+                font-size: 1.5rem;
+                padding: .5rem;
                 margin-top: 0;
                 margin-right: auto;
                 margin-left: 0;
+
+                justify-self: left;
 
                 &.open{
                     color: $primary;
                     background: none;
                     margin-left: auto;
                     margin-right: 0;
-
                 }
             }
 
-            position: fixed;
-            height: 100%;
 
             &__Container{
                 height: 100%;
-                visibility: hidden;
+                display: none;
+                opacity: 0;
                 &.open{
-                    visibility: visible;
+                    opacity: 1;
+                    display: unset; 
                 }
             }
 
 
             &.open{
+                z-index: 2;     
                 background: rgba($color: $bg-light, $alpha: .8);                
             }
         }

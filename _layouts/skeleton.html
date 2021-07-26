@@ -22,10 +22,10 @@
                     Devlogs
                 </a> -->
             </span>
-            {% if page.showNavMirai %}
+            {% if page.showNavMirai or layout.showNavMirai %}
                     <a href="/index.html" class="mirai" id="nav-logo">
-                        <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
-                        <object type="image/svg+xml" data="assets/img/eyes-open.svg" class = "mirai__Eye"></object>
+                        <object type="image/svg+xml" data="/assets/img/eyes-open.svg" class = "mirai__Eye"></object>
+                        <object type="image/svg+xml" data="/assets/img/eyes-open.svg" class = "mirai__Eye"></object>
                     </a>
             {% else %}
                 <span >
@@ -99,10 +99,10 @@
         <!-- &copy; Copyright 2021 -->
     </footer> 
     <script src="https://kit.fontawesome.com/4821939044.js" ></script>
-    <script src="{% link /assets/js/externalModules/anime.min.js %}"></script>
-    <script src="{% link /assets/js/typewriter.js %}"></script>
-    <script src="{% link /assets/js/navBurger.js %}"></script>
-    <script src="{% link /assets/js/mirai.js %}"></script>
+    <script src="/assets/js/externalModules/anime.min.js"></script>
+    <script src="/assets/js/typewriter.js"></script>
+    <script src="/assets/js/navBurger.js"></script>
+    <script src="/assets/js/mirai.js"></script>
     
 
     {% for customScript in layout.customScripts %}
