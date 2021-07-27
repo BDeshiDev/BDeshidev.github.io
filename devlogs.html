@@ -1,24 +1,31 @@
 ---
 layout: skeleton
 showNavMirai: true
-Title: B-DeshiDev 
+Title: B-DeshiDev
+testlogs:
+  - title: 'uploading consciousness to cyberspace'
+    previewImage: '/assets/img/gifs/UPLOADING_CONSCIOUSNESS_TO_CYBERSPACE.gif'
+    description: 'just your average neighbourhood cyberghost'
+  - title: 'uploading consciousness to cyberspace'
+    previewImage: '/assets/img/gifs/UPLOADING_CONSCIOUSNESS_TO_CYBERSPACE.gif'
+    description: 'just your average neighbourhood cyberghost'
 customcss:
-  - 'assets/css/contact.css'
+  - 'assets/css/devlogs.css'
 ---
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<ul>
-  
-  
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
+<h1>The Creative Process.</h1>
 
-</ul>
+  <div class="devlogsPreview">
+
+
+     
+    {% for devlog in site.posts %}
+        <a href="{{ post.url }}">
+          {% include devlogPreviewWidget.html  %}
+        </a>
+    {% endfor %}
+         
+
+  </div>
+ 
+
+

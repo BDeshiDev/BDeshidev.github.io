@@ -15,9 +15,14 @@ body {
     // line-height: 1.6;
     width: auto;
     height: auto;
-
+    display: flex;
+    flex-direction: column;
     // justify-self: auto;
-    margin: auto;
+    // margin: auto;
+    @include media-xsm{
+        flex-direction: row;
+
+    }
 }
 h1{
     @include headerFontSettings(5rem, 4.5rem);
