@@ -74,10 +74,11 @@
             @include bg-color-text;
             margin-right: auto;
             
-            font-size: 3rem;
+            font-size: 2.5rem;
             width: auto;
         }
         &__Desc{
+            color: $body-font-color;
             padding-left: .5rem;
             padding-right: .5rem;
 

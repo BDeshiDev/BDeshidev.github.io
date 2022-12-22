@@ -4,9 +4,10 @@ showNavMirai: true
 Title: B-DeshiDev 
 customcss:
   - 'assets/css/games.css'
+resumePDF: 
 ---
 
-<ul class='gamesList'>
+<!-- <ul class='gamesList'>
     <h2>Commercial:</h2>
     {% for game in site.data.games.commercial %}
         {% include gameWidget.html %}
@@ -15,9 +16,15 @@ customcss:
 <ul class='gamesList'>
     <h2>Personal:</h2>
     {% for game in site.data.games.personal %}
-        {% unless game.isPrototype %}
-            {% include gameWidget.html %}
-        {% endunless %}
-
+        {% include gameWidget.html %}
     {% endfor %}
 </ul>
+dfdfdfdfd -->
+
+
+<a href="/assets/downloadable/B_DeshiDev_Resume.pdf" target="_blank">
+    <button class="cta-button">
+        <i class="fa fa-file-pdf" aria-hidden="true"></i>
+        <span> Resume </span>
+    </button>
+</a>

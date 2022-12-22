@@ -72,9 +72,9 @@
 
         &__Date{
             color: $secondary-font-color;
-            margin-bottom: .5rem;
-            margin-left: auto;
-            justify-self: auto;
+            // margin-bottom: .5rem;
+            // margin-left: auto;
+            // justify-self: auto;
 
             padding-left: .5rem;
             padding-right: .25rem;
@@ -87,8 +87,9 @@
         padding: 1rem;
         font-size: 1.2rem;
         // background: red;
-
         .anchor {
+            color: $header-font-color;
+
             word-wrap: break-word;
             white-space: pre-line;
             @include headerFontSettings(3rem,1.6rem);
@@ -263,7 +264,7 @@
             &__Title {
                 font-family: $header-font-family;
                 display: inline;
-                font-size: 1.8rem;
+                font-size: 1.2rem;
                 @include undo-header-padding;
                 // @include nowrap-text;
                 @include bg-color-text;
@@ -326,15 +327,15 @@
             flex-direction: column;
             margin-left: 0;
 
-            &__Writer{
-                margin-left: 0;
-                margin-right: auto;    
-            }
+            // &__Writer{
+            //     margin-left: 0;
+            //     margin-right: auto;    
+            // }
     
-            &__Date{
-                margin-left: 0;
-                margin-right: auto;    
-            }
+            // &__Date{
+            //     margin-right: 0;
+            //     margin-right: auto;    
+            // }
         }
         &__Bottom{
             display: flex;
@@ -454,7 +455,7 @@
         }
         &__Title {
             &__Text{
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
         }
     }

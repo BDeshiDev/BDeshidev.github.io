@@ -14,4 +14,4 @@ comments: true
 customcss:
   - 'assets/css/devlog.css'
 ---
-Just your average neighbourhood cyberghost
+Testing GIF embeds
