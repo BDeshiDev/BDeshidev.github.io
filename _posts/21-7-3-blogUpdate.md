@@ -22,5 +22,5 @@ The sidebar on the right catches all headers in the blog text and updates as you
 # header 4
 # header 5
 # header 6
-# header 7 7r 7 7r 7 7r 7 7r 7 7r 7 7r 7 7r 7 7r 7 7r 7 7r 7 7r 7 7r 7 7r 7 7
-Will need to transform this to a mobile layout though.
+# header 7 will intentionally overflow the header bar
+Works for mobile too

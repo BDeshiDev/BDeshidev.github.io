@@ -71,23 +71,25 @@
         }
 
         &__Date{
-            @include bg-color-text($secondary);
-            margin-bottom: .5rem;
-            margin-left: auto;
-            justify-self: auto;
+            color: $secondary-font-color;
+            // margin-bottom: .5rem;
+            // margin-left: auto;
+            // justify-self: auto;
 
             padding-left: .5rem;
             padding-right: .25rem;
         }
     }
     &__Body{
+        color: $body-font-color;
         grid-area: bd;
         background: $bg-light;
         padding: 1rem;
         font-size: 1.2rem;
         // background: red;
-
         .anchor {
+            color: $header-font-color;
+
             word-wrap: break-word;
             white-space: pre-line;
             @include headerFontSettings(3rem,1.6rem);
@@ -98,13 +100,14 @@
         padding-top: .5rem;
         h4{
             font-size: 1.5rem;
-            @include bg-color-text;
+            color: $header-font-color;
             @include undo-header-padding;
             @include pad-lr;
             margin-right: auto;
             display: inline;
         }
         &__Tags{
+            color: $primary;
             padding-top: .5rem;
             padding-bottom: .5rem;
             display: flex;
@@ -113,11 +116,11 @@
         }
 
         &__Tag{
-            @include pad-lr(.25rem);
+            padding: .5rem;
             // @include margin-tb(5rem);
             @include bg-color-text($secondary);
-            margin-right: .25rem;
-            margin-bottom: .25rem;
+            margin-right: .5rem;
+            font-weight: bold;
         }
     }
     &__SideNav{
@@ -261,12 +264,12 @@
             &__Title {
                 font-family: $header-font-family;
                 display: inline;
-                font-size: 1.8rem;
+                font-size: 1.2rem;
                 @include undo-header-padding;
                 // @include nowrap-text;
                 @include bg-color-text;
                 // padding-left: .25rem;
-
+                color: $header-font-color;
                 margin-top: .5rem;                
                 margin-left: auto;
                 
@@ -292,7 +295,8 @@
                 display: flex;
                 flex-direction: column;
                 span{
-                    @include bg-color-text($secondary);
+                    // @include bg-color-text($secondary);
+                    color: $header-font-color; 
                     @include headerFontSettings(1.5rem,1.5rem);
                     display: block;
                     padding-left: .25rem;
@@ -323,15 +327,15 @@
             flex-direction: column;
             margin-left: 0;
 
-            &__Writer{
-                margin-left: 0;
-                margin-right: auto;    
-            }
+            // &__Writer{
+            //     margin-left: 0;
+            //     margin-right: auto;    
+            // }
     
-            &__Date{
-                margin-left: 0;
-                margin-right: auto;    
-            }
+            // &__Date{
+            //     margin-right: 0;
+            //     margin-right: auto;    
+            // }
         }
         &__Bottom{
             display: flex;
@@ -451,7 +455,7 @@
         }
         &__Title {
             &__Text{
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
         }
     }

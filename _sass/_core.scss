@@ -9,7 +9,7 @@ section{
 
 body {
     background-color: $background-color;
-    color: $normal-font-color;
+    color: $header-font-color;
     // height: 100vh;
     font-family: $normal-font-family;
     // line-height: 1.6;
@@ -73,7 +73,7 @@ main {
 }
 
 .cta-button {
-    background: $primary;
+    background: $secondary;
     border: none;
     margin-top:  .5rem;
     padding: .5rem;

@@ -24,6 +24,9 @@
     flex-direction: column;
     // margin-right: 2rem;
     // background: greenyellow;
+    a{
+        padding: unset
+    }
 
     &__Title{
         @include undo-header-padding;
@@ -35,6 +38,9 @@
         // @include nowrap-text;
         flex-grow: 0;
         display: block;
+        color: $bg-light;
+        color: $background-color;
+        
     }
     &__Icon{
         // background: blue;
@@ -72,6 +78,7 @@
         white-space: pre-wrap;
         text-overflow: ellipsis;  
         max-height: 15vh;
+        color: $header-font-color;
     }
     @include media-md {
         max-width: 49%;
