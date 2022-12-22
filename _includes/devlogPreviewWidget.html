@@ -1,17 +1,21 @@
 <div class="devlogPreviewWidget">
 
     <div class="devlogPreviewWidget__Icon">
-        <a href="#?"><img src="{{ devlog.previewImage }}" alt="{{ devlog.title }} previewImage"></a>
+        <a href="{{ devlog.url }}"><img src="{{ devlog.previewImage }}" alt="{{ devlog.title }} previewImage"></a>
     </div>
-    <h3 class="devlogPreviewWidget__Title">
-        {{devlog.title}}
-    </h3>
+    <a href="{{ devlog.url }}">
+        <h3 class="devlogPreviewWidget__Title">
+
+            {{devlog.title}}
+        </h3>
+    </a>
     <!-- <p class="devlogPreviewWidget__Desc">{{devlog.description}}
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, asperiores perferendis? Nostrum animi optio iste aperiam quo soluta nulla delectus commodi velit earum. Accusamus quisquam doloribus voluptatem cumque, ad blanditiis.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sint tenetur cumque iste quaerat tempora aperiam commodi atque natus accusantium, consectetur odio modi, quo optio ducimus? Distinctio laborum assumenda officia!
     </p> -->
-    <p class="devlogPreviewWidget__Desc">{{devlog.description}}
-        {{ devlog.content | truncatewords:50 | strip_html }}
-    </p>
-
+    <a href="{{ devlog.url }}">
+        <p class="devlogPreviewWidget__Desc">{{devlog.description}}
+            {{ devlog.content | truncatewords:50 | strip_html }}
+        </p>
+    </a>
 </div>

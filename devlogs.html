@@ -19,9 +19,7 @@ customcss:
 
      
     {% for devlog in site.posts %}
-        <a href="{{ post.url }}">
-          {% include devlogPreviewWidget.html  %}
-        </a>
+      {% include devlogPreviewWidget.html  %}
     {% endfor %}
          
 
