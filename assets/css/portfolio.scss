@@ -38,7 +38,7 @@
             margin-left: 1rem;
             display: flex;
             flex-direction: column;
-            flex-basis: auto;
+
             &__Where{
                 font-size: 2rem;
                 padding-top: 0;
@@ -47,11 +47,11 @@
             }
         }
         &__Logo{
-            max-height: 10vw;
-
+            max-height: auto;
+                
             img{
-                width:  100%; 
-                height: auto;
+                width: auto; 
+                max-height: 100px;
             }
         }
     }
@@ -87,6 +87,11 @@
         &__article {
             font-weight: bold;
             @include bg-color-text($secondary);
+
+            &:hover{
+                color: $background-color !important;
+                background-color: $primary;    
+            }
         }
     }
 }

@@ -20,7 +20,7 @@ commercial:
         - Worked with a publisher to publish the game on Steam
       articles:
         - desc: Wrote a post-mortem on my approach to developing the story in Control:Override
-          link: https://bdeshidev.github.io/2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
+          link: /2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
 
 personal:
   - name: MathMagician
