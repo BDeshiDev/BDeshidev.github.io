@@ -13,9 +13,11 @@ $secondary-dark:     #ffc107;
 $secondary:     #ff9800;
 
 
-$background-color:  #030303;
-$bg-light: #0a0b0c;
-$bg-light-2: #2a2a2b;
+$background-color:  #121212;
+$bg-light:  rgba(255, 255, 255, 0.03);
+$bg-light-2: rgba(255, 255, 255, 0.05);
+$bg-light-3: rgba(255, 255, 255, 0.07);
+$bg-light-4: rgba(255, 255, 255, 0.12);
 
 
 @mixin transition-ease {
@@ -37,4 +39,5 @@ a {
     color: white;
     background: $bg-col;
 }
+
 

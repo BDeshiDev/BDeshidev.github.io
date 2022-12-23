@@ -1,20 +1,23 @@
 ---
-Key skills:
+languages:
   - C# 
   - C++ 
   - Python
+  - JS
+frameworks_tools:
   - Unity3D
   - Git
-Other skills:
   - Tensorflow
-  - Game Design
-  - JS
-  - HTML/CSS/SASS
-Education:
-  - Degree: 
-    - Where: Bangladesh University of Engineering and Technology
-    - Icon:
-    - When: 2017 ‑ Present (Graduating Q2 2023)
-    - Grades: "CGPA: 3.75 / 4.0"
+  - Trello
+education:
+  - where: Bangladesh University of Engineering and Technology
+    what: Bsc in Computer Science
+    when: 2017 ‑ Present (Graduating Q2 2023)
+    grade: "CGPA 3.75 / 4.0"
+    icon: "/assets/img/BUET_LOGO.png"
+why_me:
+  - I'm passionate about telling stories through game mechanics in new and interesting ways. 
+  - I love coding up new gameplay mechanics.
+  - I have 4+ years of development experience using Unity.
 ---
 

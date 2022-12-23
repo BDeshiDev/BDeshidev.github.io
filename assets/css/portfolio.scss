@@ -1,0 +1,92 @@
+---
+---
+
+@import 'core';
+
+.portfolio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-left: 20%;
+    margin-right: 20%;
+
+    color: $body-font-color;
+    font-size: 1.2rem;
+    h2 {
+        @include bg-color-text;
+        margin-block-start: 1.25rem;
+        margin-block-end: 1.25rem;
+        padding: .25rem;
+    }
+    h3 {
+        color: $header-font-color;
+    }
+    strong {
+        font-size: 1.5rem;
+        color: $header-font-color
+    }
+
+    &__Degree{
+        background-color: $bg-light-3;
+        padding: .75rem;
+        border-radius: .5rem;
+        display: flex;
+        flex-direction: row;
+        &__Desc{
+            padding: .5rem;
+            margin-left: 1rem;
+            display: flex;
+            flex-direction: column;
+            flex-basis: auto;
+            &__Where{
+                font-size: 2rem;
+                padding-top: 0;
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+        }
+        &__Logo{
+            max-height: 10vw;
+
+            img{
+                width:  100%; 
+                height: auto;
+            }
+        }
+    }
+
+    &__skill__block {
+        margin:.5rem;
+        &__element {
+            background-color: $secondary;
+            color: $background-color;
+            padding: .5rem;
+            font-size: 2rem;
+            margin: .25rem;
+        }
+    }
+    &__project {
+        display: flex;
+        flex-direction: column;
+        background-color: $bg-light-3;
+
+        &__Desc {
+            padding: .5rem;
+            display: flex;
+            &__Body {
+                margin-left: 1rem;
+                display: flex;
+                flex-direction: column;
+                &__Title {
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                }
+            }
+        }
+        &__article {
+            font-weight: bold;
+            @include bg-color-text($secondary);
+        }
+    }
+}

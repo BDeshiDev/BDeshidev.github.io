@@ -11,12 +11,17 @@ commercial:
     itch: https://b-deshidev.itch.io/control-override
     icon: https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png
     portfolioHighlights:
-      - Expanded a game-jam(GTMKJam2020) prototype into a commercial game.
-      - Designed 47 puzzles around the core mechanic of glitching through objects you can move around
-      - Wrote a Raycast-based platformer character controller that worked with the glitch mechanic.
-      - Wrote a multi-ending branching story told through text-logs.
-      - Worked with a publisher to publish the game on Steam
-  
+      work:
+        - Expanded a game-jam(GTMKJam2020) prototype into a commercial game.
+        - Designed 47 puzzles around the core mechanic of glitching through objects you can move around
+        - Wrote a Raycast-based platformer character controller that worked with the glitch mechanic.
+        - Wrote a multi-ending branching story told through text-logs.
+        - Minimized the workload of branching dialogue in the design of the game's story. 
+        - Worked with a publisher to publish the game on Steam
+      articles:
+        - desc: Wrote a post-mortem on my approach to developing the story in Control:Override
+          link: https://bdeshidev.github.io/2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
+
 personal:
   - name: MathMagician
     gamejam: BrainJam2020

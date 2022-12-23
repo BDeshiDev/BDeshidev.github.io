@@ -234,7 +234,6 @@ If there is one thing I’m unsatisfied with, it’s the epilogue  for the defau
 In various games such as 999, bad ends were used to surprise the player while delivering some extra information that helped the player figure out the larger story. Said epilogue was also written for this purpose, I was not fully satisfied with how it turned out and we were unsure if a story skipping player would want to go through several pages of text(again, no budget for cutscenes).  So, it was cut. I still think that the game would be better if I kept it. But hey, what's done is done.
 
 At the time of writing, Most people seem to have gotten the “bad” ending(the first one).
-#TODO ending survey
 Most players seem to not have bothered with getting the good endings. However, I had mistakenly turned off credits in the release build and didn’t notice for two weeks(ouch!), This matters because the credit was followed by this:
 
 

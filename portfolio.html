@@ -3,7 +3,7 @@ layout: skeleton
 showNavMirai: true
 Title: B-DeshiDev 
 customcss:
-  - 'assets/css/games.css'
+  - 'assets/css/portfolio.css'
 resumePDF: 
 ---
 
@@ -29,4 +29,67 @@ dfdfdfdfd -->
             <span> Resume </span>
         </button>
     </a>
+    <h2>
+        Why me?
+    </h2>
+        <ul>
+            {% for reason in site.data.portfolio.why_me %}
+                <li>{{reason}}</li>
+            {% endfor %}
+        </ul>
+    <h2>
+        Education:
+    </h2>
+    <div>
+        {% for degree in site.data.portfolio.education %}
+            {% include educationWidget.html %}
+        {% endfor %}
+    </div>
+    <h2>
+        Languages:
+    </h2>
+    <div class="portfolio__skill__block">
+        {% for language in site.data.portfolio.languages %}
+            <span class="portfolio__skill__block__element">{{ language }}</span>
+        {% endfor %}
+    </div>
+    <h2>
+        Frameworks/Tools:
+    </h2>
+    <div class="portfolio__skill__block">
+        {% for ft in site.data.portfolio.frameworks_tools %}
+            <span class="portfolio__skill__block__element">{{ ft }}</span>
+        {% endfor %}
+    </div>
+    <h2>
+        Projects(Commercial):
+    </h2>
+    {% for game in site.data.games.commercial  %}
+        <div class="portfolio__project">
+   
+            <div class="portfolio__project__Desc">
+                <div class="portfolio__project__Desc__Icon">
+                    <img src="{{ game.icon }}" alt="{{ game.name }} icon">
+                </div>  
+                <div class="portfolio__project__Desc__Body">
+                    <h3 class="portfolio__project__Desc__Body__Title">{{ game.name }}</h3>
+                    <ul class="portfolio__project__Desc__Body__work">
+                        {% for work in game.portfolioHighlights.work %}
+                            <li >{{ work }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% if game.portfolioHighlights.articles %}
+                {% for article in game.portfolioHighlights.articles %}
+                    <a href="{{ article.link }}" class="portfolio__project__article" >
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                        {{ article.desc }}
+                    </a>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% endfor %}
 </div>
+
+
