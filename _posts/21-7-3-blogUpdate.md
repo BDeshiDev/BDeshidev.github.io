@@ -1,5 +1,5 @@
 ---
-title: Devlogs UI MVP
+title: Devlogs header test
 by: B-DeshiDev
 published: true
 layout: devlog

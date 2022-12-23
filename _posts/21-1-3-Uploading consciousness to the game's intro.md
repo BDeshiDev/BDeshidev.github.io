@@ -1,5 +1,5 @@
 ---
-title: Devlogs UI MVP
+title: Devlogs GIF Test
 by: B-DeshiDev
 published: true
 layout: devlog
