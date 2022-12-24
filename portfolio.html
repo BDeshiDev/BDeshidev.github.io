@@ -41,7 +41,7 @@ dfdfdfdfd -->
         Education:
     </h2>
     <div>
-        {% for degree in site.data.portfolio.education %}
+        {% for degree in site.data.portfolio.degrees %}
             {% include educationWidget.html %}
         {% endfor %}
     </div>
@@ -59,6 +59,14 @@ dfdfdfdfd -->
     <div class="portfolio__skill__block">
         {% for ft in site.data.portfolio.frameworks_tools %}
             <span class="portfolio__skill__block__element">{{ ft }}</span>
+        {% endfor %}
+    </div>
+    <h2>
+        Skills:
+    </h2>
+    <div class="portfolio__skill__block">
+        {% for skill in site.data.portfolio.skills %}
+            <span class="portfolio__skill__block__element">{{ skill }}</span>
         {% endfor %}
     </div>
     <h2>

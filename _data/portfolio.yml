@@ -9,12 +9,21 @@ frameworks_tools:
   - Git
   - Tensorflow
   - Trello
-education:
+skills:
+  - Gameplay Programming
+  - Game Design
+  - Narrative Design
+  - 3D Math
+  - AI programming
+  - Machine Learning
+degrees:
   - where: Bangladesh University of Engineering and Technology
     what: BSc in Computer Science
     when: 2017 ‑ Present (Graduating Q2 2023)
     grade: "CGPA 3.75 / 4.0"
     icon: "/assets/img/BUET_LOGO.png"
+coursework:
+  - CS
 why_me:
   - I'm passionate about telling stories through game mechanics in new and interesting ways. 
   - I love coding up new gameplay mechanics.
