@@ -17,6 +17,7 @@
         display: inline-block;   
         margin-top: 0;
         margin-bottom: 0;
+        min-height: 20vh;
         div{//image container
             height: 100%;
             width: 100%;
@@ -24,11 +25,11 @@
             flex-direction: column-reverse;   
         }
         &__Image{
-            width: auto;
+            width: 100%;
             height: auto;
             min-height: 100px;
-            max-width: 100%;
-            max-height: 50vh;
+            // max-width: 100%;
+            // max-height: 50vh;
             // margin-top: auto;
             margin-left: auto;
             margin-right: auto;
@@ -36,16 +37,25 @@
         }
 
         &__Text{
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+
             text-transform: capitalize; 
             
             @include headerFontSettings(2, 1.2);
             font-size: 3rem;
-            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,.5));
             padding-left: .5rem;
             padding-right: .5rem;
+
+            &__OverImage{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,.5));
+
+            }
+
+            &__Only{
+                margin-top: 10rem;
+            }
         }
     }
     &__PublishData{

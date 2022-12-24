@@ -7,7 +7,7 @@ tags:
   - Jekyll
   - Sass
   - WebDev
-headerImage: '/assets/img/gifs/UPLOADING_CONSCIOUSNESS_TO_CYBERSPACE.gif'
+# headerImage: '/assets/img/gifs/UPLOADING_CONSCIOUSNESS_TO_CYBERSPACE.gif'
 previewImage: '/assets/img/gifs/UPLOADING_CONSCIOUSNESS_TO_CYBERSPACE.gif'
 game: 'Control:Override'
 comments: true

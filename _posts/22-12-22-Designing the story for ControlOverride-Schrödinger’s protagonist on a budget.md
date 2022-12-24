@@ -7,7 +7,7 @@ tags:
   - Control:Override
   - Post-Mortem
   - Narrative
-headerImage: '/assets/img/Screenshot (92.2.0).png'
+headerImage: "/assets/img/co_banner.png"
 previewImage: '/assets/img/Screenshot (92.2.0).png'
 game: 'Control:Override'
 comments: true
@@ -29,7 +29,7 @@ I’d give a warning about spoilers here but based on the game’s sales, it is 
 
 In my very biased opinion, I think the game’s story is worth the 2 or so hours it takes to complete. So I recommend doing so before proceeding any further.
 
-You can play the game on steam and itch.
+You can play the game here on [steam](https://store.steampowered.com/app/1406090/ControlOverride/) and [itch.io](https://b-deshidev.itch.io/control-override).
 
 Anyways, there is a lot to talk about here.
 # How do you “design” a story? Aren’t you supposed to write a story?
@@ -69,7 +69,7 @@ The first change I made was to replace the virus with a human hacker as the play
 
 Then came the antagonist. Portal had already set the standard here with GLADOS which plenty of games copied. I didn’t want to do that. Moreover, there was also the requirement to avoid boss fights.
 
-This meant the antagonist, at their core, should not want to fight the payer. I started by envisioning an antithesis of GLADOS. That is, an AI that appeared untrustworthy and illogical/insane at first glance but gradually seems more and more sane. This became the basis for MIR-AI, the narrative core and the most beloved character in the game(if the 10 responses in the post-game surveys are any indicator).
+This meant the antagonist, at their core, should not want to fight the player. I started by envisioning an antithesis of GLADOS. That is, an AI that appeared untrustworthy and illogical/insane at first glance but gradually seems more and more sane. This became the basis for MIR-AI, the narrative core and the most beloved character in the game(if the 10 responses in the post-game surveys are any indicator).
 
 I thought that it’d be more interesting if the protagonist himself had created the AI. The act of destroying your own creation naturally creates narrative tension. To double down on this theme, I added another character as the co-creator(if the protagonist is the “father”, this’d be the ''mother” ) of the AI. The parenthood theme was rather cliche but I think the game manages to do enough with it to warrant its inclusion. 
 
@@ -265,4 +265,4 @@ That said, I’m happy with how the story turned out. I don’t think it is poss
 # What’s next?
 In my next post, I’ll talk about the design of Control:Override’s puzzles and mechanics.
 
-For now, you can check out the game on steam and itch.
+For now, you can check out the game on [steam](https://store.steampowered.com/app/1406090/ControlOverride/) and [itch.io](https://b-deshidev.itch.io/control-override).

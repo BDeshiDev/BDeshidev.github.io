@@ -57,6 +57,9 @@
     }
 
     &__skill__block {
+        display: flex;
+        flex-wrap: wrap;
+
         margin:.5rem;
         &__element {
             background-color: $secondary;

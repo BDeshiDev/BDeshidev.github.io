@@ -48,6 +48,7 @@ class Mirai{
 
         this.createTeeth();
         this.createEyes();
+        
 
         this.queuedChar = null;
         bindMethods(this);
@@ -59,8 +60,8 @@ class Mirai{
         let teethGap = 5;
         let cheekSize = new Vec2(10, 7.5);//half of remaining per cheek
         let teethSize = new Vec2( (((100 - 5.56 * 5- teethGap * (teethCount -1)) ) /10.0), 5);
-
-        console.log(teethSize);        
+        this.teethSize = teethSize;
+        // console.log(teethSize);        
         
         t.classList.add('mirai__Cheek');
         t.style.width = cheekSize.x + "%";
@@ -98,35 +99,64 @@ class Mirai{
             this.container.appendChild(t);
             teethOriginX += teethGap + teethSize.x;
         }
-        this.speechAnim = anime.timeline({
+        this.speechAnim = this.createSpeechAnim();
+
+    }
+    resetTeeth(){
+        for (let i = 0; i < this.teeth.length; i++) {
+            this.teeth[i].style.width = this.teethSize.x+"%";
+        }
+    }
+
+    createSpeechAnim(){
+        let anim = anime.timeline({
             targets: this.teeth,
             easing: 'easeOutQuad'
         });
-
-        this.speechAnim.add({
+        let r = anime.random(0,1);
+        anim.add({
 
             scaleY: function(el, i, l) {
                 let middle = l / 2.0;
-                let t = ((1.2 + (maxTeethScale -1.2) * 
-                        (((i+1)  <= middle? (i+1) : (l -i)))/middle)) *
-                        anime.random(9, 10)/10.0;
-                    return t; 
+                let heightByIndex = ((i+1)  <= middle? (i+1) : (l -i));
+                let min =  heightByIndex * 1.6;
+                let max =  heightByIndex * 2;
+                let baseHeight = .6+ heightByIndex * .15;
+                let t = baseHeight + min + (max - min) * r + anime.random(.1,.2) ;
+                return t; 
+                // let t = ((1.2 + (maxTeethScale -1.2) * 
+                //         (((i+1)  <= middle? (i+1) : (l -i)))/middle)) *
+                //         anime.random(8, 10)/10.0;
+                //     return t; 
                 },
+            // scaleX: function(el, i, l) {
+            //     let middle = l / 2.0;
+            //     let min =  .05;
+            //     let max =  .3;
+            //     let baseHeight = 1;
+            //     let t = baseHeight - (min + (max - min) * r);
+            //     return t; 
+            //     // let t = ((1.2 + (maxTeethScale -1.2) * 
+            //     //         (((i+1)  <= middle? (i+1) : (l -i)))/middle)) *
+            //     //         anime.random(8, 10)/10.0;
+            //     //     return t; 
+            //     },
             duration: teethTweenTime *.75,
             loop: true,
         });
 
-        this.speechAnim.add({
-
+        anim.add({
             scaleY: 1,
             duration: teethTweenTime *.75,
             loop: true,
         });
 
+        return anim;
     }
 
     doSpeechAnim(){
-        this.speechAnim.restart();
+        this.speechAnim.pause();
+        this.speechAnim = this.createSpeechAnim();
         this.isSpeaking = true;
    
         setTimeout(() => { 
@@ -135,6 +165,8 @@ class Mirai{
                 this.doSpeechAnim();
             }else{
                 this.isSpeaking = false;
+                this.speechAnim.pause();
+                // this.resetTeeth();
             }
         }, minSpeechAnimRestartTime);
     }
@@ -156,7 +188,7 @@ class Mirai{
             e.style.left = "15%";
 
             e =new Eye(eyes[1]).eye;
-            console.log(e);
+            // console.log(e);
 
             
             e = eyes[1];
@@ -170,7 +202,7 @@ class Mirai{
             
             e.style.fill = "green"; 
 
-            console.log(e);
+            // console.log(e);
              
         }else{
             console.log("wrong number of eyes");
@@ -269,7 +301,7 @@ function createMiraiInsideContainer(container){
 
 function fetchAndCreateMirais(){
     let targetContainers = document.querySelectorAll('.mirai');
-    console.log(targetContainers.length);
+    // console.log(targetContainers.length);
     for (let i = 0; i < targetContainers.length; i++) {
         mirais[i] = createMiraiInsideContainer(targetContainers[i])
         

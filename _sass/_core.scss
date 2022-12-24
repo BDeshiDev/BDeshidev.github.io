@@ -83,15 +83,41 @@ main {
     @include transition-ease;
 
     transform: translateX(0);
+    
     &.hide {
-        transform: translateX(-200%);
+        transform: translateX(-400%);
     }
+
+
+    &:hover {
+        background: $secondary-dark;
+        font-weight: bolder;
+    }
+}
+
+.cta-button-primary {
+    background: $primary;
+    border: none;
+    margin-top:  .5rem;
+    padding: .5rem;
+    font-weight: 300;
+    font-size: 3rem;
+    font-family: $header-font-family;
+    @include transition-ease;
+
+    transform: translateX(0);
+    
+    &.hide {
+        transform: translateX(-400%);
+    }
+
 
     &:hover {
         background: $primary-dark;
         font-weight: bolder;
     }
 }
+
 
 
 @mixin adjusted-anchor-settings{
