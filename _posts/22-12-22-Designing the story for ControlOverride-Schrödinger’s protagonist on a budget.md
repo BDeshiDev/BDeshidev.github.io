@@ -7,7 +7,7 @@ tags:
   - Control:Override
   - Post-Mortem
   - Narrative
-headerImage: "/assets/img/co_banner.png"
+# headerImage: "/assets/img/co_banner.png"
 previewImage: '/assets/img/Screenshot (92.2.0).png'
 game: 'Control:Override'
 comments: true

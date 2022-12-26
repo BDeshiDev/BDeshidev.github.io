@@ -13,22 +13,23 @@ const ctaPortfolioButton = document.querySelector('#portfolio-button');//only on
 ctaPortfolioButton.classList.add('hide');
 ctaPortfolioButton.hidden = false;
 let startedTyping = false;
-let eyeSVG = document.querySelector('#mirai__Eye__L');
+// let eyeSVG = document.querySelector('#mirai__Eye__L');
 
-eyeSVG.onload = ()=> {
-    if(!startedTyping){
-        startedTyping = true;
-        writer.typeText(revealCtaButton);
-    };
-}
+// eyeSVG.onload = ()=> {
+    
+//     if(!startedTyping){
+//         startedTyping = true;
+//         writer.typeText(revealCtaButton);
+//     };
+// }
 
-setTimeout(() => {
-    if(!startedTyping ){
-        startedTyping = true;
-        console.log("timeout. Force start babbling");
-        writer.typeText(revealCtaButton);
-    };
-}, 3000);
+// setTimeout(() => {
+//     if(!startedTyping ){
+//         startedTyping = true;
+//         console.log("timeout. Force start babbling");
+//         writer.typeText(revealCtaButton);
+//     };
+// }, 3000);
 
 
 
@@ -41,3 +42,5 @@ function revealCtaButton(){
         ctaPortfolioButton.classList.remove('hide');
     }
 }
+
+writer.typeText(revealCtaButton);
