@@ -85,6 +85,12 @@
                     margin-block-start: 0;
                     margin-block-end: 0;
                 }
+                &__Work {
+                    strong{
+                        color: $secondary;
+                    }
+                }
+
             }
         }
         &__article {

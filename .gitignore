@@ -156,3 +156,4 @@ _site/
 # Gemfile
 Gemfile.lock
 .jekyll-cache/Jekyll/Cache/*
+.jekyll-cache
