@@ -97,11 +97,16 @@
             padding: .5rem;
   
             &__Header{
+                display: flex;
+                flex-direction: row;
+                gap: .5rem;
+                  
+                @include media-md{
+                    flex-direction: column;
+                }
                 // display: flex;
                 // align-items: stretch;
                 // align-content: stretch
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
                 padding: .5rem;
                 &__Icon {
                     width: 100%;
@@ -111,7 +116,6 @@
                 }
                 &__Desc {
                     margin-bottom: auto;
-                    padding-left: 1rem;
                     h3 {
                         padding-left: .5rem;
                         margin-block-start: 0;
