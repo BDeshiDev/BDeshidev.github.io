@@ -98,7 +98,7 @@ personal:
       - UNITY3D
     year: 2020
     portfolioHighlights:
-      thumbnail: '/assets/img/gifs/phantom reverie combat.gif' 
+      thumbnail: '/assets/img/gifs/phantom reverie combat.GIF' 
       desc: |+
         Phantom Reverie is a soulslike prototype for android that I made for to get better at designing AI.
       work: 
