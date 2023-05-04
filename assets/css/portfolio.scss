@@ -95,11 +95,37 @@
 
         &__Desc {
             padding: .5rem;
-            display: flex;
-            &__Icon {
-                margin-left: auto;
-                margin-right: auto;
+  
+            &__Header{
+                // display: flex;
+                // align-items: stretch;
+                // align-content: stretch
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+                padding: .5rem;
+                &__Icon {
+                    width: 100%;
+                    height: auto;
+                    // margin-left: auto;
+                    // margin-right: auto;
+                }
+                &__Desc {
+                    margin-bottom: auto;
+                    padding-left: 1rem;
+                    h3 {
+                        padding-left: .5rem;
+                        margin-block-start: 0;
+                        margin-block-end: 0;
+                        @include bg-color-text($secondary)
+                    }
+                    div{
+                        white-space:break-spaces ;
+                        @include font_size_responsive(1.3rem,1.2rem, 1.1rem,1rem)
+                    }
+                }
+
             }
+            
             &__Body {
                 margin-left: 1rem;
                 display: flex;

@@ -12,6 +12,11 @@ commercial:
     icon: https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png
     banner: "/assets/img/co_banner.png"
     portfolioHighlights:
+      desc: |+
+        Control:Override is a puzzle game where you must share control between the environment and yourself.
+        Defy Physics. 
+        Solve puzzles.
+        Terminate the rogue AI. And perhaps confront the truth about why it went rogue.
       work:
         - Expanded a game-jam(GTMKJam2020) prototype into a commercial game.
         - Designed 47 puzzles around the core mechanic of glitching through objects you can move around
