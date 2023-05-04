@@ -1,11 +1,28 @@
 <div class="portfolio__project">
     <div class="portfolio__project__Desc__Header">
         <div>
-            <img src="{{ game.icon }}" alt="{{ game.name }} icon" class="portfolio__project__Desc__Header__Icon">
+            <img src="{{ game.portfolioHighlights.thumbnail }}" alt="{{ game.name }} icon" class="portfolio__project__Desc__Header__Icon">
         </div>    
         <div class="portfolio__project__Desc__Header__Desc">
             <h3 >{{ game.name }}</h3>
-            <div>{{ game.portfolioHighlights.desc }}</div>
+            <div class="portfolio__project__Desc__Header__Desc__Body">{{ game.portfolioHighlights.desc }}</div>
+            <div class="portfolio__project__Desc__Header__Links">
+                {% if game.steam %}
+                <a href="{{game.steam}}" class="portfolio__project__Desc__Header__Links__Link">
+                    <i class="fab fa-steam"></i>
+                </a>
+                {% endif %}
+                {% if game.itch %}
+                <a href="{{game.itch}}" class="portfolio__project__Desc__Header__Links__Link">
+                    <i class="fab fa-itch-io" ></i>
+                </a>
+                {% endif %}
+                {% if game.github %}
+                    <a href="{{game.github}}" class="portfolio__project__Desc__Header__Links__Link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                {% endif %}
+            </div>
         </div>
     </div>
     <div class="portfolio__project__Desc__Body">

@@ -12,6 +12,7 @@ commercial:
     icon: https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png
     banner: "/assets/img/co_banner.png"
     portfolioHighlights:
+      thumbnail: https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png
       desc: |+
         Control:Override is a puzzle game where you must share control between the environment and yourself.
         Defy Physics. 
@@ -44,14 +45,21 @@ personal:
       - Won 2nd place in the game-jam(Brain-Jam 2020)
   - name: Your Bullets, Our Hell
     year: 2021
+    includeInPortfolio: true
+    portfolioHighlights:
     desc: A top-down shooter where you can hypnotize enemies to fight for you until they turn your life back into a bullet hell.
     icon: https://img.itch.zone/aW1nLzc3NjExNTcucG5n/315x250%23c/otlVxn.png
     portfolioHighlights:
-      - Implemented a top-down arena bullet hell combat system
-      - Implemented a mechanic where you shoot enemies to make them fight for you
-      - Implemented a powerup spawning system that prevents the player from camping
-      - Won 2nd place in the game-jam(Brain-Jam 2021)
+      thumbnail: https://img.itch.zone/aW1nLzc3NjE0MjYuZ2lm/original/0lCdc2.gif
+      desc: |+
+        A top-down shooter where you can hypnotize enemies to fight for you until they turn your life back into a bullet hell.
+      work: 
+        - Implemented a top-down arena bullet hell combat system
+        - Implemented a system for spawning bullets in diverse patterns with <strong>object pooling</strong>
+        - Focused on nailing the <strong>game feel</strong>
+        - Won 2nd place in the game-jam(Brain-Jam 2021)
     itch: https://b-deshidev.itch.io/your-bullets-our-hell
+    github: https://github.com/BDeshiDev/-Hack-A-Jam-2021
   - name: In Exchange For My Life
     year: 2019
     gamejam: LD40
@@ -89,14 +97,13 @@ personal:
       - "C#"
       - UNITY3D
     year: 2020
-    icon: '/assets/img/gifs/phantom reverie combat.gif'
     portfolioHighlights:
+      thumbnail: '/assets/img/gifs/phantom reverie combat.gif' 
       desc: |+
         Phantom Reverie is a soulslike prototype for android that I made for to get better at designing AI.
       work: 
-        - Implemented hyper-light drifter esque combat mechanics(melee/ranged combat with dashing)
-        - Unintentionally died to my AI several times during testing.
-        - Implemented a ticketing based AI combat director.
+        - Implemented <strong>soulsike</strong> combat mechanics(melee/ranged combat with dashing)
+        - Implemented a ticketing based <strong>AI combat director</strong>.
         - Enemies coordinate their attacks to keep it challenging without overwhelming the player. 
         - Balances enemy attack tickets between melee and ranged attacks to keep combat dynamic.
 ---

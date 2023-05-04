@@ -73,14 +73,17 @@ dfdfdfdfd -->
         Projects(Commercial):
     </h2>
     {% for game in site.data.games.commercial  %}
-        {% include gamePortfolioWidget.html %}
+        <div>{% include gamePortfolioWidget.html %}</div>
     {% endfor %}
     <h2>
         Projects(Non-Commercial):
     </h2>
     {% for game in site.data.games.personal  %}
         {% if game.includeInPortfolio %}
-            {% include gamePortfolioWidget.html %}
+            <div>
+                {% include gamePortfolioWidget.html %}
+            </div>
+            <br>
         {% endif %}
     {% endfor %}
 </div>
