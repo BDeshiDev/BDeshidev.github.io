@@ -1,8 +1,8 @@
 ---
 commercial:
   - name: Control:Override
-    gamejam: GMTK 2020
-    desc: |
+    gamejam: GMTK Jam 2020
+    desc: |+
       Control:Override is a puzzle game where you must share control between the environment and yourself.
       Defy Physics. 
       Solve puzzles.
@@ -70,27 +70,34 @@ personal:
     itch: https://b-deshidev.itch.io/riskbreakers
     icon: https://img.itch.zone/aW1hZ2UvMjAxNTIxLzk0MTE4NS5wbmc=/315x250%23c/pqD7DF.png
   - name: Disconnected Yet Connected
-    desc: A short, narrative focused game around the theme of connection. Made for ECjam
+    desc: A short, narrative focused game around the theme of connection. Made for ECjam.
     itch: https://b-deshidev.itch.io/disconnectedyetconnected
     icon: https://img.itch.zone/aW1nLzI3NjM4OTQucG5n/315x250%23c/ft2l2O.png
   - name: Bullet hell bossrush prototype
     year: 2022
     isPrototype: true
-    # hideInPortfolio: true
     technology: 
       - "C#"
       - UNITY3D
     portfolioHighlights: 
       - Wrote a modular Behavior tree/Finite State Machine hybrid AI framework with Unity Editor UI for enemy AI.
       - Implemented pattern based bullet spawning with object pooling.  
-  - name: Top-Down Mobile Action Game Prototype
+  - name: Phantom Reverie
     isPrototype: true
+    includeInPortfolio: true
     technology: 
       - "C#"
       - UNITY3D
     year: 2020
-    portfolioHighlights: 
-      - Implemented hyper-light drifter esque combat mechanics(melee/ranged combat with dashing)
-      - Implemented a ticketing based AI combat director   
+    icon: '/assets/img/gifs/phantom reverie combat.gif'
+    portfolioHighlights:
+      desc: |+
+        Phantom Reverie is a soulslike prototype for android that I made for to get better at designing AI.
+      work: 
+        - Implemented hyper-light drifter esque combat mechanics(melee/ranged combat with dashing)
+        - Unintentionally died to my AI several times during testing.
+        - Implemented a ticketing based AI combat director.
+        - Enemies coordinate their attacks to keep it challenging without overwhelming the player. 
+        - Balances enemy attack tickets between melee and ranged attacks to keep combat dynamic.
 ---
 

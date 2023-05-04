@@ -8,7 +8,9 @@ frameworks_tools:
   - Unity3D
   - Git
   - Tensorflow
+  - YarnSpinner
   - Trello
+  - Notion
 skills:
   - Gameplay Programming
   - Game Design

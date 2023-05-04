@@ -73,33 +73,15 @@ dfdfdfdfd -->
         Projects(Commercial):
     </h2>
     {% for game in site.data.games.commercial  %}
-        <div class="portfolio__project">
-   
-            <div class="portfolio__project__Desc__Header">
-                <div>
-                    <img src="{{ game.icon }}" alt="{{ game.name }} icon" class="portfolio__project__Desc__Header__Icon">
-                </div>    
-                <div class="portfolio__project__Desc__Header__Desc">
-                    <h3 >{{ game.name }}</h3>
-                    <div>{{ game.portfolioHighlights.desc }}</div>
-                </div>
-            </div>
-            <div class="portfolio__project__Desc__Body">
-                <ul class="portfolio__project__Desc__Body__Work">
-                    {% for work in game.portfolioHighlights.work %}
-                        <li >{{ work }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            {% if game.portfolioHighlights.articles %}
-                {% for article in game.portfolioHighlights.articles %}
-                    <a href="{{ article.link }}" class="portfolio__project__article" >
-                        <i class="fa fa-link" aria-hidden="true"></i>
-                        {{ article.desc }}
-                    </a>
-                {% endfor %}
-            {% endif %}
-        </div>
+        {% include gamePortfolioWidget.html %}
+    {% endfor %}
+    <h2>
+        Projects(Non-Commercial):
+    </h2>
+    {% for game in site.data.games.personal  %}
+        {% if game.includeInPortfolio %}
+            {% include gamePortfolioWidget.html %}
+        {% endif %}
     {% endfor %}
 </div>
 
