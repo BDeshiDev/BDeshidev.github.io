@@ -10,6 +10,11 @@ $xsm-width: 300px;
    }
 }
 
+@mixin media-atleast-md {
+   @media screen and (min-width:$md-width) {
+       @content;
+   }
+}
 
 @mixin media-md {
     @media screen and (max-width:$md-width) {

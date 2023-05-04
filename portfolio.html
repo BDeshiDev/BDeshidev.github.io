@@ -76,17 +76,15 @@ dfdfdfdfd -->
         <div class="portfolio__project">
    
             <div class="portfolio__project__Desc">
-                <div class="portfolio__project__Desc__Icon">
-                    <img src="{{ game.icon }}" alt="{{ game.name }} icon">
-                </div>  
-                <div class="portfolio__project__Desc__Body">
-                    <h3 class="portfolio__project__Desc__Body__Title">{{ game.name }}</h3>
-                    <ul class="portfolio__project__Desc__Body__Work">
-                        {% for work in game.portfolioHighlights.work %}
-                            <li >{{ work }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
+                <img src="{{ game.icon }}" alt="{{ game.name }} icon" class="portfolio__project__Desc__Icon">
+            </div>
+            <div class="portfolio__project__Desc__Body">
+                <h3 class="portfolio__project__Desc__Body__Title">{{ game.name }}</h3>
+                <ul class="portfolio__project__Desc__Body__Work">
+                    {% for work in game.portfolioHighlights.work %}
+                        <li >{{ work }}</li>
+                    {% endfor %}
+                </ul>
             </div>
             {% if game.portfolioHighlights.articles %}
                 {% for article in game.portfolioHighlights.articles %}

@@ -24,17 +24,55 @@ body {
 
     }
 }
+@mixin font_size_responsive($baseSize, $mdSize, $smSize, $xsmSize ){
+    font-size: $baseSize;
+
+    @include media-md{
+        font-size: $mdSize;
+    }
+    @include media-sm{
+        font-size: $smSize;
+    }
+    @include media-xsm{
+        font-size: $xsmSize;
+    }
+}
 h1{
     @include headerFontSettings(5rem, 4.5rem);
+
+    @include media-md{
+        font-size: 2.5rem;
+    }
+    @include media-sm{
+        font-size: 1.8rem;
+    }
 }
 
 
 
 h2 { 
     @include headerFontSettings(4rem, 3.5rem);
-    font-style: normal; font-size: 4rem;
+    font-style: normal; 
+
+    @include media-md{
+        font-size: 2rem;
+    }
+    @include media-sm{
+        font-size: 1.65rem;
+    }
 }
-h3 { font-style: normal; font-size: 3rem;}
+
+h3 {
+    font-style: normal;
+    @include font_size_responsive(3rem, 1.8rem,1.5rem,1.3rem);
+}
+
+
+h4 {
+    font-style: normal;
+    color: $header-font-color;
+    @include font_size_responsive(2rem, 1.6rem,1.2rem,1.15rem);
+}
 
 
 
@@ -88,6 +126,15 @@ main {
         transform: translateX(-400%);
     }
 
+    @include media-xsm{
+        font-size: 1.5rem;
+
+    }
+    @include media-sm{
+        font-size: 2rem;
+
+    }
+
 
     &:hover {
         background: $secondary-dark;
@@ -106,6 +153,14 @@ main {
     @include transition-ease;
 
     transform: translateX(0);
+
+    @include media-sm{
+        font-size: 2rem;
+
+    }
+    @include media-xsm{
+        font-size: 1.5rem;
+    }
     
     &.hide {
         transform: translateX(-400%);
