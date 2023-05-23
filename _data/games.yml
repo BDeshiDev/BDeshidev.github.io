@@ -92,6 +92,7 @@ personal:
       - Implemented pattern based bullet spawning with object pooling.  
   - name: Phantom Reverie
     isPrototype: true
+    itch: https://b-deshidev.itch.io/phantom-reverie?password=lemmesee
     includeInPortfolio: true
     technology: 
       - "C#"
