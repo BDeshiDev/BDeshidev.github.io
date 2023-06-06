@@ -22,8 +22,9 @@ commercial:
         - Expanded a game-jam(GTMKJam2020) prototype into a commercial game.
         - <strong>Designed 47 puzzles</strong> around the core mechanic of glitching through objects you can move around
         - "Wrote a <strong>Raycast-based platformer character controller</strong> that worked with the glitch mechanic."
-        - "Wrote a <strong>multi-ending branching story</strong> told through text-logs."
-        - "Worked with <strong>YarnSpinner</strong> for branching dialogue." 
+        - Wrote a <strong>rewind system</strong> using the <strong>command design pattern</strong>.
+        - Wrote a <strong>multi-ending branching story</strong> told through text-logs.
+        - Worked with <strong>YarnSpinner</strong> for branching dialogue.
         - Worked with a publisher to publish the game on <strong>Steam</strong>
       articles:
         - desc: Wrote a post-mortem on my approach to developing the story in Control:Override
