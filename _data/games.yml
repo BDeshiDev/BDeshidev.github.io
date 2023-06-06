@@ -20,7 +20,7 @@ commercial:
         Terminate the rogue AI. And perhaps confront the truth about why it went rogue.
       work:
         - Expanded a game-jam(GTMKJam2020) prototype into a commercial game.
-        - Designed 47 puzzles around the core mechanic of glitching through objects you can move around
+        - <strong>Designed 47 puzzles</strong> around the core mechanic of glitching through objects you can move around
         - "Wrote a <strong>Raycast-based platformer character controller</strong> that worked with the glitch mechanic."
         - "Wrote a <strong>multi-ending branching story</strong> told through text-logs."
         - "Worked with <strong>YarnSpinner</strong> for branching dialogue." 
@@ -30,19 +30,6 @@ commercial:
           link: /2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
 
 personal:
-  - name: MathMagician
-    gamejam: BrainJam2020
-    year: 2020
-    technology: 
-      - "C#"
-      - UNITY3D
-    desc: A short card based RPG where you need to use arithmetic to manipulate the flow of mana.
-    itch: https://b-deshidev.itch.io/mathmagician
-    icon: https://img.itch.zone/aW1nLzI5NTQzMDMucG5n/315x250%23c/MkASCK.png
-    portfolioHighlights:
-      - Implemented Slay-the spire like deck-based combat
-      - Mixed it with a math-based minigame to play cards.
-      - Won 2nd place in the game-jam(Brain-Jam 2020)
   - name: Your Bullets, Our Hell
     year: 2021
     includeInPortfolio: true
@@ -60,16 +47,67 @@ personal:
         - Won 2nd place in the game-jam(Brain-Jam 2021)
     itch: https://b-deshidev.itch.io/your-bullets-our-hell
     github: https://github.com/BDeshiDev/-Hack-A-Jam-2021
+  - name: Phantom Reverie
+    isPrototype: true
+    itch: https://b-deshidev.itch.io/phantom-reverie?password=lemmesee
+    includeInPortfolio: true
+    technology: 
+      - "C#"
+      - UNITY3D
+    year: 2020
+    portfolioHighlights:
+      thumbnail: '/assets/img/gifs/phantom reverie combat.GIF' 
+      desc: |+
+        Phantom Reverie is a soulslike prototype for android that I made for to get better at designing AI.
+      work: 
+        - Implemented <strong>soulsike</strong> combat mechanics(melee/ranged combat with dashing)
+        - Implemented a ticketing based <strong>AI combat director</strong>.
+        - Enemies <strong>coordinate</strong> their attacks to keep it challenging without overwhelming the player. 
+        - Balances enemy attack tickets between melee and ranged attacks to <strong>keep combat dynamic</strong>.
+  - name: MathMagician
+    gamejam: BrainJam2020
+    year: 2020
+    includeInPortfolio: true
+    technology: 
+      - "C#"
+      - UNITY3D
+    desc: A short card based RPG where you need to use arithmetic to manipulate the flow of mana. 
+    itch: https://b-deshidev.itch.io/mathmagician
+    icon: https://img.itch.zone/aW1nLzI5NTQzMDMucG5n/315x250%23c/MkASCK.png
+    portfolioHighlights:
+      thumbnail: https://img.itch.zone/aW1nLzI5NTQzMDMucG5n/315x250%23c/MkASCK.png
+      desc: |+ 
+        A short card based RPG where you need to use arithmetic to manipulate the flow of mana. 
+        You are given a set of numbers each turn. Manipulate them to fulfill the equations in each card.
+      work:
+      - Implemented Slay the Spire like <strong>deck-based combat</strong>
+      - <strong>Turn based enemy AI</strong> with enemy "tells" like Slay the Spire
+      - Mixed it with a math-based energy system to play cards.
+      - Won 2nd place in the game-jam(Brain-Jam 2020)
   - name: In Exchange For My Life
     year: 2019
     gamejam: LD40
     desc: A short prototype ARPG where you need to bet a portion of your life every time you cast a spell
     itch: https://b-deshidev.itch.io/in-exchange-for-my-life
-    icon: https://img.itch.zone/aW1nLzIwNjUxMzkucG5n/315x250%23c/waB%2Br2.png  
+    icon: https://img.itch.zone/aW1nLzIwNjUxMzkucG5n/315x250%23c/waB%2Br2.png
   - name: Nekuro Tactics
     year: 2019
+    includeInPortfolio: true
     gamejam: LD39
-    desc: A SRPG where you can possess and order only 1  party member to act every turn. Made for GMTK2020.
+    desc: |+ 
+      An SRPG where you can possess and order only 1 party member to act every turn. 
+      Rely on a single party member too much and they'll get strained and take more damage. Made for GMTK2020.
+    gamejam: GMTK2020
+    portfolioHighlights:
+      thumbnail: https://img.itch.zone/aW1nLzIzNTcxODcucG5n/315x250%23c/WxLlvS.png
+      desc: |+
+        An SRPG where you can possess and order only 1 party member to act every turn. 
+        Balance is key. Rely on a single party member too much and they'll get strained and take more damage. 
+        Made for GMTK2020.
+      work:
+        - Implemented a <strong>custom SRPG turn system</strong> where your entire team gets a single turn. 
+        - Implmented <strong>turn based SRPG combat</strong>  with different skillset for each class
+        - Implemented SRPG <strong>enemy AI</strong> that will pick the best move depending on the scenario.
     steam: 
     itch: https://b-deshidev.itch.io/nekurotactics
     icon: https://img.itch.zone/aW1nLzIzNTcxODcucG5n/315x250%23c/WxLlvS.png
@@ -90,22 +128,5 @@ personal:
     portfolioHighlights: 
       - Wrote a modular Behavior tree/Finite State Machine hybrid AI framework with Unity Editor UI for enemy AI.
       - Implemented pattern based bullet spawning with object pooling.  
-  - name: Phantom Reverie
-    isPrototype: true
-    itch: https://b-deshidev.itch.io/phantom-reverie?password=lemmesee
-    includeInPortfolio: true
-    technology: 
-      - "C#"
-      - UNITY3D
-    year: 2020
-    portfolioHighlights:
-      thumbnail: '/assets/img/gifs/phantom reverie combat.GIF' 
-      desc: |+
-        Phantom Reverie is a soulslike prototype for android that I made for to get better at designing AI.
-      work: 
-        - Implemented <strong>soulsike</strong> combat mechanics(melee/ranged combat with dashing)
-        - Implemented a ticketing based <strong>AI combat director</strong>.
-        - Enemies coordinate their attacks to keep it challenging without overwhelming the player. 
-        - Balances enemy attack tickets between melee and ranged attacks to keep combat dynamic.
 ---
 
