@@ -1,5 +1,5 @@
 const lightbox = GLightbox({
-    selector: 'glightbox',
+    // selector: 'glightbox',
     touchNavigation: true,
     loop: true,
     autoplayVideos: true

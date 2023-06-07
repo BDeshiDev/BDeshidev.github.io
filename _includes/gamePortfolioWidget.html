@@ -25,6 +25,24 @@
             </div>
         </div>
     </div>
+    <div 
+    class="portfolio__project__Desc__Gallery">
+        {% for ss in game.portfolioHighlights.screenshots %}
+            <a href="{{ss}}" 
+            {% if game.portfolioHighlights.screenshots.size < 3 %}
+            
+                class="glightbox short"
+            {% else %}
+                class="glightbox long"
+            {% endif %}
+            >
+                <img src="{{ss}}" alt="image" class="glightbox__image"/>
+            </a>
+        {% endfor %}
+    </div>
+    {% if game.portfolioHighlights.screenshots.size < 3 %}
+    
+    {% endif %}
     <div class="portfolio__project__Desc__Body">
         <ul class="portfolio__project__Desc__Body__Work">
             {% for work in game.portfolioHighlights.work %}
@@ -32,13 +50,7 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="portfolio__project__gallery">
-        {% for ss in game.portfolioHighlights.screenshots %}
-            <a href="{{ss}}" class="glightbox">
-                <img src="{{ss}}" alt="image" />
-            </a>
-        {% endfor %}
-    </div>
+   
 
     {% if game.portfolioHighlights.articles %}
         {% for article in game.portfolioHighlights.articles %}

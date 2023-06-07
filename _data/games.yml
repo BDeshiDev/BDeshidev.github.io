@@ -21,7 +21,7 @@ commercial:
       work:
         - Expanded a game-jam(GTMKJam2020) prototype into a commercial game.
         - <strong>Designed 47 puzzles</strong> around the core mechanic of glitching through objects you can move around
-        - "Wrote a <strong>Raycast-based platformer character controller</strong> that worked with the glitch mechanic."
+        - "Wrote a <strong>Raycast-based platformer character controller</strong> that worked with <strong>the glitch mechanic</strong>."
         - Wrote a <strong>rewind system</strong> using the <strong>command design pattern</strong>.
         - Wrote a <strong>multi-ending branching story</strong> told through text-logs.
         - Worked with <strong>YarnSpinner</strong> for branching dialogue.
@@ -29,6 +29,11 @@ commercial:
       articles:
         - desc: Wrote a post-mortem on my approach to developing the story in Control:Override
           link: /2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
+      screenshots:
+        - 'https://cdn.akamai.steamstatic.com/steam/apps/1406090/ss_7ce7c343e91a85a5949986bc477087782f4e1452.600x338.jpg?t=1681819544'
+        - 'https://cdn.cloudflare.steamstatic.com/steam/apps/1406090/extras/bugs-features-tools.gif?t=1681819544'
+        - 'https://cdn.akamai.steamstatic.com/steam/apps/1406090/ss_c1d7de2d5c950105c1a43c872d91acca19f55f23.600x338.jpg?t=1681819544'
+        - 'https://cdn.akamai.steamstatic.com/steam/apps/1406090/ss_21c0cc067bad91ee0c71648301d4b3edf1e0881e.600x338.jpg?t=1681819544'
 
 personal:
   - name: Your Bullets, Our Hell
@@ -38,7 +43,7 @@ personal:
     desc: A top-down shooter where you can hypnotize enemies to fight for you until they turn your life back into a bullet hell.
     icon: https://img.itch.zone/aW1nLzc3NjExNTcucG5n/315x250%23c/otlVxn.png
     portfolioHighlights:
-      thumbnail: https://img.itch.zone/aW1nLzc3NjE0MjYuZ2lm/original/0lCdc2.gif
+      thumbnail: https://img.itch.zone/aW1nLzc3NjExNTcucG5n/315x250%23c/otlVxn.png
       desc: |+
         A top-down shooter where you can hypnotize enemies to fight for you until they turn your life back into a bullet hell.
       work: 
@@ -46,6 +51,9 @@ personal:
         - Implemented a system for spawning bullets in diverse patterns with <strong>object pooling</strong>
         - Focused on nailing the <strong>game feel</strong>
         - Won 2nd place in the game-jam(Brain-Jam 2021)
+      screenshots:
+        - https://img.itch.zone/aW1nLzc3NjE0MjYuZ2lm/original/0lCdc2.gif
+        - https://img.itch.zone/aW1hZ2UvMTMzMzkwNy83NzYxMzQxLnBuZw==/794x1000/Px87wP.png
     itch: https://b-deshidev.itch.io/your-bullets-our-hell
     github: https://github.com/BDeshiDev/-Hack-A-Jam-2021
   - name: Phantom Reverie
@@ -57,7 +65,7 @@ personal:
       - UNITY3D
     year: 2020
     portfolioHighlights:
-      thumbnail: '/assets/img/gifs/phantom reverie combat.GIF' 
+      thumbnail: 'https://img.itch.zone/aW1nLzI3NTA1MjQucG5n/315x250%23c/aqsxn0.png' 
       desc: |+
         Phantom Reverie is a soulslike prototype for android that I made for to get better at designing AI.
       work: 
@@ -65,6 +73,9 @@ personal:
         - Implemented a ticketing based <strong>AI combat director</strong>.
         - Enemies <strong>coordinate</strong> their attacks to keep it challenging without overwhelming the player. 
         - Balances enemy attack tickets between melee and ranged attacks to <strong>keep combat dynamic</strong>.
+      screenshots:
+        - '/assets/img/gifs/phantom reverie combat.GIF'
+        - 'https://img.itch.zone/aW1hZ2UvNTI1MTg3LzI3MzAwMTQuZ2lm/794x1000/kWJohk.gif'
   - name: MathMagician
     gamejam: BrainJam2020
     year: 2020
@@ -81,10 +92,13 @@ personal:
         A short card based RPG where you need to use arithmetic to manipulate the flow of mana. 
         You are given a set of numbers each turn. Manipulate them to fulfill the equations in each card.
       work:
-      - Implemented Slay the Spire like <strong>deck-based combat</strong>
-      - <strong>Turn based enemy AI</strong> with enemy "tells" like Slay the Spire
-      - Mixed it with a math-based energy system to play cards.
-      - Won 2nd place in the game-jam(Brain-Jam 2020)
+        - Implemented Slay the Spire like <strong>deck-based combat</strong>
+        - <strong>Turn based enemy AI</strong> with enemy "tells" like Slay the Spire
+        - Mixed it with a math-based energy system to play cards.
+        - Won 2nd place in the game-jam(Brain-Jam 2020)
+      screenshots:
+        - https://img.itch.zone/aW1hZ2UvNTYyODUwLzI5NTQzMDgucG5n/original/nOWO%2Fq.png
+        - https://img.itch.zone/aW1hZ2UvNTYyODUwLzI5NTQzMTEucG5n/794x1000/Nsi5SL.png
   - name: In Exchange For My Life
     year: 2019
     gamejam: LD40
@@ -109,6 +123,9 @@ personal:
         - Implemented a <strong>custom SRPG turn system</strong> where your entire team gets a single turn. 
         - Implmented <strong>turn based SRPG combat</strong>  with different skillset for each class
         - Implemented SRPG <strong>enemy AI</strong> that will pick the best move depending on the scenario.
+      screenshots:
+        - https://img.itch.zone/aW1hZ2UvNDYzMjc2LzIzNTY2NjgucG5n/original/RUlkpB.png
+        - https://img.itch.zone/aW1hZ2UvNDYzMjc2LzIzNTY2NjQucG5n/794x1000/ZSVCaI.png
     steam: 
     itch: https://b-deshidev.itch.io/nekurotactics
     icon: https://img.itch.zone/aW1nLzIzNTcxODcucG5n/315x250%23c/WxLlvS.png
