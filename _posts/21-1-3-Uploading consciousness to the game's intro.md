@@ -12,6 +12,6 @@ previewImage: '/assets/img/gifs/UPLOADING_CONSCIOUSNESS_TO_CYBERSPACE.gif'
 game: 'Control:Override'
 comments: true
 customcss:
-  - 'assets/css/devlog.css'
+  - '/assets/css/devlog.css'
 ---
 Testing GIF embeds

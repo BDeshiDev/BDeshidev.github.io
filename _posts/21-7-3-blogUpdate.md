@@ -12,7 +12,7 @@ previewImage: '/assets/img/Screenshot (92.2.0).png'
 game: 'Control:Override'
 comments: true
 customcss:
-  - 'assets/css/devlog.css'
+  - '/assets/css/devlog.css'
 ---
 I finally decided to update my github page. I needed some place to host all of my blogs together as well as a portfolio site. 
 # Sidebar
