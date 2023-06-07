@@ -4,6 +4,11 @@ showNavMirai: true
 Title: B-DeshiDev 
 customcss:
     - '/assets/css/portfolio.css'
+    - 'https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.css'
+customScripts:
+    - 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox@3.2.0/dist/js/glightbox.min.js'
+    - '/assets/js/externalModules/portfolioGallery.js'
+
 ---
 <!-- <ul class='gamesList'>
     <h2>Commercial:</h2>
@@ -84,15 +89,19 @@ dfdfdfdfd -->
             <br>
         {% endif %}
     {% endfor %}
-    <div id="lightgallery">
-        <a href="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png" >
-            <img alt="img1" src="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png" />
-        </a>
-        <a href="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png">
-            <img alt="img2" src="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png" />
-        </a>
-    </div>
-    
+
+
+    <a href="https://vimeo.com/115041822" class="glightbox">
+        <img src="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png" alt="image" />
+        <img src="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png" alt="image" />
+        <img src="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png" alt="image" />
+        <img src="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png" alt="image" />
+        <img src="https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png" alt="image" />
+    </a>
+    <div class="glightbox-desc custom-desc1">
+        <p>The content of this div will be used as the slide description</p>
+        <p>You can add links and any HTML you want</p>
+      </div>
  
 </div>
 
