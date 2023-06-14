@@ -50,9 +50,9 @@
             {% endfor %}
         </ul>
     </div>
-   
-
+    
     {% if game.portfolioHighlights.articles %}
+        <span class="portfolio__project__articles_header">Design breakdowns:</span>
         {% for article in game.portfolioHighlights.articles %}
             <a href="{{ article.link }}" class="portfolio__project__article" >
                 <i class="fa fa-link" aria-hidden="true"></i>
