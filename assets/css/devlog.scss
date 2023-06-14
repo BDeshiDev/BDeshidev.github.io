@@ -101,6 +101,9 @@
             white-space: pre-line;
             @include headerFontSettings(3rem,1.6rem);
         }
+        em{
+            color: $secondary
+        }
 
         .highlight {
             background: #f9f9f910;
