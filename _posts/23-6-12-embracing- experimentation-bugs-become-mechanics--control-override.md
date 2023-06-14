@@ -1,7 +1,7 @@
 ---
 title: "Embracing experimentation: How bugs became mechanics in Control:Override" 
 by: B-DeshiDev
-published: true
+published: false
 layout: devlog
 tags:
   - Control:Override
