@@ -27,8 +27,12 @@ commercial:
         - Worked with <strong>YarnSpinner</strong> for branching dialogue.
         - Worked with a publisher to publish the game on <strong>Steam</strong>
       articles:
-        - desc: Wrote a post-mortem on my approach to developing the story in Control:Override
-          link: /2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
+        - desc: Conveying unnatural mechanics naturally in Control:Override
+          link: 2023/06/13/conveying-unnatural-mechanics-naturally.html
+        - desc: Embracing experimentation in design in Control:Override
+          link: /2023/06/12/embracing-experimentation-bugs-become-mechanics-control-override.html
+        # - desc: Wrote a post-mortem on my approach to developing the story in Control:Override
+        #   link: /2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
       screenshots:
         - 'https://cdn.akamai.steamstatic.com/steam/apps/1406090/ss_7ce7c343e91a85a5949986bc477087782f4e1452.600x338.jpg?t=1681819544'
         - 'https://cdn.cloudflare.steamstatic.com/steam/apps/1406090/extras/bugs-features-tools.gif?t=1681819544'

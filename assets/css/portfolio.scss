@@ -203,6 +203,7 @@
             font-weight: bold;
             @include bg-color-text($secondary);
             @include font_size_responsive(1.5rem,1.4rem,1.3rem,1.2rem);
+            margin-bottom: .25rem;
             &:hover{
                 color: $background-color !important;
                 background-color: $primary;    
