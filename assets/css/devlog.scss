@@ -173,7 +173,7 @@
     }
     &__SideNav{
         grid-area: sn;
-
+        // background-color: $background-color;
         .sticky-wrapper{
             display: flex;
         }
@@ -444,7 +444,7 @@
 
 
             &.open{
-                background: rgba($color: $bg-light, $alpha: .8);                
+                background: rgba($color: $background-color, $alpha: .8);                
             }
 
         }
@@ -491,7 +491,7 @@
 
             &.open{
                 z-index: 2;     
-                background: rgba($color: $bg-light, $alpha: .8);                
+                background: rgba($color: $background-color, $alpha: .8);                
             }
         }
     }

@@ -51,17 +51,17 @@ The sci-fi setting was entirely a coincidence. However, thinking back. It was th
 # The story requirements:
 When I started expanding the game from the jam version, I wanted to have a proper story in the game.
 These were my requirements:
-1. The story would interfere as little as possible with the puzzle elements.
+1. <em>The story would interfere as little as possible with the puzzle elements:</em>
   Some puzzle games use puzzles to express parts of their story. However, the movement mechanics already made puzzle design restricting. I did not think that it would be possible to design a level that expressed a story element while keeping the puzzle interesting. As a result, I decided to tell the story through unlockable story fragments to completely separate it from the gameplay.
-2. The story must be doable with my limited artistic abilities:
+2. <em>The story must be doable with my limited artistic abilities:</em>
   I don’t have the talent for beautiful artstyle or cinematographic cutscenes. I don’t have the budget to hire actual artists. The presentation requirements of the story must be doable with my stickman level art. Due to this I resorted to a text-heavy story told through text-logs because text is cheap to implement unless you want VA.
-3. The story should not require any boss fights.
+3. <em>The story should not require any boss fights:</em>
   The c game’s mechanics did not lend well to boss fights. Moreover, the game’s design was reliant on a rewind mechanic that had become a big part of the game’s puzzle design. And rewinding would honestly ruin the thrill of boss fights. So I decided that if the game has an antagonist, s/he should not actually want to fight the player so that I have an excuse to not put boss battles in-game. 
-4. The story should build up and reach a satisfying conclusion by the end of the game.
+4. <em>The story should build up and reach a satisfying conclusion by the end of the game:</em>
   Again, this was to give the player a reason to continue solving puzzles. This was also the reason for adding mystery elements to the story.
-5. The story and the characters should have a lasting impact on the player.
+5. <em>The story and the characters should have a lasting impact on the player:</em>
   As an indie developer, I don’t expect my game to reach that many people. I expect even fewer to actually bother with the story. However, I want the few people who do so to be positively affected by the game.
-6. The player should not have to bother with the story if he does not want to.
+6. <em>The player should not have to bother with the story if he does not want to:</em> 
   I figured that no matter how much effort I put into the story, some people will still mash through the dialogue  and only play for the puzzles. So, I made the meat of the story optional.
 
 # Settling on the characters and themes:

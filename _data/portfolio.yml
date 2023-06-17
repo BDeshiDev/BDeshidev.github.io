@@ -7,20 +7,19 @@ languages:
 frameworks_tools:
   - Unity3D
   - Git
-  - Tensorflow
   - YarnSpinner
   - Trello
   - Notion
+  - Tensorflow
 skills:
   - Gameplay Programming
   - Game Design
   - Narrative Design
-  - 3D Math
   - AI programming
   - Machine Learning
 degrees:
   - where: Bangladesh University of Engineering and Technology
-    what: BSc in Computer Science
+    what: B.Sc. in Computer Science
     when: 2018 ‑ 2023 (Graduated)
     grade: "3.78 / 4.0"
     icon: "/assets/img/BUET_LOGO.png"
