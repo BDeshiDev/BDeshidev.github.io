@@ -126,6 +126,25 @@
                     &__Link {
                         font-size: 2rem;
                     }
+
+                    &__Button{
+                        padding: .125rem;
+                        color: $background-color;
+                        background: $secondary;
+                        border: none;
+                        padding: .5rem;
+                        font-weight: 100;
+                        font-size: 1.2rem;
+                        font-family: $header-font-family;
+                        cursor: pointer;
+                        i{
+                            font-size: 1.6rem;
+                        }
+                        &:hover {
+                            background: $secondary-dark;
+                            font-weight: bolder;
+                        }
+                    }
                 }
 
             }
