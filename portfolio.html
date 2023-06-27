@@ -26,12 +26,14 @@ dfdfdfdfd -->
 
 
 <div class="portfolio">
+
     <a href="/assets/downloadable/B_DeshiDev_Resume.pdf" target="_blank">
         <button class="cta-button">
             <i class="fa fa-file-pdf" aria-hidden="true"></i>
             <span> Resume </span>
         </button>
     </a>
+
     <h2>
         Why me?
     </h2>
@@ -40,6 +42,9 @@ dfdfdfdfd -->
                 <li>{{reason}}</li>
             {% endfor %}
         </ul>
+    <h2>
+        Skills:
+    </h2>
     <div class="portfolio__skill__block">
         {% for skill in site.data.portfolio.skills %}
             <span class="portfolio__skill__block__element">{{ skill }}</span>
@@ -69,9 +74,6 @@ dfdfdfdfd -->
             <span class="portfolio__skill__block__element">{{ ft }}</span>
         {% endfor %}
     </div>
-    <h2>
-        Skills:
-    </h2>
 
     <h2>
         Projects(Commercial):
@@ -81,10 +83,10 @@ dfdfdfdfd -->
             {% include gamePortfolioWidget.html %}
         {% endfor %}
     </div>
+
     <h2>
         Projects(Non-Commercial):
     </h2>
-    
     <div>
         {% for game in site.data.games.personal  %}
             {% if game.includeInPortfolio %}
@@ -93,7 +95,16 @@ dfdfdfdfd -->
         {% endfor %}
     </div>
 
-
+    <!-- <h2>
+        Tools:
+    </h2>
+    <div>
+        {% for game in site.data.tools  %}
+            {% if game.includeInPortfolio %}    
+                    {% include gamePortfolioWidget.html %}
+            {% endif %}
+        {% endfor %}
+    </div> -->
 </div>
 
 

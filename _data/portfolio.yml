@@ -16,7 +16,7 @@ skills:
   - Game Design
   - Narrative Design
   - AI programming
-  - Machine Learning
+  # - Machine Learning
 degrees:
   - where: Bangladesh University of Engineering and Technology
     what: B.Sc. in Computer Science
