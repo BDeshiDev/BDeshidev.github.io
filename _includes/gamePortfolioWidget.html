@@ -16,11 +16,11 @@
                 </a>
                 {% endif %}
                 <div>
-                    {% for role in game.portfolioHighlights.roles %}
+                    <!-- {% for role in game.portfolioHighlights.roles %}
                         <div class="portfolio__project__Role">
                             {{role}}
                         </div>
-                    {% endfor %}
+                    {% endfor %} -->
                 </div>
                 {% if game.itch %}
                 <a href="{{game.itch}}">
@@ -66,7 +66,7 @@
             {% endfor %}
         </ul>
     </div>
-    
+        
     {% if game.portfolioHighlights.articles %}
         <span class="portfolio__project__articles_header">Design breakdowns:</span>
         {% for article in game.portfolioHighlights.articles %}

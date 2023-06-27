@@ -106,6 +106,9 @@
                 }
                 &__Desc {
                     margin-bottom: auto;
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
                     h3 {
                         padding-left: .5rem;
                         margin-block-start: 0;
@@ -122,6 +125,8 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: left;
+                    margin-top: auto;
+                    flex-grow: 1;
                     
                     &__Link {
                         font-size: 2rem;
