@@ -126,7 +126,7 @@ personal:
     icon: https://img.itch.zone/aW1nLzIwNjUxMzkucG5n/315x250%23c/waB%2Br2.png
   - name: Nekuro Tactics
     year: 2019
-    includeInPortfolio: true
+    # includeInPortfolio: true
     gamejam: LD39
     desc: |+ 
       An SRPG where you can possess and order only 1 party member to act every turn. 

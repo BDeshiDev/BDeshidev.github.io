@@ -91,11 +91,23 @@ dfdfdfdfd -->
         {% for game in site.data.games.personal  %}
             {% if game.includeInPortfolio %}
                     {% include gamePortfolioWidget.html %}
+                    <br>
+
             {% endif %}
         {% endfor %}
     </div>
 
-
+    <h2>
+        Tools:
+    </h2>
+    <div>
+        {% for game in site.data.tools  %}
+            {% if game.includeInPortfolio %}    
+                    {% include gamePortfolioWidget.html %}
+                    <br>
+            {% endif %}
+        {% endfor %}
+    </div>
 </div>
 
 

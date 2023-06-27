@@ -3,10 +3,10 @@
   portfolioHighlights:
     # thumbnail: https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png
     desc: |+
-      A modular Behavior Tree and Finite State machine library for Unity3D that lets you define states, and BT nodes and manages state transitions purely via code.
-      Inspired to merge FSM and BT by the following GDC talk: https://www.youtube.com/watch?v=Qq_xX1JCreI 
+      A modular Behavior Tree and Finite State machine library for Unity3D that lets you define states and BT nodes and manages state transitions purely via code.
+      Inspired to merge FSM and BT <a href="https://www.youtube.com/watch?v=Qq_xX1JCreI">by this GDC talk.</a>
     work:
-      - Wrote Parallel, Selector, Squence etc BT nodes and several custom ones
+      - Wrote Parallel, Selector, Squence etc BT nodes and several custom ones.
       - Wrote a flexible <strong>Hierarchical Finite State machine framework</strong> that works with behavior trees.
       - BT and FSM can be <strong>constructed/modified in runtime</strong>.
       - Wrote <strong>Unity Editor code</strong> for a custom editor window for <strong>runtime debugging the FSM/BT</strong>. 

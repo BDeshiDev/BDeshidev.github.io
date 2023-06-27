@@ -1,8 +1,11 @@
 <div class="portfolio__project">
     <div class="portfolio__project__Desc__Header">
+        {% if game.portfolioHighlights.thumbnail %}
         <div>
             <img src="{{ game.portfolioHighlights.thumbnail }}" alt="{{ game.name }} icon" class="portfolio__project__Desc__Header__Icon">
-        </div>    
+        </div> 
+        {% endif %}
+    
         <div class="portfolio__project__Desc__Header__Desc">
             <h3 >{{ game.name }}</h3>
             <div class="portfolio__project__Desc__Header__Desc__Body">{{ game.portfolioHighlights.desc }}</div>
