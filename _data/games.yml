@@ -17,8 +17,8 @@ commercial:
         Abuse physics bugs to solve puzzles in out of the box ways. 
         Terminate the rogue AI. And perhaps confront the truth about why it went rogue.
       work:
-        - Expanded a game-jam(GTMKJam2020) prototype into a commercial game.
-        - <strong>Designed 47 puzzles</strong> around the core mechanic of glitching through objects you can move around.
+        - Designed and implemented <strong>the core game mechanic</strong>, the ability to share controls with and glitch into objects.
+        - Designed and implemented <strong>gameplay interactions/level elements</strong> that build upon the core mechanic
         - Implemented a <strong>Raycast-based platformer character controller</strong> that worked with <strong>the glitch mechanic</strong>.
         - Implemented a <strong>rewind/Undo system</strong>.
         - Wrote and implemented a <strong>branching, multi-ending story</strong> told through text-logs.
@@ -55,7 +55,9 @@ personal:
         A top-down shooter where you can hypnotize enemies to fight for you. But when they go berserk, they will turn your life back into a bullet hell.
       work: 
         - Implemented a top-down arena bullet hell combat system
-        - Implemented a system for spawning bullets in diverse patterns with <strong>object pooling</strong>
+        - Designed and implemented an enemy mind control mechanic.
+        - Implemented a <strong>bullet spawn system</strong> that can spawn bullets in diverse geometric patterns.
+        - Implemented <strong>object pooling</strong> for bullet spawning.
         - Focused on nailing the <strong>game feel</strong>
         - Won 2nd place in the game-jam(Brain-Jam 2021)
       screenshots:
