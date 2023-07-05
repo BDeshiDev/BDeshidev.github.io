@@ -26,11 +26,10 @@ rtxAssignment:
       desc: |+
         A <strong>C++</strong> OpenGL raytracer I wrote as part of a computer graphics course assignment. 
       work:
-        - supports <strong>General Quadratic Surfaces, Spheres, Quads and Triangles</strong>.
-        - supports point lights and spotlights.
-        - supports <strong>raytaced reflection and specular lights</strong> in phong lighting model.
-        - has a <strong>C++ Vector math</strong> library written from scratch.
-        - has a <strong>C++ Matrix operations</strong> library written from scratch.
+        - Implemented raytracing for primitives such as <strong>General Quadratic Surfaces, Spheres, Triangles</strong> etc.
+        - Implmented <strong>raytaced reflection and specular lights</strong> in phong lighting model.
+        - Wrote a <strong>C++ Vector math</strong> library written from scratch.
+        - Wrote a <strong>C++ Matrix operations</strong> library written from scratch.
       roles:
         - Gameplay programming
         - C++
