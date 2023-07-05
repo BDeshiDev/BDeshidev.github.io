@@ -1,19 +1,39 @@
-- name: "BTSM: Modular Behavior Tree + Finite State Machine library"
-  includeInPortfolio: includeInPortfolio
-  github: https://github.com/BDeshiDev/BTSM-Behavior-Tree-FSM-library-for-Unity
-  portfolioHighlights:
-    desc: |+
-      A modular Behavior Tree and Finite State machine library for Unity3D that lets you define states and BT nodes and manage state transitions purely via code.
-      Inspired to merge FSM and BT <a href="https://www.youtube.com/watch?v=Qq_xX1JCreI">by this GDC talk.</a>
-    work:
-      - Wrote a Behavior tree system with sequence, parallel etc. nodes.
-      - Wrote a flexible <strong>Hierarchical Finite State machine </strong> system.
-      - Wrote <strong>Unity Editor code</strong> for a custom editor window for <strong>runtime debugging the FSM/BT</strong>. 
-      - <strong>Each state can be a behavior tree</strong> but the two can work independently as well.
-      - BT, FSM and transitions can be <strong>constructed/modified in runtime</strong>.
-    roles:
-      - Gameplay programming
-      - AI programming
-    screenshots:
-      - '/assets/img/BTSM 1.png'
-      - '/assets/img/BTSM 2.png'
+BTSM:
+    name: "BTSM: Modular Behavior Tree + Finite State Machine library"
+    includeInPortfolio: true
+    github: https://github.com/BDeshiDev/BTSM-Behavior-Tree-FSM-library-for-Unity
+    portfolioHighlights:
+      desc: |+
+        A modular Behavior Tree and Finite State machine library for Unity3D that lets you define states and BT nodes and manage state transitions purely via code.
+        Inspired to merge FSM and BT <a href="https://www.youtube.com/watch?v=Qq_xX1JCreI">by this GDC talk.</a>
+      work:
+        - Wrote a Behavior tree system with sequence, parallel etc. nodes.
+        - Wrote a flexible <strong>Hierarchical Finite State machine </strong> system.
+        - Wrote <strong>Unity Editor code</strong> for a custom editor window for <strong>runtime debugging the FSM/BT</strong>. 
+        - <strong>Each state can be a behavior tree</strong> but the two can work independently as well.
+        - BT, FSM and transitions can be <strong>constructed/modified in runtime</strong>.
+      roles:
+        - Gameplay programming
+        - AI programming
+      screenshots:
+        - '/assets/img/BTSM 1.png'
+        - '/assets/img/BTSM 2.png'
+rtxAssignment:
+    name: "C++ OpenGL raytracer"
+    includeInPortfolio: true
+    github: https://github.com/BDeshiDev/Opengl-Raytracer-Assignment
+    portfolioHighlights:
+      desc: |+
+        A <strong>C++</strong> OpenGL raytracer I wrote as part of a computer graphics course assignment. 
+      work:
+        - supports <strong>General Quadratic Surfaces, Spheres, Quads and Triangles</strong>.
+        - supports point lights and spotlights.
+        - supports <strong>raytaced reflection and specular lights</strong> in phong lighting model.
+        - has a <strong>C++ Vector math</strong> library written from scratch.
+        - has a <strong>C++ Matrix operations</strong> library written from scratch.
+      roles:
+        - Gameplay programming
+        - C++
+      screenshots:
+        - '/assets/img/ss_mirror.jpg'
+        - '/assets/img/ss_shapes.jpg'

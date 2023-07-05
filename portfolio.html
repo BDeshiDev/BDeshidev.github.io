@@ -88,12 +88,11 @@ dfdfdfdfd -->
         Projects(Non-Commercial):
     </h2>
     <div>
-        {% for game in site.data.tools  %}
-            {% if game.includeInPortfolio %}    
-                    {% include gamePortfolioWidget.html %}
-                    <br>
-            {% endif %}
-        {% endfor %}
+        {% assign game = site.data.tools.BTSM %}
+        {% if game.includeInPortfolio %}    
+            {% include gamePortfolioWidget.html %}
+            <br>
+        {% endif %}
     </div>
     <br>
     <div>
@@ -105,7 +104,13 @@ dfdfdfdfd -->
             {% endif %}
         {% endfor %}
     </div>
-
+    <div>
+        {% assign game = site.data.tools.rtxAssignment %}
+        {% if game.includeInPortfolio %}    
+                {% include gamePortfolioWidget.html %}
+                <br>
+        {% endif %}
+    </div>
     <!-- <h2>
         Tools:
     </h2> -->
