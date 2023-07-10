@@ -20,7 +20,7 @@ BTSM:
         - '/assets/img/BTSM 2.png'
 rtxAssignment:
     name: "C++ OpenGL raytracer"
-    includeInPortfolio: true
+    includeInPortfolio: false
     github: https://github.com/BDeshiDev/Opengl-Raytracer-Assignment
     portfolioHighlights:
       desc: |+
