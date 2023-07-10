@@ -25,9 +25,9 @@ commercial:
         # - Worked with <strong>YarnSpinner</strong> for branching dialogue.
         - Worked with a publisher to publish the game on <strong>Steam</strong>
       articles:
-        - desc: Conveying unnatural mechanics naturally in Control:Override
+        - desc: Designing levels to teach unnatural mechanics naturally in Control:Override
           link: 2023/06/13/conveying-unnatural-mechanics-naturally.html
-        - desc: How physics bugs became mechanics in Control:Override
+        - desc: How I turned physics bugs into mechanics in Control:Override
           link: /2023/06/12/embracing-experimentation-bugs-become-mechanics-control-override.html
         - desc: "Schrödinger's protagonist: Designing the story in Control:Override"
           link: /2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
