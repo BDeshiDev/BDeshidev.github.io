@@ -230,7 +230,7 @@ The following figure shows a corner case:
 ![](/assets/blogEmbeds/angle-explain-corner-case.png)
 Let's consider the scenario where two cover points are at the same distance from the enemy. Assuming we score cover based only on the distance from the enemy, both of these would score the same. However, a defense focused enemy would want the cover behind them. An offense focused enemy would want the cover near the player. *By considering the angle between the player and the cover, we can prioritize/penalize covers better.*
 
-This paricular case can be countered by considering the distance of the cover from the player. However, It is also possible to draw versions where the two cover would  Sobe a the same distance to the player also. In which case, we have to rely on the angle between the player and the cover to score them differently.
+This paricular case can be countered by considering the distance of the cover from the player. However, It is also possible to draw versions where the two cover would  be a the same distance to the player also. In which case, we have to rely on the angle between the player and the cover to score them differently.
 
 *So a holistic approach weighting all the factors like this is needed.*
 ### Defensive cover seeking
@@ -276,7 +276,7 @@ The system was made within the time constraints of a game jam. While I did have 
 In the above clip you can see the enemy that is supposed to flee, move towards the player and then backwards to a cover point which is not ideal. The cover evaluation system is indeed working properly. The cover point it picks is far from the player and not exposed. The problem is that the path calculated by Unity's Navmesh system doesn't account for whether the player is in the path or not. 
 
 ### Solution
-The solution is to add a pathfinding penalty around the player. However, the other cop enemy(the offensive focused one) *wants* to move towards the player. So they have different path cost schemes. However, upon research, I realized that Unity's navmesh penalty system is ill suited for this. Different agenst can have different masks for penalty zones. But they cannot have different penalty schemes.
+The solution is to add a pathfinding penalty around the player. However, the other cop enemy(the offensive focused one) *wants* to move towards the player. So they have different path cost schemes. However, upon research, I realized that Unity's navmesh penalty system is ill suited for this. Different agents can have different masks for penalty zones. But they cannot have different penalty schemes.
 
 Using a different pathfinding system(Ex: a custom A* library) would allow for this. However, I determined that doing so would require a significant time investment without much gain. In this game, due to the focus on playing offensively, enemies moving towards the player is not that much of a problem since the player *wants* to chase enemies down. Due to this and the time constraints of the jam, I decided to prioritize other tasks. 
 
