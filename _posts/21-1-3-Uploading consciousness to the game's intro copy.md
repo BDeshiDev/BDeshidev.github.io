@@ -1,7 +1,7 @@
 ---
 title: Devlogs GIF Test
 by: B-DeshiDev
-published: true
+published: false
 layout: devlog
 tags:
   - Jekyll

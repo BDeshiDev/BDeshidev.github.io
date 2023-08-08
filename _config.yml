@@ -3,8 +3,12 @@ sass:
   style: compressed
   # implementation: sass-embedded
 url: https://bdeshidev.github.io/ 
+markdown: kramdown
+highlighter: rouge
 kramdown:
   parse_block_html: true
+  input: GFM
+
 include:
   - node_modules/
   - /node_modules/.bin/autoprefixer

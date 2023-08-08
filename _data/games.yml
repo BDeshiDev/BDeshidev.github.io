@@ -18,10 +18,11 @@ commercial:
         Terminate the rogue AI. And perhaps confront the truth about why it went rogue.
       work:
         - Designed and implemented <strong>the core game mechanic</strong>, the ability to share controls with and glitch into objects.
-        - Designed and implemented <strong>gameplay interactions/level elements</strong> that build upon the core mechanic
-        - Implemented a <strong>Raycast-based platformer character controller</strong> that worked with <strong>the glitch mechanic</strong>.
-        - Implemented a <strong>rewind/Undo system</strong>.
-        - Wrote and implemented a <strong>branching, multi-ending story</strong> told through text-logs.
+        - Designed and implemented <strong>gameplay interactions/level elements</strong> that build upon the core mechanic.
+        - Designed <strong>47 puzzle levels</strong> utilizing the above.
+        - Implemented a <strong>custom raycast-based platformer character controller</strong> that worked with <strong>the glitch mechanic</strong>.
+        # - Implemented a <strong>rewind/Undo system</strong>.
+        - Wrote and implemented a <strong>branching, multi-ending story</strong> with Yarnspinner.
         # - Worked with <strong>YarnSpinner</strong> for branching dialogue.
         - Worked with a publisher to publish the game on <strong>Steam</strong>
       articles:
@@ -32,10 +33,10 @@ commercial:
         - desc: "Schrödinger's protagonist: Designing the story in Control:Override"
           link: /2022/12/22/Designing-the-story-for-ControlOverride-Schr%C3%B6dinger-s-protagonist-on-a-budget.html
       roles:
+        - Level Design
         - Gameplay programming
-        - level design
-        - game design
-        - narrative design
+        - Game Design
+        - Narrative Design
       screenshots:
         - 'https://cdn.akamai.steamstatic.com/steam/apps/1406090/ss_7ce7c343e91a85a5949986bc477087782f4e1452.600x338.jpg?t=1681819544'
         - 'https://cdn.cloudflare.steamstatic.com/steam/apps/1406090/extras/bugs-features-tools.gif?t=1681819544'
@@ -43,11 +44,67 @@ commercial:
         - 'https://cdn.akamai.steamstatic.com/steam/apps/1406090/ss_21c0cc067bad91ee0c71648301d4b3edf1e0881e.600x338.jpg?t=1681819544'
 
 personal:
+  - name: Neon Heart Overdrive  
+    year: 2021
+    includeInPortfolio: true
+    portfolioHighlights:
+    desc: A retro FPS where your healthbar is a combo meter. 
+    icon: '/assets/img/neon-heart-overdrive-title.png'
+    itch: https://b-deshidev.itch.io/neon-heart-overdrive
+    portfolioHighlights:
+      thumbnail: '/assets/img/neon-heart-overdrive-title.png'
+      desc: |+
+        A retro FPS where your healthbar is a combo meter. Use slowmo and go into overdrive keep the combo going and your heart beating.
+      work: 
+        - Implemented FPS combat with gun spread, ammo management, hitscan, projectiles, etc.
+        - Implemented variety of weapons including smgs, shotguns, grenades and a flamethrower.
+        - Implemented <strong>enemy AI</strong> using a custom <strong>BT/FSM library I wrote(BTSM).</strong>
+        - <strong>Implemented and optimized</strong> an enemy cover system.
+        - Implemented enemy ragdolls.
+        - Implemented game feel aspects such as screenshake.
+        - Won <strong>first place in the Design Den Game Jam 2023</strong>
+      screenshots:
+        - '/assets/img/gifs/neon-heart-gif.gif'
+        - https://img.itch.zone/aW1hZ2UvMjE4NjczMS8xMjk1NDYyMy5wbmc=/794x1000/boUzOZ.png
+      roles:
+        - Gameplay programming
+        - Game design
+        - AI Programming
+      articles:
+        - desc: Implementing and optimizing cover seeking AI for Neon Heart Overdrive
+          link: 2023/08/01/Implementing-optimizing-cover-seeking-AI-neon-heart-overdrive.html
+      itch: https://b-deshidev.itch.io/neon-heart-overdrive
+  - name: MathMagician
+    gamejam: BrainJam2020
+    year: 2020
+    includeInPortfolio: true
+    technology: 
+      - "C#"
+      - UNITY3D
+    desc: A short card based RPG where you need to use arithmetic to manipulate the flow of mana. 
+    itch: https://b-deshidev.itch.io/mathmagician
+    icon: https://img.itch.zone/aW1nLzI5NTQzMDMucG5n/315x250%23c/MkASCK.png
+    portfolioHighlights:
+      thumbnail: https://img.itch.zone/aW1nLzI5NTQzMDMucG5n/315x250%23c/MkASCK.png
+      desc: |+ 
+        A short card based RPG where you need to use arithmetic to manipulate the flow of mana. 
+        You are given a set of numbers each turn. Manipulate them to fulfill the equations in each card.
+      work:
+        - Implemented Slay the Spire like <strong>deck-based combat</strong>
+        - <strong>Turn based enemy AI</strong> with enemy "tells" like Slay the Spire
+        - Mixed it with a math-based energy system to play cards.
+        - Won 2nd place in the game-jam(Brain-Jam 2020)
+      roles:
+        - Gameplay programming
+        - Game Design
+      screenshots:
+        - https://img.itch.zone/aW1hZ2UvNTYyODUwLzI5NTQzMDgucG5n/original/nOWO%2Fq.png
+        - https://img.itch.zone/aW1hZ2UvNTYyODUwLzI5NTQzMTEucG5n/794x1000/Nsi5SL.png
   - name: Your Bullets, Our Hell
     year: 2021
     includeInPortfolio: true
     portfolioHighlights:
-    desc: A top-down shooter where you can hypnotize enemies to fight for you. But when they go berserk, they will turn your life back into a bullet hell.
+    desc: A top-down shooter where you can hypnotize enemies to fight for you. But afterwards they go berserk and turn your life back into a bullet hell.
     icon: https://img.itch.zone/aW1nLzc3NjExNTcucG5n/315x250%23c/otlVxn.png
     portfolioHighlights:
       thumbnail: https://img.itch.zone/aW1nLzc3NjExNTcucG5n/315x250%23c/otlVxn.png
@@ -94,32 +151,7 @@ personal:
       screenshots:
         - '/assets/img/gifs/phantom reverie combat.GIF'
         - 'https://img.itch.zone/aW1hZ2UvNTI1MTg3LzI3MzAwMTQuZ2lm/794x1000/kWJohk.gif'
-  - name: MathMagician
-    gamejam: BrainJam2020
-    year: 2020
-    includeInPortfolio: true
-    technology: 
-      - "C#"
-      - UNITY3D
-    desc: A short card based RPG where you need to use arithmetic to manipulate the flow of mana. 
-    itch: https://b-deshidev.itch.io/mathmagician
-    icon: https://img.itch.zone/aW1nLzI5NTQzMDMucG5n/315x250%23c/MkASCK.png
-    portfolioHighlights:
-      thumbnail: https://img.itch.zone/aW1nLzI5NTQzMDMucG5n/315x250%23c/MkASCK.png
-      desc: |+ 
-        A short card based RPG where you need to use arithmetic to manipulate the flow of mana. 
-        You are given a set of numbers each turn. Manipulate them to fulfill the equations in each card.
-      work:
-        - Implemented Slay the Spire like <strong>deck-based combat</strong>
-        - <strong>Turn based enemy AI</strong> with enemy "tells" like Slay the Spire
-        - Mixed it with a math-based energy system to play cards.
-        - Won 2nd place in the game-jam(Brain-Jam 2020)
-      roles:
-        - Gameplay programming
-        - Game Design
-      screenshots:
-        - https://img.itch.zone/aW1hZ2UvNTYyODUwLzI5NTQzMDgucG5n/original/nOWO%2Fq.png
-        - https://img.itch.zone/aW1hZ2UvNTYyODUwLzI5NTQzMTEucG5n/794x1000/Nsi5SL.png
+  
   - name: In Exchange For My Life
     year: 2019
     gamejam: LD40

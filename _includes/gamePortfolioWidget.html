@@ -9,6 +9,7 @@
         <div class="portfolio__project__Desc__Header__Desc">
             <h3 >{{ game.name }}</h3>
             <div class="portfolio__project__Desc__Header__Desc__Body">{{ game.portfolioHighlights.desc }}</div>
+
             <div class="portfolio__project__Desc__Header__Links">
                 {% if game.steam %}
                 <a href="{{game.steam}}">
@@ -18,13 +19,7 @@
                     </button>
                 </a>
                 {% endif %}
-                <div>
-                    <!-- {% for role in game.portfolioHighlights.roles %}
-                        <div class="portfolio__project__Role">
-                            {{role}}
-                        </div>
-                    {% endfor %} -->
-                </div>
+      
                 {% if game.itch %}
                 <a href="{{game.itch}}">
                     <button class="portfolio__project__Desc__Header__Links__Button">
@@ -43,7 +38,22 @@
                 {% endif %}
             </div>
         </div>
+        
     </div>
+    
+    <div>
+        <div class="portfolio__project__Roles">
+            <p>Roles: </p>
+            {% for role in game.portfolioHighlights.roles %}
+                <span class="portfolio__project__Roles__Role">
+                    {{role}}
+                </span>
+            {% endfor %}
+        </div>
+        <!-- <i class="fa fa-clock" aria-hidden="true"> 1 Week </i>
+        <i class="fa fa-group" aria-hidden="true"> Team Size: 3 </i> -->
+    </div>
+
     <div 
     class="portfolio__project__Desc__Gallery">
         {% for ss in game.portfolioHighlights.screenshots %}
