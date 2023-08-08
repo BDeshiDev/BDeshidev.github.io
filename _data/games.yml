@@ -19,7 +19,7 @@ commercial:
       work:
         - Designed and implemented <strong>the core game mechanic</strong>, the ability to share controls with and glitch into objects.
         - Designed and implemented <strong>gameplay interactions/level elements</strong> that build upon the core mechanic.
-        - Designed <strong>47 puzzle levels</strong>.
+        - Designed <strong>47 puzzle levels</strong> utilizing the above.
         - Implemented a <strong>custom raycast-based platformer character controller</strong> that worked with <strong>the glitch mechanic</strong>.
         # - Implemented a <strong>rewind/Undo system</strong>.
         - Wrote and implemented a <strong>branching, multi-ending story</strong> with Yarnspinner.

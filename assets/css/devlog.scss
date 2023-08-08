@@ -10,6 +10,7 @@
     grid-template-areas: "pd tt ."
                          "tp bd sn"
                          ".  rb . ";
+    
     // background: blue;
     &__Title{
         grid-area: tt;
@@ -187,6 +188,7 @@
         }
     }
     &__SideNav{
+        display: none;
         grid-area: sn;
         // background-color: $background-color;
         .sticky-wrapper{
@@ -415,7 +417,8 @@
 
 
             &__ToggleButton{
-                display: inline;
+                
+                // display: inline;
                 font-size: 1.5rem;
                 padding: .5rem;
                 margin-top: 0;
@@ -423,6 +426,7 @@
                 margin-right: 0;
                 justify-self: right;
 
+                
                 &.open{
                     color: $secondary;
                     background: none;
@@ -524,7 +528,29 @@
     }
 
 }
+.highlight pre{
+    white-space: pre-wrap;
+    // width: 100%;
+    overflow: scroll;
+    overflow: auto;
+    padding: .5rem;
 
+    @include media-md {
+        white-space: pre;
+        overflow: auto;
+    }
+
+    // @include font_size_responsive(1rem,1rem,1rem,.75rem);
+}
+
+.highlight-parent{
+    padding: 0px;
+    margin: 0px;
+    
+    @include media-md {
+        max-width: unset;  
+    }
+}
 
 .sticky-wrapper{
     padding: 0;
