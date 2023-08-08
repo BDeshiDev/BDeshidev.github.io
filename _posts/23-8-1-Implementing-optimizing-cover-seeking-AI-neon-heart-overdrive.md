@@ -7,7 +7,7 @@ tags:
   - Gameplay Programming
   - AI Programming
 # headerImage: '/assets/img/Screenshot (92.2.0).png'
-previewImage: '/assets/img/Screenshot (92.2.0).png'
+previewImage: '/assets/img/neon-heart-overdrive-title.png'
 game: 'Control:Override'
 comments: true
 customcss:
@@ -50,11 +50,12 @@ The CoverComponent contains data about the cover that is used to evaluate and al
 
 Since we wanted to minimize involvement from the designer, the cover points are calculated automatically from the collider bounds. The spacing is such that enemies don't collide if they pick adjacent points on same side.
 
-# TODO: ADD GIZMO IMAGE
-
+![cover component cover point allocation](/assets/blogEmbeds/neon-heart-overdrive-cover-component-allocation.png)
+Here, the white points are the auto allocated cover points and the blue lines are the normals of each cover side.
 
 # Picking the best cover:
 The basic idea is simple:
+
 1. Get a list of relevant nearby Cover objects
 1. Only pick cover positions that are not exposed.  
 1. Sort all of the covers based on the AI's CoverSeekerProfile.
