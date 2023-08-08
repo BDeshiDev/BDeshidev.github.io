@@ -14,8 +14,8 @@ frameworks_tools:
 skills:
   - Gameplay Programming
   - Game Design
-  - Narrative Design
   - AI programming
+  # - Narrative Design
   # - Machine Learning
 degrees:
   - where: Bangladesh University of Engineering and Technology

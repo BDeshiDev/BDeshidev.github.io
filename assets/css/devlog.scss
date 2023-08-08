@@ -99,7 +99,22 @@
 
             word-wrap: break-word;
             white-space: pre-line;
+        }
+        h1{
             @include headerFontSettings(3rem,1.6rem);
+
+            margin-bottom: 1.5rem;
+        }
+        h2{
+            @include headerFontSettings(2.5rem,1.4rem);
+            margin-bottom: .5rem;
+            margin-top: .5rem;
+
+        }
+        h3{
+            @include headerFontSettings(1.6rem,1.2rem);
+            margin-bottom: .5rem;
+            margin-top: .5rem;
         }
         em{
             color: $secondary

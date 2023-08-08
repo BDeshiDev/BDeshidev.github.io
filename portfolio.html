@@ -50,14 +50,7 @@ dfdfdfdfd -->
             <span class="portfolio__skill__block__element">{{ skill }}</span>
         {% endfor %}
     </div>
-    <h2>
-        Education:
-    </h2>
-    <div>
-        {% for degree in site.data.portfolio.degrees %}
-            {% include educationWidget.html %}
-        {% endfor %}
-    </div>
+
     <h2>
         Languages:
     </h2>
@@ -74,7 +67,14 @@ dfdfdfdfd -->
             <span class="portfolio__skill__block__element">{{ ft }}</span>
         {% endfor %}
     </div>
-
+    <h2>
+        Education:
+    </h2>
+    <div>
+        {% for degree in site.data.portfolio.degrees %}
+            {% include educationWidget.html %}
+        {% endfor %}
+    </div>
     <h2>
         Projects(Commercial):
     </h2>
@@ -84,30 +84,38 @@ dfdfdfdfd -->
         {% endfor %}
     </div>
 
+    <br>
+    <br>
     <h2>
         Projects(Non-Commercial):
     </h2>
+
     <div>
         {% for game in site.data.games.personal  %}
             {% if game.includeInPortfolio %}
                     {% include gamePortfolioWidget.html %}
                     <br>
-
-            {% endif %}
-        {% endfor %}
-    </div>
-
-    <h2>
-        Tools:
-    </h2>
-    <div>
-        {% for game in site.data.tools  %}
-            {% if game.includeInPortfolio %}    
-                    {% include gamePortfolioWidget.html %}
                     <br>
             {% endif %}
         {% endfor %}
     </div>
+    <div>
+        {% assign game = site.data.tools.BTSM %}
+        {% if game.includeInPortfolio %}    
+            {% include gamePortfolioWidget.html %}
+        {% endif %}
+    </div>
+    {% assign game = site.data.tools.rtxAssignment %}
+    {% if game.includeInPortfolio %}
+    <h2>
+        Coursework:
+    </h2>    
+    <div>
+            {% include gamePortfolioWidget.html %}
+            <br>
+    </div> 
+    {% endif %}
+
 </div>
 
 
