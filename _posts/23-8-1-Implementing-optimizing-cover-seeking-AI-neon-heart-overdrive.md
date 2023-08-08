@@ -263,7 +263,7 @@ This accomplishes the above behavior because:
 
 This describes cover seeking behavior for <strong>one state</strong> of the AIs. In-game, the AI transitions between multiple states, resulting in much more fluid behavior. For example, the offense focused pistol enemy actually reuses the defense focused smg enemy's flee behavior. After getting some shots in, it switches to the flee behavior and hides. Then after a while it goes back to the offense focused state. This results in behavior where the pistol enemy closes in for a few shots and runs away. So it achieves the designer's desired middle ground between offense and defense.
 
-The state reuse was possible due to BTSM, my Behavior Tree/State machine library, BTSM. It decouples transitions and state behviour. So state reuse like this easy.
+The state reuse was possible due to BTSM, my Behavior Tree/State machine library, BTSM. It decouples transitions and state behviour. So state reuse like this is easy.
 
 # Limitations and improvements
 The system was made within the time constraints of a game jam. While I did have various ideas to improve it further, I had to scope down to finish the game within the jam. Here are some things that I would've done differently otherwise:
@@ -287,4 +287,4 @@ Currently, for penalizing/prioritizing covers based on distance to the player, i
 Ex: If the distance threshold is 5, both covers with a distance of 1 and 4.99 are scored the same. This would've greatly improved the granularity of the scores. But would've taken more time to tweak. I opted for simpler threshold based modifiers due to the time constraints of the jam.
 
 ## Utilizing the strategy pattern
-The stategy pattern would have been a great way to encapsulate the details of cover scoring. Currently, enemies store all the weights even if some of them are useless to them(ex: if the weight for some factor was 0). However, in the jam, to avoid scope creep, we only had 2 enemy archetypes interacting with the cover. The increased modularity of the strategy pattern would have been overkill for this. However, it is something I'd definitely consider in a refactoring pass through the system.
+The stategy pattern would have been a great way to encapsulate the details of cover scoring. Currently, enemies store all the weights even if some of them are useless to them(ex: if the weight for some factor was 0). However, in the jam, to avoid scope creep, we only had 2 enemy archetypes interacting with the cover. Given the time restrictions of the jam and the actual scope of the system, the increased modularity of the strategy pattern would have been overkill. However, it is something I'd definitely consider in a refactoring pass through the system.
