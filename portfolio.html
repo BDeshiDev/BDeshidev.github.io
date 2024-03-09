@@ -76,6 +76,19 @@ dfdfdfdfd -->
         {% endfor %}
     </div>
     <h2>
+        Experience:
+    </h2>
+    <div>
+        {% for work in site.data.experience.work  %}
+            {% include workWidget.html %}
+        {% endfor %}
+    </div>
+    <div>
+        {% for game in site.data.games.commercial  %}
+            {% include gamePortfolioWidget.html %}
+        {% endfor %}
+    </div>
+    <h2>
         Projects(Commercial):
     </h2>
     <div>

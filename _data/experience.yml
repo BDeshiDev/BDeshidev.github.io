@@ -1,0 +1,10 @@
+work:
+  - job: Gameplay Programmer/Level Designer
+    company: "Brainstation-23" 
+    portfolioHighlights:
+      - Implemented a distance based sub-scene loading system using <strong>Addressables</strong>.
+      - Implemented a node based <strong>Dialogue system</strong> with <strong>dialogue choice and localization support</strong>.
+      - Implemented an <strong>Objective/Quest system</strong>.
+      - Designed and implemented gameplay sequences and set-pieces.
+      - Participated in regular code reviews.
+      - Designed level blockouts using Probuilder.
