@@ -19,7 +19,16 @@
                     </button>
                 </a>
                 {% endif %}
-      
+                
+                {% if game.xbox %}
+                <a href="{{game.xbox}}">
+                    <button class="portfolio__project__Desc__Header__Links__Button">
+                        <i class="fab fa-xbox"></i>
+                        Xbox
+                    </button>
+                </a>
+                {% endif %}
+                
                 {% if game.itch %}
                 <a href="{{game.itch}}">
                     <button class="portfolio__project__Desc__Header__Links__Button">
@@ -28,6 +37,7 @@
                     </button>
                 </a>
                 {% endif %}
+
                 {% if game.github %}
                 <a href="{{game.github}}">
                     <button class="portfolio__project__Desc__Header__Links__Button">

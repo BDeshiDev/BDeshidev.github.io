@@ -8,10 +8,11 @@ commercial:
       Solve puzzles.
     steam: https://store.steampowered.com/app/1406090/ControlOverride/
     itch: https://b-deshidev.itch.io/control-override
+    xbox: https://www.xbox.com/en-US/games/store/controloverride/9N73W1728BG8
     icon: https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png
     banner: "/assets/img/co_banner.png"
     portfolioHighlights:
-      thumbnail: https://img.itch.zone/aW1nLzU3MTkyODQucG5n/315x250%23c/1AY0Oq.png
+      thumbnail: https://img.itch.zone/aW1nLzE0NTQ4NTM1LnBuZw==/315x250%23c/2JzOpA.png
       desc: |+
         Control:Override is a puzzle game where you share control between the environment and yourself.
         Abuse physics bugs to solve puzzles in out of the box ways. 
@@ -24,7 +25,7 @@ commercial:
         # - Implemented a <strong>rewind/Undo system</strong>.
         - Wrote and implemented a <strong>branching, multi-ending story</strong> with Yarnspinner.
         # - Worked with <strong>YarnSpinner</strong> for branching dialogue.
-        - Worked with a publisher to publish the game on <strong>Steam</strong>
+        - Shipped on <strong>Steam</strong> and <strong>XBOX</strong>
       articles:
         - desc: Designing levels to teach unnatural mechanics naturally in Control:Override
           link: 2023/06/13/conveying-unnatural-mechanics-naturally.html
@@ -44,6 +45,30 @@ commercial:
         - 'https://cdn.akamai.steamstatic.com/steam/apps/1406090/ss_21c0cc067bad91ee0c71648301d4b3edf1e0881e.600x338.jpg?t=1681819544'
 
 personal:
+  - name: Compress(space)
+    includeInPortfolio: true
+    gamejam: LD54
+    desc: |+
+      A mind and world splitting puzzle platformer where you fold space to cheat your way through puzzles.
+    itch: https://b-deshidev.itch.io/compressspace-expanded
+    portfolioHighlights:
+      thumbnail: https://img.itch.zone/aW1nLzE4MDgyNDUxLmdpZg==/315x250%23c/XG7uJN.gif
+      desc: |+
+        A 2D+ ||D mind and world splitting puzzle platformer where you fold space to cheat your way through puzzles.
+      work:
+        - Implemented the core mechanic, <strong>space folding</strong>
+        - Designed and implemented supplementary mechanics that interact with space folding.
+        - Designed <strong>70+ levels</strong>.
+        - Won <strong>10th place</strong> in the innovation category <strong>among 1500+ entries</strong> in LD54.
+      roles:
+        - Level Design
+        - Gameplay programming
+        - Game Design
+      screenshots:
+        - 'https://img.itch.zone/aW1hZ2UvMjU2MjUzMi8xNTI5ODMxNi5qcGc=/250x600/56%2BYtt.jpg'
+        - 'https://img.itch.zone/aW1hZ2UvMjU2MjUzMi8xNzg3NjI5MC5qcGc=/250x600/eFEyVk.jpg'
+        - 'https://img.itch.zone/aW1hZ2UvMjU2MjUzMi8xNzg3NjI4OS5qcGc=/250x600/bGW8tz.jpg'
+        - 'https://img.itch.zone/aW1hZ2UvMjU2MjUzMi8xNzg3NjI5MS5qcGc=/250x600/lS2Kvp.jpg'
   - name: Neon Heart Overdrive  
     year: 2021
     includeInPortfolio: true

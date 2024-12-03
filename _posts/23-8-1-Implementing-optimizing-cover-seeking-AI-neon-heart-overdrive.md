@@ -93,7 +93,7 @@ for(int )i = 0; i < numCoversInRange;i++){
 
 Moreover, raycasts only consider occlusion. If we rely on raycasts only, we can pick a cover position that is occluded by geometry but on the same side as the player. 
 
-Instead, we consider the angle the player makes with the cover side's normal. If it is <= 90 degrees, this cover side is on the opposite side to the player. In other words, it is not exposed.
+*Instead, we consider the angle the player makes with the cover side's normal.* If it is <= 90 degrees, this cover side is on the opposite side to the player. In other words, it is not exposed.
 
 This is done per cover "side", not cover points. In practice, the angle with the player can vary between cover points. This can lead to unstable behavior where points near the corner are considered not exposed when other points in the same side were. The enemy would see that and jump to that point leaving the safe side they were in. *Doing it per side is both more stable and more performant.*
 
@@ -135,7 +135,7 @@ Before scoring the cover that we found, we need to pick an appropriate side and 
 2. Verify that the current one is not exposed
 3. return the first non occupied slot near to the closest corner .
 
- The loop is less scary than it looks. We mainly used boxcolliders. So there were only 4 faces/sides. We also want the enemy to peek from behind cover to attack. Choosing the first non occupied slot near the closest corners will make the enemy stay in corners when possible.  
+ The loop is less scary than it looks. We mainly used boxcolliders. So there were only 4 faces/sides. We also want the enemy to peek from behind cover to attack. Choosing the first non occupied slot near the closest corners will make the enemy stay in corners when possible. In practice, most of the ponts will not be occupied. so the loop returns quickly
 
 
 ```csharp
